@@ -55,7 +55,7 @@ private class File {
             this.listFiles() // Returns an array of abstract pathnames denoting the files in the directory.
             this.lastModified() // Returns the time that the file was last modified by milliseconds.
             this.setLastModified(100L) // todo
-            this.length() // Bytes Size of this abstract file.
+            this.length() // Bytes atlasCompose.ui.Size of this abstract file.
             this.mkdir() // Creates the directory named by this abstract pathname.
             this.mkdirs() // todo
             this.renameTo(File("")) // Renames the file denoted by this abstract pathname.

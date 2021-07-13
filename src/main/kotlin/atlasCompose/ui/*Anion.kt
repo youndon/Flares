@@ -6,10 +6,10 @@
 //
 //
 //    androidx.compose.ui.geometry.atlasCompose.ui.CornerRadius()
-//    androidx.compose.ui.geometry.Offset()
-//    androidx.compose.ui.geometry.Rect()
-//    androidx.compose.ui.geometry.RoundRect()
-//    androidx.compose.ui.geometry.Size()
+//    androidx.compose.ui.geometry.atlasCompose.ui.Offset()
+//    androidx.compose.ui.geometry.atlasCompose.ui.Rect()
+//    androidx.compose.ui.geometry.atlasCompose.ui.RoundRect()
+//    androidx.compose.ui.geometry.atlasCompose.ui.Size()
 //    androidx.compose.ui.geometry.lerp()
 //
 //
@@ -23,15 +23,19 @@
 //    androidx.compose.ui.graphics.atlasCompose.ui.ImageBitmap()
 //    androidx.compose.ui.graphics.ImageShader()
 //    androidx.compose.ui.graphics.LinearGradientShader()
-//    androidx.compose.ui.graphics.Paint()
-//    androidx.compose.ui.graphics.Path()
-//    androidx.compose.ui.graphics.PathMeasure()
+//    androidx.compose.ui.graphics.atlasCompose.ui.Paint()
+//    androidx.compose.ui.graphics.atlasCompose.ui.Path()
+//    androidx.compose.ui.graphics.atlasCompose.ui.PathMeasure()
 //    androidx.compose.ui.graphics.RadialGradientShader()
-//    androidx.compose.ui.graphics.ShaderBrush()
+//    androidx.compose.ui.graphics.atlasCompose.ui.ShaderBrush()
 //    androidx.compose.ui.graphics.SweepGradientShader()
-//    androidx.compose.ui.graphics.TransformOrigin()
+//    androidx.compose.ui.graphics.atlasCompose.ui.TransformOrigin()
 //    androidx.compose.ui.graphics.imageFromResource()
 //    androidx.compose.ui.graphics.lerp()
+//    androidx.compose.ui.graphics.NativeCanvas
+//    androidx.compose.ui.graphics.NativePaint
+//    androidx.compose.ui.graphics.NativeColorFilter
+//    androidx.compose.ui.graphics.Shader
 //
 //
 //
@@ -57,7 +61,7 @@
 //    androidx.compose.ui.graphics.vector.EmptyPath
 //    androidx.compose.ui.graphics.vector.RootGroupName
 //    androidx.compose.ui.graphics.vector.Group {  }
-//    androidx.compose.ui.graphics.vector.Path()
+//    androidx.compose.ui.graphics.vector.atlasCompose.ui.Path()
 //    androidx.compose.ui.graphics.vector.PathData {  }
 //    androidx.compose.ui.graphics.vector.addPathNodes()
 //    androidx.compose.ui.graphics.vector.rememberVectorPainter()
@@ -65,12 +69,13 @@
 //
 //    androidx.compose.ui.input.key.atlasCompose.ui.Key()
 //    androidx.compose.ui.input.key.atlasCompose.ui.KeysSet()
+//    androidx.compose.ui.input.key.NativeKeyEvent
 //
 //    androidx.compose.ui.layout.FirstBaseline
 //    androidx.compose.ui.layout.LastBaseline
 //    androidx.compose.ui.layout.Layout()
 //    androidx.compose.ui.layout.atlasCompose.ui.MeasurePolicy()
-//    androidx.compose.ui.layout.ScaleFactor()
+//    androidx.compose.ui.layout.atlasCompose.ui.ScaleFactor()
 //    androidx.compose.ui.layout.SubcomposeLayout {  }
 //    androidx.compose.ui.layout.lerp()
 //
@@ -100,12 +105,12 @@
 //    androidx.compose.ui.res.svgResource()
 //    androidx.compose.ui.res.vectorXmlResource()
 //
-//    androidx.compose.ui.state.ToggleableState()
+//    androidx.compose.ui.state.atlasCompose.ui.ToggleableState()
 //
 //    androidx.compose.ui.text.atlasCompose.ui.AnnotatedString()
-//    androidx.compose.ui.text.Paragraph()
-//    androidx.compose.ui.text.ParagraphIntrinsics()
-//    androidx.compose.ui.text.TextRange()
+//    androidx.compose.ui.text.atlasCompose.ui.atlasCompose.ui.Paragraph()
+//    androidx.compose.ui.text.atlasCompose.ui.ParagraphIntrinsics()
+//    androidx.compose.ui.text.atlasCompose.ui.TextRange()
 //    androidx.compose.ui.text.buildAnnotatedString {  }
 //    androidx.compose.ui.text.lerp()
 //    androidx.compose.ui.text.resolveDefaults()
@@ -116,7 +121,7 @@
 //    androidx.compose.ui.text.input.VisualTransformation {  }
 //
 //    androidx.compose.ui.text.platform.atlasCompose.ui.Font()
-//    androidx.compose.ui.text.platform.Typeface()
+//    androidx.compose.ui.text.platform.atlasCompose.ui.Typeface()
 //
 //    androidx.compose.ui.text.style.lerp()
 //
@@ -126,7 +131,7 @@
 //    androidx.compose.ui.unit.atlasCompose.ui.IntOffset()
 //    androidx.compose.ui.unit.atlasCompose.ui.IntRect()
 //    androidx.compose.ui.unit.atlasCompose.ui.IntSize()
-//    androidx.compose.ui.unit.TextUnit()
+//    androidx.compose.ui.unit.atlasCompose.ui.TextUnit()
 //    androidx.compose.ui.unit.Velocity()
 //    androidx.compose.ui.unit.lerp()
 //    androidx.compose.ui.unit.max()
@@ -136,7 +141,7 @@
 //    androidx.compose.ui.window.AwtWindow()
 //    androidx.compose.ui.window.Dialog()
 //    androidx.compose.ui.window.Popup {  }
-//    androidx.compose.ui.window.Tray()
+//    androidx.compose.ui.window.atlasCompose.ui.Tray()
 //    androidx.compose.ui.window.Window()
 //    androidx.compose.ui.window.WindowDraggableArea {  }
 //    androidx.compose.ui.window.WindowPosition()

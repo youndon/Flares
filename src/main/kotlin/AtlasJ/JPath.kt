@@ -5,7 +5,7 @@ import java.nio.file.Path
 interface JPath {
     val path: Path?
         get() {
-//            Path.of("")
+//            atlasCompose.ui.Path.of("")
             with(path!!) {
                 this.fileName
                 this.fileSystem
@@ -15,7 +15,7 @@ interface JPath {
                 this.root
                 this.endsWith("")
                 this.normalize()
-//                this.relativize(Path.of(""))
+//                this.relativize(atlasCompose.ui.Path.of(""))
                 this.getName(1)
                 this.resolve("")
                 this.resolveSibling("")
