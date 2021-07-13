@@ -1,1 +1,3 @@
-class InternalTextApi { }
+package atlasCompose.ui
+
+private annotation class InternalTextApi

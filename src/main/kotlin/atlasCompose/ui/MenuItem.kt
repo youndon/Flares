@@ -1,3 +1,12 @@
-package compose.ui
+package atlasCompose.ui
 
-class MenuItem
+import androidx.compose.ui.window.v1.MenuItem
+
+private class MenuItem {
+    val MenuItem.ss: Any
+        get() = this.apply {
+            this.action
+            this.name
+            this.shortcut
+        }
+}

@@ -1056,7 +1056,7 @@ Right: -1 -> 0 -> 2 -> 2 -> 7
 Merged: -1 -> 0 -> 1 -> 2 -> 2 -> 2 -> 3 -> 4 -> 5 -> 7
 ```
 This algorithm has a time complexity of ***O\*(\*m\* + \*n\*)**, where ***m\*** is the # of nodes in the first list, and ***n\*** is the # of nodes in the second list.
-## Key points
+## atlasCompose.ui.Key points
 - Linked lists are linear and unidirectional. As soon as you move a reference from one node to another, you can’t go back.
 - Linked lists have a *O*(*1*) time complexity for head-first insertions. Arrays have *O*(*n*) time complexity for head-first insertions.
 - Conforming to Kotlin collection interfaces, such as `Iterable` and `Collection`, offers a host of helpful methods for a reasonably small amount of requirements.
