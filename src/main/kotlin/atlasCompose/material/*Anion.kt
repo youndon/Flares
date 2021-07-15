@@ -1,75 +1,80 @@
-//package compose.material
-//
-//import androidx.compose.material.*
-//
-//private fun void() {
-//    LocalAbsoluteElevation
-//    LocalContentAlpha
-//    LocalContentColor
-//    LocalElevationOverlay
-//    LocalTextStyle
-//    Button()
-//    MaterialTheme {  }
-//    Text()
-//    AlertDialog()
-//    BackdropScaffold()
-//    BottomAppBar {  }
-//    BottomDrawer()
-//    BottomNavigation {  }
-//    BottomSheetScaffold()
-//    Card {  }
-//    Checkbox()
-//    CircularProgressIndicator()
-//    ContextMenu()
-//    Divider()
-//    DropdownMenu()
-//    DropdownMenuItem()
-//    ExtendedFloatingActionButton()
-//    FloatingActionButton()
-//    Icon()
-//    IconButton()
-//    IconToggleButton()
-//    LeadingIconTab()
-//    LinearProgressIndicator()
-//    ListItem {  }
-//    ModalBottomSheetLayout()
-//    ModalDrawer()
-//    OutlinedButton()
-//    OutlinedTextField()
-//    ProvideTextStyle()
-//    RadioButton()
-//    Scaffold {  }
-//    ScrollableTabRow()
-//    Slider()
-//    Snackbar {  }
-//    SnackbarHost()
-//    Surface {  }
-//    SwipeToDismiss()
-//    Switch()
-//    Tab()
-//    TabRow()
-//    TopAppBar()
-//    darkColors()
-//    TextField()
-//    contentColorFor()
-//    rememberBackdropScaffoldState()
-//    rememberBottomDrawerState()
-//    rememberBottomSheetScaffoldState()
-//    rememberBottomSheetState()
-//    rememberDismissState {  }
-//    rememberModalBottomSheetState()
-//    rememberDrawerState()
-//    rememberScaffoldState()
-//    rememberSwipeableState()
-//    TextButton()
-//    TriStateCheckbox()
-//    lightColors()
-//
-//
-//    androidx.compose.material.icons.materialIcon()
-//    androidx.compose.material.icons.Icons
-//    androidx.compose.material.ripple.LocalRippleTheme
-//    androidx.compose.material.ripple.rememberRipple()
-//    androidx.compose.material.ripple.RippleAlpha
-//    androidx.compose.material.ripple.RippleTheme
-//}
+package atlasCompose.material
+
+import androidx.compose.material.*
+import androidx.compose.material.icons.*
+import androidx.compose.material.ripple.*
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.state.ToggleableState
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.Dp
+
+@OptIn(ExperimentalMaterialApi::class)
+private fun <T> void() {
+    LocalAbsoluteElevation
+    LocalContentAlpha
+    LocalContentColor
+    LocalElevationOverlay
+    LocalTextStyle
+    Button({}){}
+    MaterialTheme {  }
+    Text("")
+    AlertDialog({},{})
+    BackdropScaffold({},{},{})
+    BottomAppBar {  }
+    BottomDrawer({}){}
+    BottomNavigation {  }
+    BottomSheetScaffold({}){}
+    Card {  }
+    Checkbox(false,{b: Boolean -> b })
+    CircularProgressIndicator()
+    ContextMenu(false,{}){}
+    Divider()
+    DropdownMenu(false,{}){}
+    DropdownMenuItem({}){}
+    ExtendedFloatingActionButton({},{})
+    FloatingActionButton({}){}
+//    Icon() // FIXME: 15/07/2021
+    IconButton({}){}
+    IconToggleButton(false,{b: Boolean -> b }){}
+    LeadingIconTab(false,{},{},{})
+    LinearProgressIndicator()
+    ListItem {  }
+    ModalBottomSheetLayout({}){}
+    ModalDrawer({}){}
+    OutlinedButton({}){}
+    OutlinedTextField("",{})
+    ProvideTextStyle(TextStyle()){}
+    RadioButton(false,{})
+    Scaffold {  }
+    ScrollableTabRow(1){}
+    Slider(1f,{})
+    Snackbar {  }
+    SnackbarHost(SnackbarHostState())
+    Surface {  }
+//    SwipeToDismiss() // FIXME: 15/07/2021
+    Switch(false,{})
+    Tab(false,{})
+    TabRow(1){}
+    TopAppBar({})
+    darkColors()
+    TextField("",{})
+    contentColorFor(Color.Gray)
+    rememberBackdropScaffoldState(BackdropValue.Concealed)
+    rememberBottomDrawerState(BottomDrawerValue.Expanded)
+    rememberBottomSheetScaffoldState()
+    rememberBottomSheetState(BottomSheetValue.Expanded)
+    rememberDismissState { dismissValue: DismissValue -> false}
+    rememberModalBottomSheetState(ModalBottomSheetValue.Expanded)
+    rememberDrawerState(DrawerValue.Open)
+    rememberScaffoldState()
+    rememberSwipeableState(1)
+    TextButton({}){}
+    TriStateCheckbox(ToggleableState.Indeterminate,{})
+    lightColors()
+    materialIcon(""){ImageVector.Builder("", Dp.Hairline,Dp.Hairline,1f,1f)}
+    Icons
+    LocalRippleTheme
+    rememberRipple()
+    RippleTheme
+}

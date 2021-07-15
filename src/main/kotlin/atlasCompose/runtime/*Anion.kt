@@ -1,70 +1,73 @@
-//package compose.runtime
-//
-//import androidx.compose.runtime.*
-//
-//private fun void() {
-//
-//    currentComposer
-//    currentCompositeKeyHash
-//    currentRecomposeScope
-//    mutableStateOf()
-//    remember {  }
-//    ComposeNode<>()
-//    Composition()
-//    CompositionLocalProvider()
+package compose.runtime
+
+import androidx.compose.runtime.*
+import androidx.compose.runtime.collection.MutableVector
+import androidx.compose.runtime.collection.mutableVectorOf
+import androidx.compose.runtime.internal.*
+import androidx.compose.runtime.saveable.*
+import androidx.compose.runtime.tooling.LocalInspectionTables
+import kotlinx.coroutines.runBlocking
+
+@Suppress("UNREACHABLE_CODE")
+@OptIn(InternalComposeApi::class)
+private inline fun <T, E,reified R> void() {
+
+    currentComposer
+    currentCompositeKeyHash
+    currentRecomposeScope
+    mutableStateOf(1)
+    remember {  }
+//    ComposeNode<>() // FIXME: 15/07/2021
+//    Composition() // FIXME: 15/07/2021
+//    CompositionLocalProvider() // FIXME: 15/07/2021
 //    ControlledComposition()
-//    DisposableEffect()
-//    LaunchedEffect()
+    DisposableEffect(null,null) { onDispose { } }
+    LaunchedEffect(null,null) {}
 //    ReusableComposeNode<>()
-//    compositionLocalOf()
-//    derivedStateOf {  }
-//    key()
-//    SideEffect {  }
-//    ReusableContent()
-//    mutableStateListOf<>()
-//    mutableStateMapOf<>()
-//    neverEqualPolicy<>()
-//    produceState()
-//    referentialEqualityPolicy<>()
-//    rememberCompositionContext()
-//    rememberCoroutineScope()
-//    rememberUpdatedState()
-//    simulateHotReload()
-//    snapshotFlow {  }
-//    sourceInformationMarkerEnd()
-//    sourceInformationMarkerStart()
-//    staticCompositionLocalOf {  }
-//    structuralEqualityPolicy<>()
-//    withFrameMillis {  }
-//    withFrameNanos {  }
-//    withRunningRecomposer {  }
-//
-//    androidx.compose.runtime.collection.MutableVector<>()
-//    androidx.compose.runtime.collection.mutableVectorOf<>()
-//
-//    androidx.compose.runtime.internal.isLiveLiteralsEnabled
-//    androidx.compose.runtime.internal.composableLambda()
-//    androidx.compose.runtime.internal.composableLambdaInstance()
-//    androidx.compose.runtime.internal.composableLambdaN()
-//    androidx.compose.runtime.internal.composableLambdaNInstance()
-//    androidx.compose.runtime.internal.enableLiveLiterals()
-//    androidx.compose.runtime.internal.illegalDecoyCallException()
-//    androidx.compose.runtime.internal.liveLiteral()
-//    androidx.compose.runtime.internal.updateLiveLiteralValue()
-//
-//
-//    androidx.compose.runtime.saveable.LocalSaveableStateRegistry
-//    androidx.compose.runtime.saveable.SaveableStateRegistry()
-//    androidx.compose.runtime.saveable.Saver()
-//    androidx.compose.runtime.saveable.SaverScope {  }
-//    androidx.compose.runtime.saveable.autoSaver<>()
-//    androidx.compose.runtime.saveable.listSaver()
-//    androidx.compose.runtime.saveable.mapSaver()
-//    androidx.compose.runtime.saveable.rememberSaveable()
-//    androidx.compose.runtime.saveable.rememberSaveableStateHolder()
-//
-//    androidx.compose.runtime.snapshots.ObserverHandle {  }
-//
-//    androidx.compose.runtime.tooling.LocalInspectionTables
-//
-//}
+    compositionLocalOf { }
+    derivedStateOf { }
+    key { }
+    SideEffect { }
+    ReusableContent({ }){ }
+    mutableStateListOf<T>()
+    mutableStateMapOf<E,T>()
+    neverEqualPolicy<T>()
+    produceState(1,null,null) { }
+    referentialEqualityPolicy<T>()
+    rememberCompositionContext()
+    rememberCoroutineScope()
+    rememberUpdatedState(1)
+    simulateHotReload(1)
+    snapshotFlow {  }
+    sourceInformationMarkerEnd(currentComposer)
+    sourceInformationMarkerStart(currentComposer,1,"")
+    staticCompositionLocalOf {  }
+    structuralEqualityPolicy<T>()
+    runBlocking {
+        withFrameMillis { frameTimeMillis: Long -> frameTimeMillis }
+        withFrameNanos { frameTimeMillis: Long -> frameTimeMillis }
+        withRunningRecomposer { recomposer: Recomposer -> recomposer }
+    }
+    MutableVector<R>()
+    mutableVectorOf<R>()
+    isLiveLiteralsEnabled
+    composableLambda(currentComposer,1,false,{ })
+    composableLambdaInstance(1,false,{ })
+    composableLambdaN(currentComposer,1,false,1,{ })
+    composableLambdaNInstance(1,false,1,{ })
+    enableLiveLiterals()
+    illegalDecoyCallException("")
+    liveLiteral("",1)
+    updateLiveLiteralValue("",null)
+    LocalSaveableStateRegistry
+    SaveableStateRegistry(mapOf()) { any: Any -> false }
+    Saver<T,String>({ null }) {value: String -> null }
+    SaverScope { value: Any -> false }
+    autoSaver<T>()
+//    listSaver<>() // FIXME: 15/07/2021
+//    mapSaver() // FIXME: 15/07/2021
+    rememberSaveable(null) { }
+    rememberSaveableStateHolder()
+    LocalInspectionTables
+
+}
