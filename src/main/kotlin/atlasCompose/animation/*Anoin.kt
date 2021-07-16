@@ -2,6 +2,7 @@ package atlasCompose.animation
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
@@ -13,7 +14,8 @@ import androidx.compose.ui.unit.IntSize
 import kotlinx.coroutines.runBlocking
 
 @OptIn(ExperimentalAnimationApi::class)
-private fun <T,V> void() {
+@Composable
+private fun <T> void() {
     // animation.
     Animatable(Color.Blue)
     AnimatedVisibility(false){}

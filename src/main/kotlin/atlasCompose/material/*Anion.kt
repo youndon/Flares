@@ -3,6 +3,7 @@ package atlasCompose.material
 import androidx.compose.material.*
 import androidx.compose.material.icons.*
 import androidx.compose.material.ripple.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.state.ToggleableState
@@ -10,6 +11,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 
 @OptIn(ExperimentalMaterialApi::class)
+@Composable
 private fun <T> void() {
     LocalAbsoluteElevation
     LocalContentAlpha

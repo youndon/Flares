@@ -1,13 +1,8 @@
-import androidx.compose.desktop.Window
-import androidx.compose.material.Button
-import androidx.compose.material.Text
-import androidx.compose.ui.window.Notifier
-import javax.management.Notification
+import jetbrains.letsPlot.letsPlot
 
 fun main() {
-    Window {
-        Button(onClick = { println("this compose!!")}){
-            Text("notify")
-        }
+
+    letsPlot {
+        mapOf(1 to "one",2 to "tow",3 to "three")
     }
 }

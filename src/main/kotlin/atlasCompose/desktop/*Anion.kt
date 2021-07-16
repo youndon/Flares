@@ -1,7 +1,9 @@
 package atlasCompose.desktop
 
 import androidx.compose.desktop.*
+import androidx.compose.runtime.Composable
 
+@Composable
 private fun void() {
 
     LocalAppWindow

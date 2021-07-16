@@ -1,4 +1,4 @@
-package compose.runtime
+package atlasCompose.runtime
 
 import androidx.compose.runtime.*
 import androidx.compose.runtime.collection.MutableVector
@@ -10,6 +10,7 @@ import kotlinx.coroutines.runBlocking
 
 @Suppress("UNREACHABLE_CODE")
 @OptIn(InternalComposeApi::class)
+@Composable
 private inline fun <T, E,reified R> void() {
 
     currentComposer
@@ -26,7 +27,7 @@ private inline fun <T, E,reified R> void() {
 //    ReusableComposeNode<>()
     compositionLocalOf { }
     derivedStateOf { }
-    key { }
+    key(""){}
     SideEffect { }
     ReusableContent({ }){ }
     mutableStateListOf<T>()

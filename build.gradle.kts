@@ -22,6 +22,7 @@ dependencies {
     implementation(compose.uiTooling)
     implementation(kotlin("reflect"))
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.0")
+    implementation ("org.jetbrains.lets-plot:lets-plot-kotlin-jvm:3.0.0")
 }
 
 tasks.test {
