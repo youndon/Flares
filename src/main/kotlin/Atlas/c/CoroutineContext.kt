@@ -1,8 +1,5 @@
-package c
+package Atlas.c
 
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.cancelChildren
-import kotlinx.coroutines.isActive
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.getPolymorphicElement
 import kotlin.coroutines.minusPolymorphicKey
@@ -15,10 +12,7 @@ interface CoroutineContext {
     @ExperimentalStdlibApi
     fun some() {
         with(cc){
-            cancel()
-            cancelChildren()
-//            this.fold()
-            isActive
+            this.fold(0) { i: Int, element: CoroutineContext.Element -> i }
             minusKey(ke)
             plus(this)
             this[ke]

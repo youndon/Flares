@@ -1,7 +1,11 @@
-package d
+package Atlas.d
 
 import kotlin.DeprecationLevel
 class DeprecationLevel {
+    /**
+     * This class used in the annotation class @Deprecated'()
+     * that by default WARNING value.
+     * */
     lateinit var deprecationLevel: DeprecationLevel
     init {
         deprecationLevel

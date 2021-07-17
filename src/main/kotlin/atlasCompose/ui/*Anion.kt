@@ -13,9 +13,7 @@ import androidx.compose.ui.platform.*
 import androidx.compose.ui.res.*
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.*
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.ResourceFont
+import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.platform.Typeface
 import androidx.compose.ui.unit.*
 import androidx.compose.ui.window.*

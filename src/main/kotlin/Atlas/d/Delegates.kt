@@ -1,10 +1,10 @@
-package d
+package Atlas.d
 
 import kotlin.properties.Delegates
 
 object Delegates {
 
-     var delegates: Delegates by Delegates.notNull()
+     var delegates: Delegates = Delegates
 
     init {
         /** Delegation.Observable()

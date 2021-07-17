@@ -1,4 +1,4 @@
-package c
+package Atlas.c
 
 import kotlin.contracts.ContractBuilder
 import kotlin.contracts.ExperimentalContracts

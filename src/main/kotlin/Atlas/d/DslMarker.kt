@@ -1,3 +1,3 @@
-package d
+package Atlas.d
 
 annotation class DslMarker ()

@@ -1,5 +1,3 @@
-@file:Suppress("UNREACHABLE_CODE")
-
 package Atlas.c
 
 import kotlin.collections.Collection

@@ -1,4 +1,4 @@
-package r
+package Atlas.r
 
 import kotlin.random.Random
 import kotlin.random.asJavaRandom
@@ -27,13 +27,8 @@ private class Random {
                     /** @see AtlasJ.JStream */
                 }
                 this.nextGaussian() // return random double number between 0.0 and 1.0
-                this.setSeed(1L) // TODO: 2/5/21 NOT SPORTED!
-//                this.nextBoolean()
-//                this.nextBytes(ByteArray(1))
-//                this.nextDouble()
-//                this.nextFloat()
-//                this.nextLong()
-//                this.nextInt()
+                this.setSeed(1L) // TODO: 2/5/21 NOT REPORTED!
+                this.nextBoolean() // And other types.
             }
         }
     }

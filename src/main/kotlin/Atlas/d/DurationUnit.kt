@@ -1,4 +1,4 @@
-package d
+package Atlas.d
 
 import java.time.Duration
 import kotlin.time.DurationUnit
