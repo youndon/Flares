@@ -4,7 +4,7 @@ package cio
 // In kotlin language using the interface just for Implementing a class or object.
 // the interface can't inheritance a class, but can inheritance many interfaces.
 
-internal interface Interface {
+private interface Interface {
     // property.
     val stunning: Int get() = 100
 
@@ -19,5 +19,10 @@ internal interface Interface {
 
         // function.
         fun function(a: EE): EE = a
+    }
+
+    //
+    fun interface vidas{
+        fun ss()
     }
 }

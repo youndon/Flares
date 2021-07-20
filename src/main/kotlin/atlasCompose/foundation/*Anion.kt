@@ -16,7 +16,6 @@ import androidx.compose.ui.input.mouse.MouseScrollOrientation
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.Dp
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun void() {
 
@@ -45,7 +44,7 @@ private fun void() {
     Column{}
     PaddingValues()
     Row{}
-//    Spacer() // FIXME: 15/07/2021
+    Spacer(Modifier)
     LazyColumn {  }
     LazyRow {  }
 //    LazyVerticalGrid(){} // FIXME: 15/07/2021

@@ -2,7 +2,7 @@ package Atlas.d
 
 import kotlin.properties.Delegates
 
-object Delegates {
+private object Delegates {
 
      var delegates: Delegates = Delegates
 

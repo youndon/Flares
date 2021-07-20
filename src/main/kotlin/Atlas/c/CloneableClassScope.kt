@@ -1,8 +1,9 @@
-package c
+package Atlas.c
 
 @Deprecated("don't have attachment!")
-class CloneableClassScope {
+private class CloneableClassScope {
     lateinit var cloneableClassScope: CloneableClassScope
+
     init {
         cloneableClassScope
     }

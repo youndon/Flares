@@ -1,10 +1,9 @@
-
 package Atlas.c
 
 import java.util.Comparator
 import kotlin.CharSequence
 
-interface CharSequence {
+private interface CharSequence {
 
     @ExperimentalStdlibApi
     /**
@@ -30,10 +29,10 @@ interface CharSequence {
             this.associateByTo(destination = mutableMapOf(), keySelector = { c: Char -> c.isLetter() }) //{(s, s)=s, (t, t)=t, (r, r)=r, (i, i)=i, (n, n)=n, (g, g)=g}
             this.associateWith { c: Char -> c } // {s=s, t=t, r=r, i=i, n=n, g=g}
             this.associateWithTo(mutableMapOf()) { c: Char -> c } // {s=s, t=t, r=r, i=i, n=n, g=g}
-            this.chunked(2) { it == "st" } // [true, false, false]
-            this.chunkedSequence(2) { it == "st" } //
-            this.commonPrefixWith("str000") // take the correct CharSequence from the start text. -> str
-            this.commonSuffixWith("000ing") //  take the correct CharSequence from the end text. -> ing
+            this.chunked(2) { it } //
+            this.chunkedSequence(2) { it } //
+            this.commonPrefixWith("str***") // take the correct CharSequence from the start text. -> str
+            this.commonSuffixWith("***ing") //  take the correct CharSequence from the end text. -> ing
             this.contains('s') // check if the text has specific char or CharSequence.
             this.count() // size indexes.
             this.elementAt(0) // return the index number 0.
@@ -56,10 +55,10 @@ interface CharSequence {
             this.flatMapTo(mutableListOf()) { c: Char -> listOf(c) } // TODO: 27/05/2021
             this.forEach { print(it) }
             this.forEachIndexed { index: Int, c: Char -> println(c + index) }
-            this.fold(initial = "#", operation = { acc: String, c: Char -> "$acc*$c" }) // #*s*t*r*i*n*g
-            this.foldRight(initial = "#", operation = { c: Char, acc: String -> "$c*$acc" }) // s*t*r*i*n*g*#
-            this.foldIndexed(initial = "", operation = { index: Int, acc: String, c: Char -> "$acc*$c$index" })
-            this.foldRightIndexed(initial = "", operation = { index: Int, c: Char, acc: String -> "$c*$acc$index" })
+            this.fold("#") { acc: String, c: Char -> "$acc*$c" } // #*s*t*r*i*n*g
+            this.foldRight("#") { c: Char, acc: String -> "$c*$acc" } // s*t*r*i*n*g*#
+            this.foldIndexed("") { index: Int, acc: String, c: Char -> "$acc*$c$index" }
+            this.foldRightIndexed("") { index: Int, c: Char, acc: String -> "$c*$acc$index" }
             this.getOrElse(0) { 'z' } // get the value of the index 0, or else get 'z'.
             this.getOrNull(0) // get the value of the index 0, or else get null.
             this.groupBy { it == 's' } // {true=[s], false=[t, r, i, n, g]}

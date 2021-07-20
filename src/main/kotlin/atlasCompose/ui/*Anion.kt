@@ -25,9 +25,9 @@ import org.xml.sax.InputSource
 import java.awt.Window
 import java.io.InputStream
 
-@OptIn(ExperimentalComposeUiApi::class, androidx.compose.ui.unit.ExperimentalUnitApi::class)
+@OptIn(ExperimentalComposeUiApi::class, ExperimentalUnitApi::class)
 @Composable
-private fun <W:Window> void() {
+private fun void() {
     CornerRadius(1f,1f)
     Offset(1f,1f)
     Rect(1f,1f,1f,1f)

@@ -4,7 +4,7 @@ import kotlin.time.*
 import kotlin.time.Duration
 import kotlin.time.DurationUnit
 
-class Duration {
+private class Duration {
 
     @ExperimentalTime
     fun main() {
@@ -39,7 +39,7 @@ class Duration {
         duration.ZERO.run {
         }
         /** Converts the given time duration [value] expressed in the specified [sourceUnit] into the specified [targetUnit]. */
-        duration.convert(value = 1.0 ,sourceUnit = DurationUnit.DAYS,targetUnit = DurationUnit.HOURS)
+        duration.convert(value = 1.0, sourceUnit = DurationUnit.DAYS, targetUnit = DurationUnit.HOURS)
 
     }
 }

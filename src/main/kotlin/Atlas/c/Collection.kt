@@ -2,7 +2,7 @@ package Atlas.c
 
 import kotlin.collections.Collection
 
-interface Collection {
+private interface Collection {
      var mutableCollection: MutableCollection<Char>
      var matchNamedGroupCollection: MatchNamedGroupCollection
      var matchGroupCollection: MatchGroupCollection

@@ -1,3 +1,3 @@
-package b
+package Atlas.b
 
-annotation class BuilderInference ()
+private annotation class BuilderInference ()

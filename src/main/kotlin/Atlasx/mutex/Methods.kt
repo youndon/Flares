@@ -1,4 +1,4 @@
-package coroutines.mutex
+package Atlasx.mutex
 
 import kotlinx.coroutines.sync.Mutex
 

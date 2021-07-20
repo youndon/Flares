@@ -1,3 +1,3 @@
 package Atlas.d
 
-annotation class DslMarker ()
+private annotation class DslMarker ()

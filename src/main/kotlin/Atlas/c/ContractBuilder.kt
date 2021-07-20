@@ -3,9 +3,9 @@ package Atlas.c
 import kotlin.contracts.ContractBuilder
 import kotlin.contracts.ExperimentalContracts
 
-interface ContractBuilder {
+private interface ContractBuilder {
     @ExperimentalContracts
-     var contractBuilder: ContractBuilder
+    var contractBuilder: ContractBuilder
 
     @ExperimentalContracts
     fun main() {

@@ -2,6 +2,7 @@
 
 package types
 
+import jetbrains.datalore.base.json.escape
 import java.util.*
 
 /**
@@ -133,8 +134,8 @@ val string = "\n-> next line," +
         toCharArray().run {
             /**@see types.charArray*/
         }
-        toBooleanStrict()
-        toBooleanStrictOrNull()
+        toBooleanStrict() // TODO: 18/07/2021
+        toBooleanStrictOrNull() // TODO: 18/07/2021
         toBigDecimal() //         Parses the string as a java.math.BigDecimal number and returns the result.
         toBigDecimalOrNull() //  or null if the string is not a valid.
         toBigInteger() //         ⎫

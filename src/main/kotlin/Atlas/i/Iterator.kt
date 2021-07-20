@@ -1,7 +1,7 @@
 package Atlas.i
 
 
-interface Iterator {
+private interface Iterator {
     var mutableiterator: MutableIterator<String>
     var mutableListIterator: MutableListIterator<String>
 

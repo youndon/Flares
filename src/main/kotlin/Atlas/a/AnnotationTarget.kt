@@ -1,9 +1,12 @@
-package a
+package Atlas.a
 
 import kotlin.annotation.AnnotationTarget
-enum class AnnotationTarget {  ;
+/**
+ This class work with the annotation class @Target(),
+ and Contains the list of code elements which are the possible annotation targets
+ */
+private enum class AnnotationTarget {  ;
     init {
-
         AnnotationTarget.ANNOTATION_CLASS
         AnnotationTarget.CLASS
         AnnotationTarget.CONSTRUCTOR

@@ -2,8 +2,8 @@ package Atlas.c
 
 import kotlin.Comparable
 
-interface Comparable {
-     var comparable: Comparable<Int>
+private interface Comparable {
+     var comparable: Comparable<Any>
 
     /**
      * Classes which inherit from this interface have a defined total ordering between their instances.

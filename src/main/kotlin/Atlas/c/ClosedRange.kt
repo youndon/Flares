@@ -1,10 +1,8 @@
-@file:Suppress("UNREACHABLE_CODE")
-
-package c
+package Atlas.c
 
 import kotlin.ranges.ClosedRange
 
-interface ClosedRange {
+private interface ClosedRange {
      var closedRange: ClosedRange<Int>
 
     fun main(){
@@ -15,5 +13,4 @@ interface ClosedRange {
             this.isEmpty()
         }
     }
-
 }

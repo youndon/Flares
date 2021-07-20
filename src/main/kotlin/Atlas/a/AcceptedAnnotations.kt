@@ -1,3 +1,3 @@
-package a
+package Atlas.a
 
-annotation class AcceptedAnnotations ()
+private annotation class AcceptedAnnotations ()

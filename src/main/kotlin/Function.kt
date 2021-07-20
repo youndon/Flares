@@ -69,7 +69,6 @@ inline fun myInlineFun(a:()->Unit,noinline b:()->Unit){}
 
 inline fun myInlineFunction(crossinline a:()->Unit){} // TODO: 10/06/2021 crossinline
 
-
 // external modifier.
 // If you need to access a class implemented in JavaScript from Kotlin in a typesafe way,
 // you can write a Kotlin declaration using the external modifier.

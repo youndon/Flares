@@ -1,9 +1,10 @@
-package c
+package Atlas.c
 
 import kotlin.Cloneable
 @Deprecated("don't have attachment!")
-class Cloneable {
+private class Cloneable {
     lateinit var cloneable: Cloneable
+
     init {
         cloneable
     }

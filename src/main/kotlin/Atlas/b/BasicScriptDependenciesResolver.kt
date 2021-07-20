@@ -1,7 +1,7 @@
-package b
+package Atlas.b
 
 @Deprecated("don't have attachment!")
-class BasicScriptDependenciesResolver {
+private class BasicScriptDependenciesResolver {
     lateinit var basicScriptDependenciesResolver: BasicScriptDependenciesResolver
     init {
         basicScriptDependenciesResolver

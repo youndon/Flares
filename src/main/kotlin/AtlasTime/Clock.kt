@@ -16,5 +16,4 @@ interface Clock {
             Clock::asTimeSource
         }
     }
-
 }

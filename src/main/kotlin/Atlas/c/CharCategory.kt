@@ -1,15 +1,14 @@
-@file:Suppress("CAST_NEVER_SUCCEEDS")
-
 package Atlas.c
 
 import kotlin.text.CharCategory
 
 private class CharCategory {
     var cc = 'A'.category
+
     /**
      * Represents the character general category in the Unicode specification.
      */
-     init {
+    init {
         cc.run {
             code // Must be two characters denotes about category name.
             value // TODO: 16.01.2021  
