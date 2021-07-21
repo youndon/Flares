@@ -93,7 +93,6 @@ private fun void() {
     LocalAutofillTree
     LocalClipboardManager
     LocalDensity
-    LocalDesktopPlatform
     LocalFocusManager
     LocalFontLoader
     LocalHapticFeedback
