@@ -78,5 +78,4 @@ private fun <T> void() {
     Icons
     LocalRippleTheme
     rememberRipple()
-    RippleTheme
 }

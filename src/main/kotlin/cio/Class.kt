@@ -34,5 +34,9 @@ private open class Class(): AbstractClass() , Interface {
     // semilar of inline function job, but in inline class you mast create only one variable param.
     @JvmInline
     value class InClass(val flo:Float)
+
+    // Anonymous Class.
+    private val anonymousClass = object:Any() {/*...*/ }
+
 }
 

@@ -5,4 +5,8 @@ package cio
 private object Object  {
 
     val str :String = "Anything!!"
+
+    // Anonymous Object.
+    private val anonymousObject = object {/*...*/}
+
 }
