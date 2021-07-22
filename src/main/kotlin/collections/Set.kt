@@ -11,9 +11,8 @@ fun mySet(){
           minus(1)
           minusElement(1)
     }
-
     // MutableSet.
-    val myMutableSet = set as MutableSet
+    mutableSetOf(1,2,2,3,4,14,10,5,6,7,8)
 
     // AbstractSet.
     val myAbstractSet = set as AbstractSet

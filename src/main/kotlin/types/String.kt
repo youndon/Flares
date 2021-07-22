@@ -167,10 +167,10 @@ val string = "\n-> next line," +
         }
         take(3) // Take numbers of the values, (n:3) -> str.
         takeLast(0) // Take from the last.
-        takeIf { it === "string" } // Returns this value if it satisfies the given predicate or null, if it doesn't.
-        takeUnless { it === "string" } // Returns this value if it _does not_ satisfy the given predicate or null, if it does.
-        takeWhile { it === 's' } // Returns a string containing the first characters that satisfy the given predicate.
-        takeLastWhile { it === 'g' } // Returns a string containing last characters that satisfy the given predicate.
+        takeIf { it == "string" } // Returns this value if it satisfies the given predicate or null, if it doesn't.
+        takeUnless { it == "string" } // Returns this value if it _does not_ satisfy the given predicate or null, if it does.
+        takeWhile { it == 's' } // Returns a string containing the first characters that satisfy the given predicate.
+        takeLastWhile { it == 'g' } // Returns a string containing last characters that satisfy the given predicate.
         trim() // Returns a string having leading and trailing whitespace removed.
         trimStart() // Returns a string having leading whitespace removed from the start.
         trimEnd() // Returns a string having leading whitespace removed from the End.

@@ -94,6 +94,6 @@ class Uncoding {
             return (las1 + las2)
         }
 
-       private fun ops() = println(ConsoleColor.Background.red("Ops! Something Wrong:("))
+       private fun ops() = println("Ops! Something Wrong:(".redBackground())
     }
 }

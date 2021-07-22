@@ -8,16 +8,16 @@ private fun some(){
     ss!=null
 
     // ?. ...
-    if (ss!=null) println("not null") // or do something.
+    if (ss!=null) print("not null") // or do something.
     // or
-    ss ?.let { println("not null") }
+    ss ?.let { print("not null") }
 
-    // ?:
-    if (ss==null) println("null!!") // or do something.
+    // ?: Elvis_Operator
+    if (ss==null) print("null!!") // or do something.
     // or
-    ss ?: println("null!!")
+    ss ?: print("null!!")
 
     //  ?. with ?:
-     ss ?.let { println("not null") } ?: println("null!!")
+     ss ?.let { print("not null") } ?: print("null!!")
 
 }

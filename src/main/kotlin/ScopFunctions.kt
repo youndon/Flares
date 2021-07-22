@@ -40,7 +40,7 @@ fun main() {
     Delegation(BaseImp("lalaland...")).printk()
 
     //
-    println(ww+"whatever..")
+    println(ww + "whatever..")
 
     /** [with] method. */
     val one = 10

@@ -1,6 +1,5 @@
 package collections
 
-
 import kotlin.collections.*
 
 @ExperimentalStdlibApi
@@ -77,7 +76,6 @@ private fun lists(){
         sortBy { it }
         sortWith { sec ,fir -> fir.compareTo(sec) } // compare between tow elements
         sortByDescending { it } // sort the list from the grand to the small
-
     }
 
     // ArrayList.
