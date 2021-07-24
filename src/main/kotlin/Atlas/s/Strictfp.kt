@@ -1,3 +1,3 @@
-package s
+package Atlas.s
 
-annotation class Strictfp ()
+annotation class Strictfp

@@ -58,8 +58,8 @@ private interface Iterable {
             this.filterIsInstanceTo(mutableListOf(""))
             this.filterTo(mutableListOf()) { it == it }
             this.filterNotTo(mutableListOf()) { it == it }
-            this.groupBy { it == 's' } //
             this.groupByTo(mutableMapOf(), { it }, { it }) //
+            this.groupBy { it == 's' } //
             this.groupingBy { it }.run {
                 /**@see Atlas.g.Grouping*/
             }
@@ -108,8 +108,8 @@ private interface Iterable {
             this.reduceIndexed { index, acc, c -> c }
             this.runningReduce { acc, c -> c }
             this.runningReduceIndexed { index, acc, c -> c }
-            this.scan("") { acc: String, c: Char -> "$acc*$c" } // [, *s, *s*t, *s*t*r, *s*t*r*i, *s*t*r*i*n, *s*t*r*i*n*g].
             this.scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
+            this.scan("") { acc: String, c: Char -> "$acc*$c" } // [, *s, *s*t, *s*t*r, *s*t*r*i, *s*t*r*i*n, *s*t*r*i*n*g].
             this.runningReduce { acc, c -> c }
             this.runningReduceIndexed { index, acc, c -> c }
             this.single { it == 't' } // Returns the single character if it was existing.
@@ -153,4 +153,6 @@ private interface Iterable {
             this.retainAll { it == it }
         }
     }
+    // So What's the different between Iterable and Sequence.
+    // -> Sequence are "processed" lazily, Iterable eagerly.
 }

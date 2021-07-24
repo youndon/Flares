@@ -79,7 +79,7 @@ private fun lists(){
     }
 
     // ArrayList.
-    arrayListOf<String?>().apply {
+    arrayListOf<String>().apply {
         trimToSize() // TODO: 26/06/2021
         ensureCapacity(1) // TODO: 26/06/2021
     }
