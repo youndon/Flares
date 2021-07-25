@@ -133,13 +133,13 @@ runBlocking {
 
 `nullsLast<String>()`  ...    ...  .    ....    ..
 
-`compareValues(1,2)` Comparator.
+`compareValues(1,2)` Comparative.
 
-`compareValuesBy(1,2,{it>it })`  Comparator.
+`compareValuesBy(1,2,{it>it })`  Comparative.
 
-`maxOf(0,0)`  Comparator.
+`maxOf(0,0)`  Comparative.
 
-`minOf(0,0)`  Comparator.
+`minOf(0,0)`  Comparative.
 
 ###kotlin.concurrent.*
 
@@ -175,7 +175,7 @@ runBlocking {
 
 ###kotlin.sequences.*
 
-`Atlas.s.Sequence{ iterator { yield("") }}`
+`Sequence{ iterator { yield("") }}`
 
 `sequenceOf("")`  Creates a sequence that returns the specified values.
 
