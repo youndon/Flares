@@ -76,8 +76,8 @@ val string = "\n-> next line," +
         encodeToByteArray().run{
             /**@see types.byteArr*/
         }
-        filter { it == 's' } // for get only 's' char from the text.
-        filterNot { it == 's' } // for get all the text except 's' char.
+        filter { it == 's' } // for get only "it" from the string.
+        filterNot { it == 's' } // for get all the text except "it".
         filterIndexed { index: Int, c: Char -> c == c + index }
         filterIndexedTo(StringBuilder("")) { index, c -> c == c + index }
         format() /**@see AtlasJ.JFormat*/
@@ -100,7 +100,6 @@ val string = "\n-> next line," +
         prependIndent() //  Prepends indent to every line of the original string.
         uppercase() // Making All the String as capital.
         reader().run {
-
         }
         regionMatches(0, "string", 0, 6) // Returns true if the specified range in this string is equal to the specified range in another string.
         replace('s', '*', false) // *tring
@@ -136,7 +135,7 @@ val string = "\n-> next line," +
         }
         toBooleanStrict() // TODO: 18/07/2021
         toBooleanStrictOrNull() // TODO: 18/07/2021
-        toBigDecimal() //         Parses the string as a java.math.BigDecimal number and returns the result.
+        toBigDecimal() // Parses the string as a java.math.BigDecimal number and returns the result.
         toBigDecimalOrNull() //  or null if the string is not a valid.
         toBigInteger() //         ⎫
         toBigIntegerOrNull() //   ⎪
@@ -163,7 +162,7 @@ val string = "\n-> next line," +
             /**@see AtlasJ.JPattern*/
         }
         toRegex().run {
-            /* RegularExpression.kt */
+            /** @see RegularExpression.kt */
         }
         take(3) // Take numbers of the values, (n:3) -> str.
         takeLast(0) // Take from the last.

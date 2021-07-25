@@ -1,4 +1,3 @@
-
 lateinit var regex: Regex
 
 fun regularExpressionFun() {
