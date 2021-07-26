@@ -1,7 +1,11 @@
+import kotlin.coroutines.coroutineContext
 import kotlin.reflect.typeOf
 
 fun main() {
 
+    val dd = "0123456".asIterable()
+    dd.plus(8)
+    println(dd)
 
 }
 

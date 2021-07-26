@@ -9,6 +9,10 @@ private interface Sequence {
     /**
      * A sequence that returns values through its iterator.
      * The values are evaluated lazily, and the sequence is potentially infinite.
+     * Most Sequence members is familiar wit iterable, so you can go back to Iterable to find
+     * the descriptions of the members, except constrainOnce() and ifEmpty(),
+     * So Then What's the different between Iterable and Sequence.
+          -> Sequence are "processed" lazily, Iterable eagerly.
      */
 
    private suspend fun SequenceScope<Int>.mySequence() {
@@ -41,6 +45,8 @@ private interface Sequence {
             findLast { it == 's' }
             flatMap { this }
             flatMapTo(mutableListOf()) { this }
+            flatMapIndexed { index: Int, c: Char -> this }
+            flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> this }
             forEach { print(it) }
             forEachIndexed { index, any -> }
             fold("") { acc, any -> acc + any }
@@ -91,7 +97,7 @@ private interface Sequence {
             runningReduceIndexed { index, acc, c -> c }
             single { it == it }
             singleOrNull()
-//          sumOf<T> { 1 } // TODO: 25/05/2021
+//          sumOf<T> { 1 }
             sortedBy { null }
             sortedByDescending { null }
             plus('z')

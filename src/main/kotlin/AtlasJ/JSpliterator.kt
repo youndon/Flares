@@ -30,7 +30,7 @@ class JSpliterator {
             this.tryAdvance(Consumer { })
             this.exactSizeIfKnown
             this.comparator.run {
-                /* orchid.c.comparator */
+                /*  */
             }
         }
 

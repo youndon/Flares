@@ -31,9 +31,8 @@ private interface Iterable {
             chunked(2) { it == it } // Splits this collection into several lists
             contains('s') // check if the text has specific char or CharSequence.
             count { it == 's' } // count the size of "it".
-
-            this.distinct() // TODO Returns a list containing only distinct elements from the given collection.
-            this.distinctBy { } // TODO
+            distinct() //  Return Set containing.
+            distinctBy { }
             elementAt(0) // return the element of index.
             elementAtOrElse(2) { 'z' } // , or 'z' if the index is out of bounds of this collection.
             elementAtOrNull(2) //, or null if the index is out of bounds of this collection.
@@ -44,20 +43,21 @@ private interface Iterable {
             find { it == 's' } // to find and get "it" from the text if it existing, or null if wasn't.
             findLast { it == 's' }
             this.flatMap { listOf('z') }
-            this.flatMapTo(mutableListOf()) { listOf('z') } //
+            this.flatMapTo(mutableListOf()) { listOf('z') }
+            this.flatMapIndexed { index: Int, c: Char -> sequenceOf(this) }
+            this.flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> sequenceOf(this) }
             forEach { print(it) }
-            this.forEachIndexed { index, any -> println("$index; $any") }
-            this.fold("") { acc, any -> acc + any } //
-            this.foldIndexed("") { index, acc, any -> acc + any + index }
+            forEachIndexed { index, any -> println("$index; $any") }
+            fold("") { acc, any -> acc + any } // Accumulates value starting with initial value and applying operation from left to right to current accumulator value and each element.
+            foldIndexed("") { index, acc, any -> acc + any + index }
             filter { it == 's' } // for get only "it" from the string.
             filterNot { it == 's' } // for get all the text except "it".
             filterIndexed { index, it -> it == it } // filter with index.
-            filterIndexedTo(mutableListOf()) { index, it -> it == it }
-            this.filterIsInstanceTo(mutableListOf(""))
-            this.filterTo(mutableListOf()) { it == it }
-            this.filterNotTo(mutableListOf()) { it == it }
-            this.groupByTo(mutableMapOf(), { it }, { it }) //
+            filterTo(mutableListOf()) { it == it } // filter to destination.
+            filterIndexedTo(mutableListOf()) { index, it -> it == it } // filter to destination with index.
+            filterNotTo(mutableListOf()) { it == it } // filter not to te destination.
             this.groupBy { it == 's' } //
+            this.groupByTo(mutableMapOf(), { it }, { it }) //
             this.groupingBy { it }.run {
                 /**@see Atlas.g.Grouping*/
             }
@@ -89,20 +89,22 @@ private interface Iterable {
             this.minusElement('z')
             none { it == 'z' } // return true if the char not existing in the string.
             this.onEach { println(it) }
-            this.reduce { acc, c -> c }
-            this.reduceOrNull { acc, c -> c }
-            this.reduceIndexed { index, acc, c -> c }
+            reduce { acc, c -> c } // Accumulates value starting with the first element and applying operation from left to right
+                                        // to current accumulator value and each element.
+                                        // And te only different between reduce and fold is fold has initial value and reduce don't.
+            reduceOrNull { acc, c -> c } // , Or null if the collection is empty.
+            reduceIndexed { index, acc, c -> c }
             this.runningReduce { acc, c -> c }
-            this.runningReduceIndexed { index, acc, c -> c }
+            runningReduceIndexed { index, acc, c -> c }
             this.scan("") { acc: String, c: Char -> "$acc*$c" } // [, *s, *s*t, *s*t*r, *s*t*r*i, *s*t*r*i*n, *s*t*r*i*n*g].
-            this.scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
+            scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
             single { it == 't' } // Returns the single element if existing, or throw exception.
             singleOrNull() // , or null if not exist.
 //            this.sumOf { c: Char -> c } // TODO: 25/05/2021
-            this.sortedBy { it }
-            this.sortedByDescending { it }
-            this.plus('z')
-            this.plusElement('z')
+            sortedBy{ it } // Return 'it' in the last of this sequence.
+            sortedByDescending { it==it } // Returns a list of all elements sorted descending according to natural sort order of the value returned by specified selector function.
+            plus('*') // Returns a list containing and then the given element.
+            plusElement('*')
             toCollection(mutableListOf<Any>()).run {
                 /**@see collections.lists*/
             }
@@ -138,6 +140,5 @@ private interface Iterable {
             this.retainAll { it == it }
         }
     }
-    // So What's the different between Iterable and Sequence.
-    // -> Sequence are "processed" lazily, Iterable eagerly.
+
 }

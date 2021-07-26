@@ -30,7 +30,7 @@ fun myArray(){
         union(arrayListOf()) // Returns a set containing all distinct elements from both collections.
         intersect(arrayListOf()) // Returns a set containing all elements that are contained by both this array and the specified collection.
         subtract(arrayListOf()) // Returns a set containing all elements that are contained by this array and not contained by the specified collection.
-        filterIsInstance<Char>() // Returns a list containing all elements that are instances of specified class, this normally work in shuffled collection, when you need to return specified only type.
+        filterIsInstance<Char>() // Returns a list containing all elements that are instances of specified class, this normally work in shuffled collection.
         filterIsInstanceTo(mutableListOf('1','2','3')) // Appends all elements that are instances of specified class to the given destination -> [1,2,3,a,b,c,d,e,f,...] // note:the elements that happens is supposed to be as same type.
         distinct() // Return Set containing.
         distinctBy {it.lowercase()}
