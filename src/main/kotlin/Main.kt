@@ -3,10 +3,9 @@ import kotlin.reflect.typeOf
 
 fun main() {
 
-    val dd = "0123456".asIterable()
-    dd.plus(8)
-    println(dd)
-
+    println(
+        "Argentina".groupByTo(mutableMapOf() ,{ it }, { it.code })
+    )
 }
 
 

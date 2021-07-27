@@ -16,9 +16,6 @@ import java.util.*
 
  val str = String.CASE_INSENSITIVE_ORDER // TODO A Comparator that orders strings ignoring character case.
 
-@Suppress("UNREACHABLE_CODE")
-@ExperimentalUnsignedTypes
-@ExperimentalStdlibApi
 private fun some(){
     //
     """..."""

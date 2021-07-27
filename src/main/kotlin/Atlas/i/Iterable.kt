@@ -1,3 +1,5 @@
+@file:Suppress("UselessCallOnCollection")
+
 package Atlas.i
 
 import jetbrains.datalore.base.json.containsString
@@ -15,80 +17,77 @@ private interface Iterable {
      */
     private fun myIterable() {
         "Argentina".asIterable().apply {
-            all { it == 's' } // check each index equal some specific value.
-            any { it == 's' } // check if some value existing in any index.
+            all { it == 'g' } // check each index equal some specific value.
+            any { it == 'g' } // check if some value existing in any index.
             asSequence().run {
                 /**@see Atlas.s.Sequence */
             }
-            associateWith { it }.run {
-                /** @see collections.maps*/
-            }
-            this.associateBy { Pair(it, it) } //
-            this.associateWithTo(mutableMapOf()) { it } //
-            this.associateByTo(mutableMapOf()) { any -> any }
-            this.associateWith { any -> any } //
-            this.associateWithTo(mutableMapOf()) { any -> any } //
-            chunked(2) { it == it } // Splits this collection into several lists
-            contains('s') // check if the text has specific char or CharSequence.
-            count { it == 's' } // count the size of "it".
+            associate { it to it.code } // {A=65, r=114, g=103, e=101 ...}
+            associateBy { it.code } // {65=A, 114=r, 103=g, 101=e, ...}
+            associateByTo(mutableMapOf()) { it.code }
+            associateWith { it.code } // {A=65, r=114, g=103, e=101,... }
+            associateWithTo(mutableMapOf()) { it }
+            chunked(2) { it } // Splits this collection into several lists
+            contains('n') // check if the text has specific char or CharSequence.
+            count { it == 'n' } // count the size of "it".
             distinct() //  Return Set containing.
             distinctBy { }
             elementAt(0) // return the element of index.
-            elementAtOrElse(2) { 'z' } // , or 'z' if the index is out of bounds of this collection.
+            elementAtOrElse(2) { 't' } // , or 'z' if the index is out of bounds of this collection.
             elementAtOrNull(2) //, or null if the index is out of bounds of this collection.
             first() // to get first index.
             firstOrNull() // to get first index or null.
             firstNotNullOf { it=='t' } // to get first index of "it".
             firstNotNullOfOrNull { it=='t' } //  or null if no non-null value was produced.
-            find { it == 's' } // to find and get "it" from the text if it existing, or null if wasn't.
-            findLast { it == 's' }
-            this.flatMap { listOf('z') }
-            this.flatMapTo(mutableListOf()) { listOf('z') }
+            find { it == 'g' } // to find and get "it" from the text if it existing, or null if wasn't.
+            findLast { it == 'g' }
+            this.flatMap { listOf('n') }
+            this.flatMapTo(mutableListOf()) { listOf('n') }
             this.flatMapIndexed { index: Int, c: Char -> sequenceOf(this) }
             this.flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> sequenceOf(this) }
             forEach { print(it) }
             forEachIndexed { index, any -> println("$index; $any") }
             fold("") { acc, any -> acc + any } // Accumulates value starting with initial value and applying operation from left to right to current accumulator value and each element.
             foldIndexed("") { index, acc, any -> acc + any + index }
-            filter { it == 's' } // for get only "it" from the string.
-            filterNot { it == 's' } // for get all the text except "it".
+            filter { it == 'g' } // for get only "it" from the string.
+            filterNot { it == 'g' } // for get all the text except "it".
             filterIndexed { index, it -> it == it } // filter with index.
             filterTo(mutableListOf()) { it == it } // filter to destination.
             filterIndexedTo(mutableListOf()) { index, it -> it == it } // filter to destination with index.
             filterNotTo(mutableListOf()) { it == it } // filter not to te destination.
-            this.groupBy { it == 's' } //
-            this.groupByTo(mutableMapOf(), { it }, { it }) //
-            this.groupingBy { it }.run {
+            groupBy { it.isUpperCase()  } // {true=[A], false=[r, g, e, n, t, i, n, a]}
+            groupByTo(mutableMapOf(), { it }, { it.code }) // {A=[65], r=[114], g=[103], e=[101],.. }
+            groupingBy { it }.run {
                 /**@see Atlas.g.Grouping*/
             }
             indexOf('s') // return index of char 's'.
-            indexOfFirst { it == 's' }
+            indexOfFirst { it == 'g' }
             indexOfLast { it == 'g' }
             iterator().run {
-                /**@see Atlas.i.Iterator*/
+                /**@see Atlas.i.Iter    ator*/
             }
-            joinTo(StringBuilder("")) //
-            joinToString()
+            joinTo(StringBuffer("B "),"-", "<", ">", 5, "..!") // <B a-b-c-d-e-..!>
+            joinToString("-", "<", ">", 5, "..!") // <a-b-c-d-e-..!>
             last() // last index value.
             lastOrNull() // , if is empty return null.
             lastIndexOf('t') //  last index of the element.
-            this.map { '*' } // [*, *, *, *, *, *]
-            this.mapTo(mutableListOf()) { '*' } // [*, *, *, *, *, *]
-            this.mapNotNull { '*' } // [*, *, *, *, *, *], if {null}==[].
-            this.mapNotNullTo(mutableListOf()) { '*' } // [*, *, *, *, *, *], if {null}==[].
-            this.mapIndexed { index, any -> any;index } //
-            this.mapIndexedNotNull { index, any -> any; index } //
-            this.mapIndexedNotNullTo(mutableListOf()) { index, any -> any; index } //
-            this.maxOrNull() // return max value.
-            this.maxByOrNull { it.isLowerCase() }
-            this.maxWithOrNull { t, t2 -> t.compareTo(t2) }
-            this.minOrNull() // return min value.
-            this.minByOrNull { it.isLowerCase() }
-            this.minWithOrNull { t, t2 -> t.compareTo(t2) }
-            this.minus('z')
-            this.minusElement('z')
+            map { it.code } // [65, 114, 103, 101, 110,... ]
+            mapTo(mutableListOf()) { }
+            mapNotNull { } // Returns a list containing only the non-null.
+            mapNotNullTo(mutableListOf()) { }
+            mapIndexed { index, any -> any;index } // map with indexed.
+            mapIndexedNotNull { index, any -> any; index }
+            mapIndexedNotNullTo(mutableListOf()) { index, any -> any; index }
+            maxOrNull() // return max value or null if there are no elements.
+            maxByOrNull { it.isLowerCase() }
+            this.maxWithOrNull { t, t2 -> t.compareTo(t2) } // FIXME: 27/07/2021
+            minOrNull() // return min value or null if there are no elements.
+            minByOrNull { it.isLowerCase() }
+            this.minWithOrNull { t, t2 -> t.compareTo(t2) } // FIXME: 27/07/2021
+            minus('z')
+            minusElement('z')
             none { it == 'z' } // return true if the char not existing in the string.
-            this.onEach { println(it) }
+            onEach { println(it) }
             reduce { acc, c -> c } // Accumulates value starting with the first element and applying operation from left to right
                                         // to current accumulator value and each element.
                                         // And te only different between reduce and fold is fold has initial value and reduce don't.
@@ -105,7 +104,7 @@ private interface Iterable {
             sortedByDescending { it==it } // Returns a list of all elements sorted descending according to natural sort order of the value returned by specified selector function.
             plus('*') // Returns a list containing and then the given element.
             plusElement('*')
-            toCollection(mutableListOf<Any>()).run {
+            toCollection(mutableListOf()).run {
                 /**@see collections.lists*/
             }
             toHashSet() // Returns a new HashSet of all elements.
@@ -118,11 +117,11 @@ private interface Iterable {
             toMutableSet() // Returns a new MutableSet.
             windowed(3) // [str, tri, rin, ing].
             withIndex() // Returns a lazy Iterable that wraps each element with his index.
-            this.zip(listOf('1', '2', '3')).run {
+            this.zip("123".toList()).run {
                 /**@see collections.lists*/
             } // [(s, 1), (t, 2), (r, 3)]
             shuffled() // Returns a new list with the elements of this list randomly shuffled.
-            this.partition { it == 't' } // TODO
+            this.partition { it == 'g' } // TODO
             this.zipWithNext { a: Char, b: Char -> "$a$b" } // [st, tr, ri, in, ng]
 
             // special for iterator.

@@ -21,10 +21,16 @@ private interface Sequence {
         yieldAll(sequence { })
 
         "Madagascar".asSequence().apply {
+
+            // special for sequence.
+            this.ifEmpty { sequence { } } // TODO: 25/07/2021
+            this.constrainOnce()  // TODO Returns a wrapper sequence that provides values of this sequence, but ensures it can be iterated only one time.
+
             all { it == it }
             any { it == it }
-            asIterable()
-            asSequence()
+            asIterable().run {
+                /** @see Atlas.i.Iterable */
+            }
             associateBy { Pair(it, it) }
             associateWith { it }
             associateByTo(mutableMapOf()) { any -> any }
@@ -117,10 +123,6 @@ private interface Sequence {
             }
             zipWithNext { a: Char, b: Char -> a + "" + b }
             shuffled()
-
-            // special for sequence.
-            this.ifEmpty { sequence { } } // TODO: 25/07/2021
-            this.constrainOnce()  // TODO Returns a wrapper sequence that provides values of this sequence, but ensures it can be iterated only one time.
         }
     }
 }

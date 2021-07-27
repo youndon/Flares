@@ -1,4 +1,4 @@
-package t
+package Atlas.t
 
 import kotlin.time.Duration
 import kotlin.time.ExperimentalTime

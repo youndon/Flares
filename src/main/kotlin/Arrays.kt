@@ -10,11 +10,11 @@ fun myArray(){
     // Array Attachment.
     with(myArray) {
         component1() // Returns 1st element from the array.
-        component2() //   ...   2nd   ...    ...  ..  ...
-        component3() //   ...   3rd   ...    ...  ..  ...
-        component4() //   ...   4th   ...    ...  ..  ...
-        component5() //   ...   5th   ...    ...  ..  ...
-        binarySearch('c') //
+        component2()
+        component3()
+        component4()
+        component5()
+        binarySearch('.') // Searches this Array for the provided [element] using the binary search algorithm.
         contentEquals(arrayOf()) // Returns true if the two specified arrays are structurally equal to one another,
         contentDeepEquals(arrayOf()) // Returns true if the two specified arrays are deeply equal to one another,
         contentHashCode() // Returns a hash code based on the orchid.contents of this array as if it is List.

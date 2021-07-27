@@ -15,7 +15,6 @@ interface KProperty {
             this.javaGetter
         }
        val acc : KProperty.Accessor<Int>
-
        val gett : KProperty.Getter<Int>
     }
 }

@@ -12,7 +12,7 @@ interface KClass {
             this.isAbstract // abstract class.
             this.isCompanion // companion object.
             this.isData // data class.
-            this.isOpen // mean can inheritance or overriding this class.
+            this.isOpen // open class.
             this.isFinal // mean can't inheritance or overriding this class.
             this.isInner // inner class.
             this.isSealed // sealed class.
