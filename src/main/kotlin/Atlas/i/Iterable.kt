@@ -41,10 +41,10 @@ private interface Iterable {
             firstNotNullOfOrNull { it=='t' } //  or null if no non-null value was produced.
             find { it == 'g' } // to find and get "it" from the text if it existing, or null if wasn't.
             findLast { it == 'g' }
-            this.flatMap { sequenceOf(this) }
-            flatMapTo(mutableListOf()) { sequenceOf(this) }
-            this.flatMapIndexed { index: Int, c: Char -> sequenceOf(this) }
-            flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> sequenceOf(this) }
+            flatMap { "123".asSequence() } // is usually useful for flattening one-to-many relationships, [1,2,3,1,2,3,1,2,3...].
+            flatMapTo(mutableListOf()) { "".asSequence() }
+            flatMapIndexed { index: Int, c: Char -> "".asSequence() }
+            flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> "".asSequence() }
             forEach { print(it) }
             forEachIndexed { index, any -> println("$index; $any") }
             fold("") { acc, any -> acc + any } // Accumulates value starting with initial value and applying operation from left to right to current accumulator value and each element.
@@ -120,7 +120,7 @@ private interface Iterable {
             withIndex() // Returns a lazy Iterable that wraps each element with his index.
             zip("123".toList()) // Returns a list of pairs built from the elements of this collection and other collection with the same index.
             shuffled() // Returns a new list with the elements of this list randomly shuffled.
-            partition { it == 'g' } // Splits the original collection into pair of lists,cbf
+            partition { it == 'g' } // Splits the original collection into a pair of lists,cbf
             zipWithNext { a: Char, b: Char -> "$a$b" } // Return list has all operations between each two elements.
 
             // special for iterator.
@@ -134,8 +134,8 @@ private interface Iterable {
         listOf(1,2,3,4,5,6,7,8,9).asIterable().average() // Returns an average value of elements in the collection.
 
         mutableIterable.run {
-            this.removeAll { it == it }
-            this.retainAll { it == it }
+            this.removeAll { it == ".." }
+            this.retainAll { it == ".." }
         }
     }
 

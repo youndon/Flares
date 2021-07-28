@@ -3,16 +3,8 @@ import kotlin.contracts.contract
 import kotlin.coroutines.coroutineContext
 import kotlin.reflect.typeOf
 
-@OptIn(ExperimentalContracts::class)
 fun main() {
 
-    val ss = sequence{
-        yield(1)
-        yieldAll(sequenceOf(1,2,3,4,5,5,68,7,9,0))
-    }
-    iterator {
-        yield(2)
-    }
 
 }
 
