@@ -10,13 +10,7 @@
 `with("") {}` see Blocks.kt 
 
 ```kotlin
-Comparator<Any> { a,b  -> 
-      when {
-        (a == null && b == null) -> 0
-        (a == null) -> -1
-        else -> 1
-    }
-}
+Comparator<Any> { a,b  -> a.compareTo(b) }
 ```
 
 `TODO("")` mean it's not implemented.
@@ -105,7 +99,7 @@ runBlocking {
 Iterable{ iterator {
     
 yield(0) // We can say it's the initializer of SequenceScope bloc, for one value.
-yieldAll(0..10) // this one for ranges values.
+yieldAll(0..10) // this one for ranges values or seqquen
      }
  }
  ```
@@ -225,13 +219,10 @@ in the console:
 ###kotlin.contracts.*
 
 ```kotlin
-@ExperimentalContracts
-
 private fun contractOnce() {
     contract { 
         returns() 
     }
-
 }
 ```
 

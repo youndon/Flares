@@ -41,14 +41,16 @@ private interface Iterable {
             firstNotNullOfOrNull { it=='t' } //  or null if no non-null value was produced.
             find { it == 'g' } // to find and get "it" from the text if it existing, or null if wasn't.
             findLast { it == 'g' }
-            this.flatMap { listOf('n') }
-            this.flatMapTo(mutableListOf()) { listOf('n') }
+            this.flatMap { sequenceOf(this) }
+            flatMapTo(mutableListOf()) { sequenceOf(this) }
             this.flatMapIndexed { index: Int, c: Char -> sequenceOf(this) }
-            this.flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> sequenceOf(this) }
+            flatMapIndexedTo(mutableListOf()) { index: Int, c: Char -> sequenceOf(this) }
             forEach { print(it) }
             forEachIndexed { index, any -> println("$index; $any") }
             fold("") { acc, any -> acc + any } // Accumulates value starting with initial value and applying operation from left to right to current accumulator value and each element.
             foldIndexed("") { index, acc, any -> acc + any + index }
+            runningFold(""){acc, c -> c + acc } // return a list has every result operation between two values.
+            runningFoldIndexed(""){index, acc, c -> c+acc+index }
             filter { it == 'g' } // for get only "it" from the string.
             filterNot { it == 'g' } // for get all the text except "it".
             filterIndexed { index, it -> it == it } // filter with index.
@@ -87,19 +89,18 @@ private interface Iterable {
             minus('z')
             minusElement('z')
             none { it == 'z' } // return true if the char not existing in the string.
-            onEach { println(it) }
             reduce { acc, c -> c } // Accumulates value starting with the first element and applying operation from left to right
-                                        // to current accumulator value and each element.
+                                     // to current accumulator value and each element.
                                         // And te only different between reduce and fold is fold has initial value and reduce don't.
             reduceOrNull { acc, c -> c } // , Or null if the collection is empty.
             reduceIndexed { index, acc, c -> c }
-            this.runningReduce { acc, c -> c }
+            runningReduce { acc, c -> c } // return a list has result every step operation between the accumulator and element.
             runningReduceIndexed { index, acc, c -> c }
-            this.scan("") { acc: String, c: Char -> "$acc*$c" } // [, *s, *s*t, *s*t*r, *s*t*r*i, *s*t*r*i*n, *s*t*r*i*n*g].
-            scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
+            scan("") { acc, c -> c + acc } // Similar to foldrunning().
+            scanIndexed("") { index, acc, c -> acc + c + index }
             single { it == 't' } // Returns the single element if existing, or throw exception.
             singleOrNull() // , or null if not exist.
-//            this.sumOf { c: Char -> c } // TODO: 25/05/2021
+            sumOf { it.code } // sum all elements in the iterable by "it".
             sortedBy{ it } // Return 'it' in the last of this sequence.
             sortedByDescending { it==it } // Returns a list of all elements sorted descending according to natural sort order of the value returned by specified selector function.
             plus('*') // Returns a list containing and then the given element.
@@ -117,12 +118,10 @@ private interface Iterable {
             toMutableSet() // Returns a new MutableSet.
             windowed(3) // [str, tri, rin, ing].
             withIndex() // Returns a lazy Iterable that wraps each element with his index.
-            this.zip("123".toList()).run {
-                /**@see collections.lists*/
-            } // [(s, 1), (t, 2), (r, 3)]
+            zip("123".toList()) // Returns a list of pairs built from the elements of this collection and other collection with the same index.
             shuffled() // Returns a new list with the elements of this list randomly shuffled.
-            this.partition { it == 'g' } // TODO
-            this.zipWithNext { a: Char, b: Char -> "$a$b" } // [st, tr, ri, in, ng]
+            partition { it == 'g' } // Splits the original collection into pair of lists,cbf
+            zipWithNext { a: Char, b: Char -> "$a$b" } // Return list has all operations between each two elements.
 
             // special for iterator.
             union("...".asIterable()) // Returns a set containing all distinct elements from both collections.

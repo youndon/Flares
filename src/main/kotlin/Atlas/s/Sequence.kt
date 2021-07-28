@@ -15,17 +15,17 @@ private interface Sequence {
           -> Sequence are "processed" lazily, Iterable eagerly.
      */
 
-   private suspend fun SequenceScope<Int>.mySequence() {
-
-        yield(10)
-        yieldAll(sequence { })
+   private fun mySequence() {
 
         "Madagascar".asSequence().apply {
 
             // special for sequence.
-            this.ifEmpty { sequence { } } // TODO: 25/07/2021
-            this.constrainOnce()  // TODO Returns a wrapper sequence that provides values of this sequence, but ensures it can be iterated only one time.
+            ifEmpty { sequenceOf() } // when this sequence be empty, performed the default function that's must be Sequence type.
+            this.constrainOnce()  // TODO: 28/07/2021
+            onEach { println(it) } // performs the given action on each element and returns the collection itself afterward.
+            onEachIndexed { index, c ->  }
 
+            //
             all { it == it }
             any { it == it }
             asIterable().run {
@@ -93,17 +93,16 @@ private interface Sequence {
             minus('z')
             minusElement('z')
             none { c: Char -> c == 'z' }
-            onEach { println(it) }
             reduce { acc, c -> acc }
             reduceOrNull { acc, c -> c }
             reduceIndexed { index, acc, c -> c }
-            scan("") { acc: String, c: Char -> "$acc*$c" }
-            scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
+            scan("") { acc: String, c: Char -> c+acc }
+            scanIndexed("") { index, acc, c -> c+acc+index }
             runningReduce { acc, c -> c }
             runningReduceIndexed { index, acc, c -> c }
             single { it == it }
             singleOrNull()
-//          sumOf<T> { 1 }
+            sumOf { it.code }
             sortedBy { null }
             sortedByDescending { null }
             plus('z')
