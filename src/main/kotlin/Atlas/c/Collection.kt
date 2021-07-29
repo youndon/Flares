@@ -2,10 +2,11 @@ package Atlas.c
 
 import kotlin.collections.Collection
 
+
 private interface Collection {
-     var mutableCollection: MutableCollection<Char>
-     var matchNamedGroupCollection: MatchNamedGroupCollection
-     var matchGroupCollection: MatchGroupCollection
+    var mutableCollection: MutableCollection<Char>
+    var matchNamedGroupCollection: MatchNamedGroupCollection
+    var matchGroupCollection: MatchGroupCollection
 
     /**
      * A generic collection of elements.
@@ -14,22 +15,20 @@ private interface Collection {
      * @param E the type of elements contained in the collection.
      * The collection is covariant on its element type.
      */
-    @ExperimentalStdlibApi
-    fun <E>myCollection() {
-        val collection :Collection<Char> = listOf('a','b')
-
+    fun <E> myCollection() {
+        val collection: Collection<Int> = listOf()
         with(collection) {
             this.size
             this.indices
             this.parallelStream()
             this.stream()
-            this.contains('z')
+            this.contains(0)
             this.containsAll(listOf())
             this.isEmpty()
             this.isNotEmpty()
-            this.count()
-            this.plus('z')
-            this.plusElement('z')
+            count { it == 0 } // count the size of "it".
+            plus(0) // Returns an array containing all elements of the original array and then all elements of the given elements array.
+            plusElement(3) // Returns an array containing all elements of the original array and then the given element.
             this.random()
             this.randomOrNull()
             this.toMutableList()
@@ -46,7 +45,7 @@ private interface Collection {
             this.retainAll(listOf())
             this.clear()
         }
-        matchGroupCollection[1]
-        matchNamedGroupCollection[""]
+        matchGroupCollection
+        matchNamedGroupCollection
     }
 }

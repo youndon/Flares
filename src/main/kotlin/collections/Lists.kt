@@ -3,9 +3,9 @@ package collections
 import kotlin.collections.*
 
 @ExperimentalStdlibApi
-private fun lists(){
-    // List. read-only.
-    listOf(0,1,2,3,4,5,6,7,8,9).apply {
+private fun lists() {
+
+    (0..9).toList().apply {
         listIterator().run {
             /**@see Atlas.i.Iterator*/
         }
@@ -52,13 +52,10 @@ private fun lists(){
         slice(0..6) // Returns a list containing elements at indices in the specified indices range.
         foldRight(""){i, acc -> acc } // Accumulates value starting with initial value and applying operation from right to left to each element and current accumulator value, or return initial vale if this collection is empty (this why we haven't foldRightOrNull() fun like reduce).
         foldRightIndexed(""){index, i, acc -> acc } // In here we get index with each element.
-        /** So what is the main different between fold and reduce then
-         * */
     }
 
-    // MutableList. read-write.
-    mutableListOf<String>().apply {
-        add("") // add specified element to the collection.
+    (0..9).toMutableList().apply {
+        add(0) // add specified element to the collection.
         addAll(listOf()) // add specified collection to this collection.
         removeAll{ true } // remove specific collection from this collection.
         removeAt(1) // remove a element at specific index.
@@ -66,11 +63,11 @@ private fun lists(){
         removeFirstOrNull() // like removeFirst(),or returns `null` if this list is empty.
         removeLast() // remove the last element in the list.
         removeLastOrNull() // ..., or null
-        retainAll{it == "..."} // true if none element equals it, false if any element equals it.
-        this.replaceAll {it} // TODO: 26/06/2021
+        retainAll{it == 6} // true if none element equals it, false if any element equals it.
+        replaceAll { it } // FIXME: 29/07/2021
         asReversed() // Returns a reversed mutable view of the original mutable List.
         reverse() // Reverses elements in the list in-place.
-        fill("...") // Fills the list with the provided value. Each element in the list gets replaced with the value.
+        fill(3) // Fills the list with the provided value. Each element in the list gets replaced with the value.
         shuffle() // Randomly shuffles elements in this mutable list.
         sort() // Sorts elements in the list in-place according to their natural sort order.
         sortBy { it }

@@ -1,14 +1,10 @@
 
-@ExperimentalStdlibApi
-fun myArray(){
-    // Array.read-only.
-    val myArray0:Array<in Char> = Array(3){'s'}
-    myArray0[0]='a' ; myArray0[1]='b' ; myArray0[2]='c'
+private fun arr(){
 
-    // arrayOf.read-only.
-    val myArray = ('a'..'z').toList().toTypedArray()
-    // Array Attachment.
-    with(myArray) {
+    val arr = Array(3){'s'}
+    arr[0]='a' ; arr[1]='b' ; arr[2]='c'
+
+    arr.apply {
         component1() // Returns 1st element from the array.
         component2()
         component3()

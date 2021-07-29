@@ -49,11 +49,11 @@ val string = "\n-> next line," +
    // String Attachment:
     with(string) {
         byteInputStream().run {
-        } // -> .JStream.kt
+        }
         chars().run {
             /**@see AtlasJ.JStream.intStream*/
-        } // -> .JStream.kt
-        compareTo("string") // Compare by size indexes.
+        }
+        compareTo("string") // Compare by the size.
         codePoints().run {
             /**@see AtlasJ.JStream.intStream*/
         }
@@ -90,10 +90,10 @@ val string = "\n-> next line," +
         length // Index size.
         orEmpty() // Returns the string if it is not null, or the empty string otherwise.
         offsetByCodePoints(0, 3) // TODO: Returns the index within this String that is offset from the given index by codePointOffset code points. Unpaired surrogates within the text range given by index and codePointOffset count as one code point each.
-        plus("value") // Add "value" from the end.
+        plus("value") // return this string with that value plus.
         padEnd(1, '*') // *string.
         padStart(1, '*') // string*
-        partition { true } // Splits the original string into pair of strings, {true}==(string, ), {false}== ( ,string).
+        partition { true } // Splits the original string into a pair of strings, {true}==(string, ), {false}== ( ,string).
         prependIndent() //  Prepends indent to every line of the original string.
         uppercase() // Making All the String as capital.
         reader().run {
@@ -114,7 +114,7 @@ val string = "\n-> next line," +
         removeSurrounding("st", "ng") // -> ri.
         removeRange(0..3) // -> ng.
         rangeTo("other") // string..other.
-        runCatching { /**@see Blocks*/ }
+        runCatching {  } // TODO: 29/07/2021
         reversed() // -> return all the text as reversed.
         slice(0..2) // -> str
         startsWith("") // Returns true if this string starts with the specified prefix.
