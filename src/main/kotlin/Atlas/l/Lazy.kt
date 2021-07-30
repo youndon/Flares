@@ -1,13 +1,10 @@
-@file:Suppress("UNREACHABLE_CODE")
-
-package l
+package Atlas.l
 
 import kotlin.Lazy
 
-interface Lazy {
-     var lazy:Lazy<Int>
-    fun main(){
-        lazy.run {
+private interface Lazy {
+   companion object{
+       private val <E> Lazy<E>.laz get() = this.apply {
             this.value
             this.isInitialized()
 //            this.getValue(1,KProperty<*>) // TODO

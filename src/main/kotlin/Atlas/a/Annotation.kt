@@ -1,8 +1,8 @@
-package a
+package Atlas.a
 
 import kotlin.Annotation
 @Deprecated("don't have attachment!")
-interface Annotation {
+private interface Annotation {
      var annotation: Annotation
      fun main(){
         annotation

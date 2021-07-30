@@ -12,13 +12,7 @@ private class Duration {
 
         duration.INFINITE.run {
             this.absoluteValue // Returns the absolute value.
-            this.toDouble(DurationUnit.NANOSECONDS) // How much Nano's in the duration
-            this.toDouble(DurationUnit.MICROSECONDS) // How much Micro's in the duration
-            this.toDouble(DurationUnit.MILLISECONDS) // How much Milli's in the duration
-            this.toDouble(DurationUnit.SECONDS) // How much Sec's in the duration
-            this.toDouble(DurationUnit.MINUTES) // How much Min's in the duration
-            this.toDouble(DurationUnit.HOURS) // How much Hour's in the duration
-            this.toDouble(DurationUnit.DAYS) // How much Days in the duration
+            this.toDouble(DurationUnit.NANOSECONDS) // How much Nano's or other duration in this value.
             this.div(0) // (÷)
             this.times(0) // (×)
             this.minus(Duration.ZERO) // (-)

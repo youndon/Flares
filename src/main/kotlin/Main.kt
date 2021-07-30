@@ -1,14 +1,12 @@
-import java.util.*
-import java.util.function.UnaryOperator
-import kotlin.contracts.ExperimentalContracts
-import kotlin.contracts.contract
-import kotlin.coroutines.coroutineContext
-import kotlin.reflect.typeOf
+import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+
 fun main() {
 
 
-
 }
+
 
 
 // s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]

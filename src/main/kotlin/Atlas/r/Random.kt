@@ -4,19 +4,16 @@ import kotlin.random.Random
 import kotlin.random.asJavaRandom
 
 private class Random {
-    lateinit var random: Random
     init {
-        random.run {
-            this.nextInt() /** return random number from [MIN_VALE] until [MAX_VALUE] */
-            this.nextInt(10) // from 0 until 10
+        Random.apply {
             this.nextInt(50,100) // from 50 until 100
-            this.nextLong() // work like nextInt()
-            this.nextDouble() // like nextInt()
-            this.nextFloat() // like nextInt()
-            this.nextBoolean() // true | false
+            this.nextLong()
+            this.nextDouble()
+            this.nextFloat()
+            this.nextBoolean() // Random true or false.
             this.nextBits(0) // return random number from binary by bitCount as max range.
             this.nextBytes(10) /** return [Array] of random numbers in byte range */
-            this.asJavaRandom().run {
+            this.asJavaRandom().apply {
                 this.doubles().run {
                     /** @see AtlasJ.JStream */
                 }

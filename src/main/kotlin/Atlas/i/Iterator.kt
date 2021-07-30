@@ -11,20 +11,16 @@ private interface Iterator {
      * Allows to sequentially access the elements.
      */
     fun some() {
-        val iter = "string".asIterable().iterator()
-
-        iter.run {
+        "string".asIterable().iterator().apply {
             this.hasNext()
             this.next()
-            this.forEach { _ -> }
+            this.forEach { }
             this.forEachRemaining { }
             this.asSequence()
-            this.iterator()
             this.withIndex()
         }
 
-        val listIterator = "string".toList().listIterator()
-        listIterator.run {
+        "string".toList().listIterator().apply {
             this.hasPrevious()
             this.previous()
             this.previousIndex()

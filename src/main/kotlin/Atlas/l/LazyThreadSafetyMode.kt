@@ -1,9 +1,9 @@
-package l
+package Atlas.l
 
 import kotlin.LazyThreadSafetyMode
 
-class LazyThreadSafetyMode {
-        init {
+private class LazyThreadSafetyMode {
+    init {
         LazyThreadSafetyMode.NONE
         LazyThreadSafetyMode.PUBLICATION
         LazyThreadSafetyMode.SYNCHRONIZED
