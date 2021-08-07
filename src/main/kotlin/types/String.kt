@@ -79,7 +79,7 @@ val string = "\n-> next line," +
         filterIndexedTo(StringBuilder("")) { index, c -> c == c + index }
         format() /**@see AtlasJ.JFormat*/
         this[0] // Get the value of the index 0.
-        hashCode() // TODO: 03/06/2021
+        hashCode() // Equality -> s[0]*31^(n-1) + s[1]*31^(n-2) + ...
         intern() /** @see AtlasBox.Interning_Of_String*/
         this::class.run{
             /**@see Atlas.k.KClass*/
@@ -114,7 +114,7 @@ val string = "\n-> next line," +
         removeSurrounding("st", "ng") // -> ri.
         removeRange(0..3) // -> ng.
         rangeTo("other") // string..other.
-        runCatching {  } // TODO: 29/07/2021
+        runCatching {  } // Return the result if it's success, but throw to exception if it's failure.
         reversed() // -> return all the text as reversed.
         slice(0..2) // -> str
         startsWith("") // Returns true if this string starts with the specified prefix.
@@ -130,8 +130,8 @@ val string = "\n-> next line," +
         toCharArray().run {
             /**@see types.charArray*/
         }
-        toBooleanStrict() // TODO: 18/07/2021
-        toBooleanStrictOrNull() // TODO: 18/07/2021
+        toBooleanStrict() // Returns true if the content of this string is equal to the word "true", false if it is equal to "false".
+        toBooleanStrictOrNull() // , and null otherwise.
         toBigDecimal() // Parses the string as a java.math.BigDecimal number and returns the result.
         toBigDecimalOrNull() //  or null if the string is not a valid.
         toBigInteger() //         ⎫

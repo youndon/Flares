@@ -55,6 +55,6 @@ The `const` keyword is used to declare those properties which are immutable in n
 
 // Why use "const" when we can use "val"?
 // It's all depending on your status,
-// If you needed immutable value don't change even in the runtime (Strings,Numbers,Chars) use "const",
-// And "const" don't allow any function and class and interface because all of them mutable even in the runtime,
-// Otherwise oyu can use only "val".
+// If you needed immutable value don't change even in the "runtime" (Strings,Numbers,Chars) use "const",
+// And "const" don't allow any function and class and interface because all of them mutable even in the "runtime",
+// Otherwise oyu can use only "val" for mutable value "compileTime" and "runtime".

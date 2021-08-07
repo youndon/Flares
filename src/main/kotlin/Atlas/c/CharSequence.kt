@@ -46,7 +46,8 @@ private interface CharSequence {
             this.splitToSequence("")
             this.subSequence(1..3) // -> tri
 
-            // ...
+            /** Those functions available in iterable,
+             * @see Atlas.i.Iterable */
             all { it == 's' }
             any { it == 's' }
             asIterable()
