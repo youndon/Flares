@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.compose.desktop:desktop-jvm:0.5.0-build262">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.desktop/desktop-jvm/0.5.0-build262/c268d28417c6fb551eb580f63588307c28e326eb/desktop-jvm-0.5.0-build262.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.desktop/desktop-jvm/0.5.0-build262/795f22980ca22a8a62ccc010a4f874911cc56bd8/desktop-jvm-0.5.0-build262-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
