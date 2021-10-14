@@ -1,5 +1,0 @@
-package coroutines
-
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-
-annotation class ExperimentalCoroutinesApi
