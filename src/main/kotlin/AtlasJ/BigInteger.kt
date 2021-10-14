@@ -25,7 +25,7 @@ private class BigInteger {
             flipBit(0) // reversed the bit at n index.
             clearBit(0) // Changing the bit 1 to 0 at the n index.
             divideAndRemainder(BigInteger.ONE) // todo
-            gcd(BigInteger.ONE) // todo
+            gcd(BigInteger.ONE) // GCD (Greatest Common Divisor) or HCF (Highest Common Factor) of two numbers is the largest number that divides both of them.
             nextProbablePrime() // todo
             isProbablePrime(1) // todo
             max(BigInteger.ONE) // comparison

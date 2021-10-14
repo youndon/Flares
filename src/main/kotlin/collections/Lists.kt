@@ -19,7 +19,7 @@ private fun lists() {
         parallelStream().run {
             /**@see AtlasJ.JStream*/ }
         asReversed()
-        binarySearch { 1 } /* Searches this list or it's range for the provided
+        binarySearch { 1 } /* Searches this list, or it's range for the provided
                                 [element] using the binary search algorithm. */
         binarySearchBy(1, 0, 3){it}
         component1() // Returns 1st element from the list, there is 5th.

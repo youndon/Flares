@@ -1,3 +1,0 @@
-package atlasCompose.material
-
-private annotation class ExperimentalMaterialApi

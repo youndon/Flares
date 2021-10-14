@@ -39,7 +39,7 @@ private interface Iterable {
             firstOrNull() // to get first index or null.
             firstNotNullOf { it=='t' } // to get first index of "it".
             firstNotNullOfOrNull { it=='t' } //  or null if no non-null value was produced.
-            find { it == 'g' } // to find and get "it" from the text if it existing, or null if wasn't.
+            find { it == 'g' } // to find and get "it" from the text if it's existing, or null if wasn't.
             findLast { it == 'g' }
             flatMap { "123".asSequence() } // is usually useful for flattening one-to-many relationships, [1,2,3,1,2,3,1,2,3...].
             flatMapTo(mutableListOf()) { "".asSequence() }
