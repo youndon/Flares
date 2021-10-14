@@ -14,9 +14,9 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(kotlin("reflect"))
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
-    implementation ("org.jetbrains.lets-plot:lets-plot-kotlin-jvm:3.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation ("org.jetbrains.lets-plot:lets-plot-kotlin-jvm:3.0.0")
     implementation(kotlin("stdlib"))
 }
 tasks.test {
