@@ -1,0 +1,5 @@
+package coroutines
+
+import kotlinx.coroutines.InternalCoroutinesApi
+
+annotation class InternalCoroutinesApi
