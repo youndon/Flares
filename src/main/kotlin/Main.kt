@@ -27,15 +27,6 @@ Cutting out the middle of a string.
         s.chunked(s.length/2).also { println(it.first().dropLast(1)+it.last().drop(1)) }
     } else println(s.removeRange(s.lastIndex/2..(s.lastIndex/2)))
 
-Generating Password.
- val ns = "3 4 2 9".split(' ').map { it.first().digitToInt() }
-   if (ns[0]+ns[1]+ns[2] <= ns[3]) {
-      val list = mutableListOf<Any>()
-      repeat(ns[0]) { list.add(('a'..'z').random()) }
-      repeat(ns[1]) { list.add(('A'..'Z').random()) }
-      repeat(ns[2]) { list.add(('0'..'9').random()) }
-      println(list.shuffled().joinToString("").take(ns[3]))
-   } else println()
 
 Guard On The Gate.
       println(s.plus(ss).joinToString())
