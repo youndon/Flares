@@ -7,15 +7,15 @@ fun regularExpressionFun() {
      \\d  index for one number.
      \\w  index one number or one char(uppercase ,lowercase).
      \\s  space.
-     |_   or -> (\\d) | (\\w).
-     +_  -> \\d+ for add unless one number or more.
-     \\+   for input plus symbol itself.
-     *_  -> \\d* for add numbers or null(nothing).
-     \\*   for input this symbol itself.
-     ?_  -> \\d? for input one number or null.
-     \\?   for input ? itself.
+     |   or -> (\\d) | (\\w).
+     +  -> (\\d+) for add unless one number or more.
+     \\+   for input + symbol itself.
+     *  -> (\\d*) for add numbers or null.
+     \\*   for input * symbol itself.
+     ?  -> \\d? for input one number or null.
+     \\?   for input ? symbol itself.
      []  -> [A-Z],[0-9] for make range.
-     {}  -> \\d{3} -> \\d\\d\\d ,three index.
+     {}  -> \\d{3} -> \\d\\d\\d ,3 index.
      ()   for Aggregation -> (\\d[a-z]\\w)+.
 */
     //
