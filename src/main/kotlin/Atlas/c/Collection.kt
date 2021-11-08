@@ -51,7 +51,7 @@ private interface Collection {
             this.retainAll(listOf('a','b')) // return all the shared elements with element collection.
             this.clear()
         }
-        matchGroupCollection
-        matchNamedGroupCollection
+        matchGroupCollection[0] // TODO: 07/11/2021
+        matchNamedGroupCollection[0] // TODO: 07/11/2021
     }
 }
