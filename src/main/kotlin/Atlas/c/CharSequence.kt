@@ -108,7 +108,7 @@ private interface CharSequence {
             scanIndexed("") { index, acc, c -> "$acc-$c-$index" }
             single { it == 't' }
             singleOrNull()
-//            this.sumOf { 1 }
+            this.sumOf { it.code }
             toCollection(mutableListOf<Any>())
             toHashSet()
             toList()
