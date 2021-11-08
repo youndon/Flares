@@ -7,7 +7,7 @@ class FileTreeWalk {
     lateinit var fileTreeWalk: FileTreeWalk
     fun main() {
         fileTreeWalk.run {
-            this.maxDepth(0)
+            this.maxDepth(1)
             this.onEnter {file: File -> true }
             this.onFail { file, ioException -> }
             this.onLeave { }

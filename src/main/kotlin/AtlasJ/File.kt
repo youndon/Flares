@@ -122,7 +122,7 @@ private class File {
             this.relativeToOrNull(File("")) // like relativeTo() or `null` if this and base paths have different roots.
             this.relativeToOrSelf(File("")) // ...     ...       or `this` if this and base  ...  ...     ...     ...
             this.toRelativeString(File("")) // ...    ...      or throws `IllegalArgumentException` if this and base ... ...    ...    ...
-            this.walk().run {
+            this.walk(FileWalkDirection.TOP_DOWN).run {
                 /** @see Atlas.f.FileTreeWalk */
             }
             this.walkTopDown().run {
