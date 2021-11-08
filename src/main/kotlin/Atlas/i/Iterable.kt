@@ -96,7 +96,7 @@ private interface Iterable {
             reduceIndexed { index, acc, c -> c }
             runningReduce { acc, c -> c } // return a list has result every step operation between the accumulator and element.
             runningReduceIndexed { index, acc, c -> c }
-            scan("") { acc, c -> c + acc } // Similar to foldrunning().
+            scan("") { acc, c -> c + acc } // Similar to runningFold() but this has init value.
             scanIndexed("") { index, acc, c -> acc + c + index }
             single { it == 't' } // Returns the single element if existing, or throw exception.
             singleOrNull() // , or null if not exist.
