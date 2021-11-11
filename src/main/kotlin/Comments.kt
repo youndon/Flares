@@ -11,7 +11,7 @@ shortcut(Ctrl+shift+slash)
  *  @constructor
  *  @exception
  *  @param: => parameter,
- *  @property: you can pointing to all <root> properties in this project,
+ *  @property: you can be pointing to all <root> properties in this project,
                this comment can work only if it was DIRECTLY above some class or property.
  *  @receiver
  *  @return
