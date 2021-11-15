@@ -4,7 +4,7 @@ package cio
 // And this the whole different between the class.
 private object Object  {
 
-    val str :String = "Anything!!"
+    val str : Any by lazy { "..." }
 
     // Anonymous Object.
     private val anonymousObject = object {/*...*/}

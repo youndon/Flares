@@ -6,7 +6,7 @@ import kotlin.reflect.jvm.*
 Reflection is a set of language and library features that allows for introspecting the structure of
 your own program at runtime.
 Kotlin makes functions and properties rst-class citizens in the
-language, and introspecting them (i.e. learning a name or a type of a property or function at
+language, and introspecting them (i.e. learning a name or a type of property or function at
 runtime) is closely intertwined with simply using a functional or reactive style.
 */
 const val reflection:String = ""
