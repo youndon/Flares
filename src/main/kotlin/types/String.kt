@@ -29,8 +29,7 @@ val string = "\n-> next line," +
              "\"-> print quotation_marks itself  " +
              "\u1FC8-> unicode."
 
-    // StringBuilder. typealias StringBuilder = java.lang.StringBuilder
-    with(StringBuilder("string")){
+    buildString() {
         append("...")
         appendLine("...")
         appendRange("...",0,3)

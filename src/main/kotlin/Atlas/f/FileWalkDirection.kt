@@ -2,10 +2,10 @@ package Atlas.f
 
 import kotlin.io.FileWalkDirection
 
-class FileWalkDirection {
+private class FileWalkDirection {
+    /**An enumeration to describe possible walk directions.*/
     lateinit var fileWalkDirection: FileWalkDirection
     init {
-        fileWalkDirection
         FileWalkDirection.BOTTOM_UP
         FileWalkDirection.TOP_DOWN
         FileWalkDirection.values()

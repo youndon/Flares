@@ -4,6 +4,9 @@ import java.io.File
 import kotlin.io.FileTreeWalk
 
 class FileTreeWalk {
+    /**
+     This class is intended to implement different file traversal methods.
+     */
     lateinit var fileTreeWalk: FileTreeWalk
     fun main() {
         fileTreeWalk.run {

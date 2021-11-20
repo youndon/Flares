@@ -16,7 +16,7 @@ private interface Collection {
      * The collection is covariant on its element type.
      */
     private fun <E> coll() {
-        val collection: Collection<Int> = listOf()
+        val collection: Collection<Int> = listOf() // setOf, mapOf.
         with(collection) {
             size // Size of the elements.
             indices // Return the range between first and last element.

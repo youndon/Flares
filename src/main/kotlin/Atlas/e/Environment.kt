@@ -1,5 +1,7 @@
 package Atlas.e
 
+import kotlin.script.dependencies.Environment
+
 
 private class Environment {
     /**
@@ -10,7 +12,7 @@ private class Environment {
     lateinit var environment: Environment
     init {
         environment.run {
-           /* Map attachment */
+           /**@see collections.maps for attachment.*/
         }
     }
 }

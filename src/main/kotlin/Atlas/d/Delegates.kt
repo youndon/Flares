@@ -14,13 +14,13 @@ private object Delegates {
         implement delegation.
          */
         class User{
-            var user : Int by delegates.observable ( 0
-            ) { property, oldValue, newValue ->
+            var user : Int by delegates.observable ( 0)
+            { property, oldValue, newValue ->
                 println("a:$property b:$oldValue c:$newValue")
             }
         }
 
-        delegates.vetoable(this
-        ) { property, oldValue, newValue -> true } // todo
+        delegates.vetoable(this)
+        { property, oldValue, newValue -> true } // todo
     }
 }

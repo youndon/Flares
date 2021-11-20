@@ -21,28 +21,24 @@ class JFormat {
         /**
         format is very import and useful option in the kotlin,
         some result in big operation will be long but not necessary to show the all ,
-        for the we will use format option.
+        for this, we will use format option.
          */
 
         // add `f` for float number to print n numbers after the period.
-        val pi = Math.PI  // 3.141592653589793
-        println("%.2f".format(pi))
+        // pi -> 3.141592653589793
+        println("%.2f".format(Math.PI))
 
         // for remove all the string except the firsts characters.
-        val str = "land rover"
-        println("%.4s".format(str))
+        println("%.4s".format("land rover"))
 
         // for remove all numbers except the firsts.
-        val num = 123456789
-        println("%.5s".format(num))
+        println("%.5s".format(123456789))
 
         // for remove all the line of string
-        val year = 2001
-        println("%n".format(year))
+        println("%n".format(1985))
 
         // for changing the digit with unicode value.
-        val boo = 1579
-        println("%c".format(boo))
+        println("%c".format(1579))
 
 
     }

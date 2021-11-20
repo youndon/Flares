@@ -31,11 +31,11 @@ private open class Class(): AbstractClass() , Interface {
         val genericArray : Array<Y?>? = null
     }
     // inline class.
-    // semilar of inline function job, but in inline class you mast create only one variable param.
+    // Similar of inline function job, but in inline class you mast create only one variable param.
     @JvmInline
     value class InClass(val flo:Float)
 
-    // Anonymous Class.
+    // Anonymous Class (Any).
     private val anonymousClass = object:Any() {/*...*/ }
 
 }

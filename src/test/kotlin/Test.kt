@@ -9,7 +9,7 @@ private class Test {
         @Ignore
         @BeforeTest
         @AfterTest
-        fun kest() {
+        fun kTest() {
         }
         asserter
         assertContains(arrayOf(),0,"")

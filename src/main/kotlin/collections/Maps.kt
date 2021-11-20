@@ -12,7 +12,7 @@ import kotlin.collections.LinkedHashMap
 */
 
 @Suppress("UNCHECKED_CAST")
-private fun maps(){
+internal fun maps(){
     // Map. read-write.
     val map: Map<Int,String> =  mapOf(1 to "one",2 to "two",3 to "three")
     with(map){

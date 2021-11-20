@@ -11,7 +11,7 @@ private class Number {
             this.toByte() //      ⎫
             this.toChar() //      ⎪
             this.toDouble() //    ⎪
-            this.toFloat() //     ⎬- convert to the types.
+            this.toFloat() //     ⎬-  Returns the value of this number as a types.
             this.toInt() //       ⎪
             this.toLong() //      ⎪
             this.toShort() //     ⎭
