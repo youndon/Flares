@@ -1,7 +1,5 @@
 package Atlas.c
 
-import kotlin.ranges.ClosedFloatingPointRange
-
 private class ClosedFloatingPointRange {
     lateinit var closedFloatingPointRange: ClosedFloatingPointRange<Int>
 

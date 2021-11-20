@@ -2,8 +2,11 @@
 
 package types
 
-import kotlin.math.*
-import kotlin.time.*
+import kotlin.math.absoluteValue
+import kotlin.math.sign
+import kotlin.time.DurationUnit
+import kotlin.time.ExperimentalTime
+import kotlin.time.toDuration
 
 lateinit var intIterator: IntIterator
 // Note: The integer variable has correct number.

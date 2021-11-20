@@ -2,8 +2,6 @@ package collections
 
 import java.util.*
 import kotlin.collections.AbstractMap
-import kotlin.collections.HashMap
-import kotlin.collections.LinkedHashMap
 
 /**
  A collection that holds pairs of objects (K and V) and supports efficiently retrieving

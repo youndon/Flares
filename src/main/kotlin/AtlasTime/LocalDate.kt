@@ -1,7 +1,7 @@
 package AtlasTime
 
-import kotlinx.datetime.*
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.toJavaLocalDate
 
 class LocalDate {
     init {

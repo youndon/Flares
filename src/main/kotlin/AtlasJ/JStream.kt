@@ -2,12 +2,12 @@
 
 package AtlasJ
 
-import java.io.*
+import java.io.InputStream
+import java.io.OutputStream
 import java.nio.file.SecureDirectoryStream
 import java.util.stream.*
 import javax.xml.stream.StreamFilter
 import javax.xml.stream.XMLStreamReader
-
 
 
 class   JStream {

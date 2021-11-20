@@ -1,7 +1,5 @@
 package Atlas.c
 
-import kotlin.text.Charsets
-
 private object Charsets {
     lateinit var charsets: Charsets
 

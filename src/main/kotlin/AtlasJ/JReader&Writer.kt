@@ -1,6 +1,8 @@
 package AtlasJ
 
-import java.io.*
+import java.io.FileWriter
+import java.io.Reader
+import java.io.Writer
 
 class `JReader&Writer` {
     lateinit var reader: Reader

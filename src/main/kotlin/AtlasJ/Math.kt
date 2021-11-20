@@ -1,7 +1,7 @@
 package AtlasJ
 
-import java.lang.Math as M
 import kotlin.math.*
+import java.lang.Math as M
 
 private class Math {
 

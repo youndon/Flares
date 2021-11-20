@@ -1,7 +1,5 @@
 package Atlas.c
 
-import kotlin.text.CharCategory
-
 private class CharCategory {
     var cc = 'A'.category
 

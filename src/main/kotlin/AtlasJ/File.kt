@@ -4,8 +4,11 @@ import java.io.*
 import java.io.File.*
 import java.nio.ByteBuffer
 import java.nio.channels.FileChannel
-import java.nio.file.*
-import java.util.logging.*
+import java.nio.file.FileStore
+import java.nio.file.FileSystem
+import java.util.logging.FileHandler
+import java.util.logging.Level
+import java.util.logging.LogRecord
 import javax.sound.midi.MidiFileFormat
 
 private class File {

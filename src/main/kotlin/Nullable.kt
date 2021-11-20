@@ -1,6 +1,3 @@
-import org.jetbrains.annotations.Nullable
-import java.util.Comparator
-
 private fun some(){
     val ss :Int? = readLine()?.toIntOrNull()
 

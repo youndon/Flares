@@ -1,8 +1,5 @@
 package Atlas.c
 
-import java.util.Comparator
-import kotlin.CharSequence
-
 private interface CharSequence {
 
     /**

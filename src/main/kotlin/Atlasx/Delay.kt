@@ -3,7 +3,6 @@ package coroutines
 import kotlinx.coroutines.Delay
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.runBlocking
-import java.lang.Runnable
 
 @Suppress("UNREACHABLE_CODE")
 @coroutines.InternalCoroutinesApi

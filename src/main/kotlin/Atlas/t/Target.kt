@@ -1,6 +1,6 @@
 package t
 
-import kotlin.annotation.AnnotationTarget.*
+import kotlin.annotation.AnnotationTarget.CLASS
 import kotlin.annotation.Target
 
 /**

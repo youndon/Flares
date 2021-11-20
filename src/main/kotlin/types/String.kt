@@ -2,7 +2,6 @@
 
 package types
 
-import jetbrains.datalore.base.json.escape
 import java.util.*
 
 /**

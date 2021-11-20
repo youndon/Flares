@@ -1,7 +1,5 @@
 package Atlas.l
 
-import kotlin.Lazy
-
 private interface Lazy {
    companion object{
        lateinit var property : Nothing

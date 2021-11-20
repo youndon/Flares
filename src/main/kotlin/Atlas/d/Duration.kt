@@ -1,8 +1,6 @@
 package Atlas.d
 
 import kotlin.time.*
-import kotlin.time.Duration
-import kotlin.time.DurationUnit
 
 private class Duration {
 

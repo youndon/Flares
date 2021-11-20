@@ -1,7 +1,9 @@
 package types
 
 import kotlin.math.*
-import kotlin.time.*
+import kotlin.time.DurationUnit
+import kotlin.time.ExperimentalTime
+import kotlin.time.toDuration
 
 lateinit var doubleIterator:DoubleIterator
 //

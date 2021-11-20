@@ -1,11 +1,8 @@
-import org.jetbrains.annotations.TestOnly
-import kotlin.test.Test
 import kotlin.test.*
-import kotlin.test.junit.*
+import kotlin.test.junit.JUnitContributor
 
 private class Test {
     init {
-        @Test
         @Ignore
         @BeforeTest
         @AfterTest

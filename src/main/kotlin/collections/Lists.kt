@@ -1,7 +1,5 @@
 package collections
 
-import kotlin.collections.*
-
 @ExperimentalStdlibApi
 private fun lists() {
 

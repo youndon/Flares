@@ -1,6 +1,5 @@
 package Atlas.a
 
-import kotlin.annotation.AnnotationTarget
 /**
  This class work with the annotation class @Target(),
  and Contains the list of code elements which are the possible annotation targets

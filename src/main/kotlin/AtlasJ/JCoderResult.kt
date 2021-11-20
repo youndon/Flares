@@ -1,6 +1,6 @@
 package AtlasJ
 
-import java.nio.charset.*
+import java.nio.charset.CoderResult
 
 class JCoderResult {
     private lateinit var coderResult: CoderResult

@@ -1,7 +1,9 @@
 package AtlasTime
 
-import kotlinx.datetime.*
 import kotlinx.datetime.Instant
+import kotlinx.datetime.isDistantFuture
+import kotlinx.datetime.isDistantPast
+import kotlinx.datetime.toJavaInstant
 
 class Instant {
     init {

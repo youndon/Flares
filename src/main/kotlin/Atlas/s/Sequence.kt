@@ -1,10 +1,5 @@
 package Atlas.s
 
-import kotlinx.coroutines.runBlocking
-import java.util.Comparator
-import kotlin.Suppress
-import kotlin.sequences.SequenceScope
-
 private interface Sequence {
     /**
      * A sequence that returns values through its iterator.
