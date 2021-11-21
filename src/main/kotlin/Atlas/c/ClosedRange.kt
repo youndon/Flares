@@ -1,5 +1,7 @@
 package Atlas.c
 
+import kotlin.ranges.ClosedRange
+
 private interface ClosedRange {
      var closedRange: ClosedRange<Int>
 

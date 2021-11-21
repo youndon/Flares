@@ -1,5 +1,7 @@
 package k
 
+import kotlin.KotlinVersion
+
 private class KotlinVersion {
     init {
         KotlinVersion.CURRENT /** [major].[minor].[patch]*/

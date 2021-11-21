@@ -1,4 +1,5 @@
 package Atlas.c
+import kotlin.text.CharCategory.*
 
 private class CharCategory {
     var cc = 'A'.category
@@ -11,36 +12,36 @@ private class CharCategory {
             code // Must be two characters denotes about category name.
             value // TODO: 16.01.2021  
             contains('a')
-            CharCategory.FORMAT //                   ⎫
-            CharCategory.COMBINING_SPACING_MARK //   ⎪
-            CharCategory.CONNECTOR_PUNCTUATION //    ⎪
-            CharCategory.CONTROL //                  ⎪
-            CharCategory.CURRENCY_SYMBOL //          ⎪
-            CharCategory.DASH_PUNCTUATION //         ⎪
-            CharCategory.START_PUNCTUATION //        ⎪
-            CharCategory.END_PUNCTUATION //          ⎪
-            CharCategory.ENCLOSING_MARK //           ⎪
-            CharCategory.DECIMAL_DIGIT_NUMBER //     ⎪
-            CharCategory.FINAL_QUOTE_PUNCTUATION //  ⎬- See charCategory package.
-            CharCategory.LETTER_NUMBER //            ⎪
-            CharCategory.UPPERCASE_LETTER //         ⎪
-            CharCategory.MATH_SYMBOL //              ⎪
-            CharCategory.MODIFIER_SYMBOL //          ⎪
-            CharCategory.MODIFIER_LETTER //          ⎪
-            CharCategory.NON_SPACING_MARK //         ⎪
-            CharCategory.OTHER_NUMBER //             ⎪
-            CharCategory.OTHER_PUNCTUATION //        ⎪
-            CharCategory.OTHER_SYMBOL //             ⎪
-            CharCategory.PRIVATE_USE //              ⎪
-            CharCategory.TITLECASE_LETTER //         ⎪
-            CharCategory.OTHER_LETTER //             ⎪
-            CharCategory.LOWERCASE_LETTER //         ⎪
-            CharCategory.INITIAL_QUOTE_PUNCTUATION //⎪
-            CharCategory.UNASSIGNED //               ⎭
-            CharCategory.SPACE_SEPARATOR // Whitespace.
-            CharCategory.LINE_SEPARATOR // Whitespace.
-            CharCategory.PARAGRAPH_SEPARATOR // Whitespace.
-            CharCategory.SURROGATE // it.isSurrogate().
+            FORMAT //                   ⎫
+            COMBINING_SPACING_MARK //   ⎪
+            CONNECTOR_PUNCTUATION //    ⎪
+            CONTROL //                  ⎪
+            CURRENCY_SYMBOL //          ⎪
+            DASH_PUNCTUATION //         ⎪
+            START_PUNCTUATION //        ⎪
+            END_PUNCTUATION //          ⎪
+            ENCLOSING_MARK //           ⎪
+            DECIMAL_DIGIT_NUMBER //     ⎪
+            FINAL_QUOTE_PUNCTUATION //  ⎬- See charCategory package.
+            LETTER_NUMBER //            ⎪
+            UPPERCASE_LETTER //         ⎪
+            MATH_SYMBOL //              ⎪
+            MODIFIER_SYMBOL //          ⎪
+            MODIFIER_LETTER //          ⎪
+            NON_SPACING_MARK //         ⎪
+            OTHER_NUMBER //             ⎪
+            OTHER_PUNCTUATION //        ⎪
+            OTHER_SYMBOL //             ⎪
+            PRIVATE_USE //              ⎪
+            TITLECASE_LETTER //         ⎪
+            OTHER_LETTER //             ⎪
+            LOWERCASE_LETTER //         ⎪
+            INITIAL_QUOTE_PUNCTUATION //⎪
+            UNASSIGNED //               ⎭
+            SPACE_SEPARATOR // Whitespace.
+            LINE_SEPARATOR // Whitespace.
+            PARAGRAPH_SEPARATOR // Whitespace.
+            SURROGATE // it.isSurrogate().
         }
     }
 }

@@ -1,5 +1,7 @@
 package Atlas.c
 
+import kotlin.CharSequence
+
 private interface CharSequence {
 
     /**

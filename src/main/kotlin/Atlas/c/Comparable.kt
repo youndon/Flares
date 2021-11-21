@@ -1,5 +1,7 @@
 package Atlas.c
 
+import kotlin.Comparable
+
 private interface Comparable {
      var comparable: Comparable<Any>
 

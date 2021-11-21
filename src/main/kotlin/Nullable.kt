@@ -1,7 +1,7 @@
 private fun some(){
     val ss :Int? = readLine()?.toIntOrNull()
 
-    // ! isn't
+    // ! not.
     ss!=null
 
     // ?. ...

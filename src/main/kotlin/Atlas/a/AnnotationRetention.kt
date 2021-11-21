@@ -1,6 +1,8 @@
 package Atlas.a
 
-private enum class AnnotationRetention {   ;
+import kotlin.annotation.AnnotationRetention
+
+private enum class AnnotationRetention { ;
     init {
         AnnotationRetention.BINARY
         AnnotationRetention.RUNTIME

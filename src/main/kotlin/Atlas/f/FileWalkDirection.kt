@@ -4,8 +4,8 @@ private class FileWalkDirection {
     /**An enumeration to describe possible walk directions.*/
     lateinit var fileWalkDirection: FileWalkDirection
     init {
-        FileWalkDirection.BOTTOM_UP
-        FileWalkDirection.TOP_DOWN
-        FileWalkDirection.values()
+        kotlin.io.FileWalkDirection.BOTTOM_UP
+        kotlin.io.FileWalkDirection.TOP_DOWN
+        kotlin.io.FileWalkDirection.values()
     }
 }

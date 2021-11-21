@@ -1,5 +1,7 @@
 package t
 
+import kotlin.Triple
+
 private class Triple {
     /** Represents a triad of values */
     val tri : Triple<Any,Any,Any> = Triple(1,2,3)

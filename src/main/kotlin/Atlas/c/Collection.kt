@@ -1,5 +1,7 @@
 package Atlas.c
 
+import kotlin.collections.Collection
+
 
 private interface Collection {
     var mutableCollection: MutableCollection<Char>

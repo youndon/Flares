@@ -1,5 +1,7 @@
 package n
 
+import kotlin.Number
+
 private class Number {
     /** The number class accept any type of numbers (integer,decimal,hex,octal...)
      and you can convert it to any another type of number. */

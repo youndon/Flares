@@ -2,7 +2,7 @@ package cio
 
 // The abstract keyword use for make the class not allowed to create objects from,
 // This allowed just for inheritance and not necessarily to overloads the the methods inside.
-internal abstract class AbstractClass internal constructor(name: String, rate: Int) {
+internal abstract class AbstractClass constructor(name: String, rate: Int) {
 
     // The secondary constructor can inheritance the other constructor in the same class.
     protected constructor(id: Int = 0) : this("unknown", 10) {
