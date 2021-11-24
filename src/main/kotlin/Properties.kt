@@ -1,7 +1,6 @@
 
-
-// The properties has two different terms.
-// val: the value on val property not allowed to changing.
+// The properties have two different terms.
+// val: the value on val property not allowed to change.
 private val ONE = 2020
 fun main() {
 //    ONE = 2021 // FIXME: error!
@@ -9,7 +8,7 @@ fun main() {
 // the const mean constant or fix property using only on val in the objects and top-level property
 // the const normally has Uppercase name.
 
-// var: the value on var property allowed to change.
+// var: the value on var property allowed changing.
 private var two = 100
 
 // getter and setter.
@@ -30,14 +29,14 @@ private val boss = Any()
 
 // Create Extension property.
 private val Any.go:Int get() = 0
-// this mean we creating property for the Boss class out the class.
+// this mean we're creating property for the Boss class out the class.
 
 // Generic Extension property.
 private val <Y> Array<Y>.fame: Y? get() = null
 
 // Gave the property keyword name.
 private lateinit var `var`:Any
-// Note: this also can working with the function and the class.
+// Note: this also can work with the function and the class.
 
 // by.
 private val some:Any? by lazy { null }

@@ -63,7 +63,7 @@ private fun arr(){
     val arrayArr : Array<Array<String>> = arrayOf(arrayOf(""),arrayOf(""))
 
     //  out/in type. todo
-    val arrayPro : Array<in Int> = Array(5){0}
+    val arrayPro : Array<in Int> = Array(5){ 0 }
 
     // ArrayDeque. Resizable-array implementation of the deque data structure.
     // The name deque is short for "double ended queue" and is usually pronounced "deck".

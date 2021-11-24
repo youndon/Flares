@@ -2,6 +2,7 @@
 
 package types
 
+import jetbrains.datalore.base.math.ipow
 import kotlin.math.absoluteValue
 import kotlin.math.sign
 import kotlin.time.DurationUnit
@@ -81,6 +82,9 @@ private fun some(){
         countOneBits() // sum number 1 of binary.
         countLeadingZeroBits() // return sum most important zero's bits.
         countTrailingZeroBits() // work revers countLeadingZeroBits.
+        this.coerceIn(1..2)
+        this.coerceAtLeast(1)
+        this.coerceAtMost(1)
         takeHighestOneBit()
         takeLowestOneBit()
         rotateRight(0) // like shr().
@@ -97,9 +101,10 @@ private fun some(){
                    `0` if the value is zero,
                     `1` if the value is positive. */
         absoluteValue // |-1| = 1.
-        this.digitToChar() // Returns the Char that represents this decimal digit. exception if the value !in 0..9.
-        this.floorDiv(1) // Divides this value by the other value, flooring the result to an integer that is closer to negative infinity.
-        this.mod(1) // Calculates the remainder of flooring division of this value by the other value.
+        digitToChar() // Returns the Char that represents this decimal digit. exception if the value !in 0..9.
+        floorDiv(1) // Divides this value by the other value, flooring the result to an integer that is closer to negative infinity.
+        mod(1) // Calculates the remainder of flooring division of this value by the other value.
+        this.ipow(1)
     }
 
 }
