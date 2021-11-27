@@ -187,4 +187,4 @@ val soundTracks: File = parent.walkTopDown().first { it.name == "SoundTracks" }
 
 ##### Conclusion
 
-We've learned how multiple directories and files can be incorporated in a complex hierarchy. We've considered several methods to traverse file hierarchies and illustrated them with an example. However, these methods allow developing general algorithms to traverse any file hierarchy. We skipped the `null` checking to simplify the example, but do not forget about checking it in your programs to avoid NPE.
+We've learned how multiple directories and files can be incorporated in a complex hierarchy. We've considered several methods to traverse file hierarchies and illustrated them with an example. However, these methods allow developing FP.general algorithms to traverse any file hierarchy. We skipped the `null` checking to simplify the example, but do not forget about checking it in your programs to avoid NPE.

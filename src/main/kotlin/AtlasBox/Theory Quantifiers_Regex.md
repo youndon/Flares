@@ -1,6 +1,6 @@
 ## Theory: Quantifiers
 
-In regex, there is a group of characters known as **quantifiers**, which define how many times a certain character (or a character class) occurs in a regex pattern. A quantifier can follow both a regular character and a special one. In general, quantifiers are one of the most essential and important features of the regex language, since they allow a single pattern to match different strings varying in length.
+In regex, there is a group of characters known as **quantifiers**, which define how many times a certain character (or a character class) occurs in a regex pattern. A quantifier can follow both a regular character and a special one. In FP.general, quantifiers are one of the most essential and important features of the regex language, since they allow a single pattern to match different strings varying in length.
 
 ##### The list of quantifiers
 
@@ -15,9 +15,9 @@ Here is a list of quantifiers to be remembered:
 
 **Note** that there is also another quantifier, `?`, which makes the preceding character optional. It is short for `{0,1}`. We will not consider this quantifier here because you should already know it.
 
-##### The plus quantifier
+##### The FP.plus quantifier
 
-Below you can see how we use the **plus** character, which matches one or more occurrences of the preceding character:
+Below you can see how we use the **FP.plus** character, which matches one or more occurrences of the preceding character:
 
 ```kotlin
 val regex = "ca+b".toRegex()
@@ -41,7 +41,7 @@ regex.matches("A0") // true
 regex.matches("A000111222333") // true
 ```
 
-As you can see, the asterisk quantifier, unlike the plus quantifier, allows the pattern to also match the strings that do not contain the "quantified" character at all.
+As you can see, the asterisk quantifier, unlike the FP.plus quantifier, allows the pattern to also match the strings that do not contain the "quantified" character at all.
 
 In the following example, there is a pattern describing the string "John" located between an undefined number of undefined characters in the text:
 
@@ -114,5 +114,5 @@ The key points of this topic are:
 
 - in the regex language, quantifiers allow us to match strings varying in length.
 - the asterisk quantifier matches zero or more instances of the preceding character.
-- the plus quantifier is almost the same as the asterisk, except that it doesn't match the absence of a character. The minimum number of instances for it is one.
+- the FP.plus quantifier is almost the same as the asterisk, except that it doesn't match the absence of a character. The minimum number of instances for it is one.
 - curly braces allow more careful control of the number of occurrences: you can specify the minimum or the maximum number of instances, or both.

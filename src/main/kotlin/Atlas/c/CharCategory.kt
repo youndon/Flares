@@ -5,7 +5,7 @@ private class CharCategory {
     var cc = 'A'.category
 
     /**
-     * Represents the character general category in the Unicode specification.
+     * Represents the character FP.general category in the Unicode specification.
      */
     init {
         cc.run {

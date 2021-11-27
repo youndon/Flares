@@ -450,7 +450,7 @@ Compare the two images on the following page; one has elements in a contiguous a
 
 In a linked list, elements aren’t in contiguous blocks of memory. This could lead to more cache misses, which will increase access time.
 ## Challenges
-Think you have a handle on queues? In this section, you’ll explore five different problems related to queues. This serves to solidify your fundamental knowledge of data structures in general.
+Think you have a handle on queues? In this section, you’ll explore five different problems related to queues. This serves to solidify your fundamental knowledge of data structures in FP.general.
 ### Challenge 1: Explain differences
 #### Solution 1
 Queues have a behavior of first in, first out. What comes in first must come out first. Items in the queue are inserted from the rear and removed from the front.

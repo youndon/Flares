@@ -1,8 +1,11 @@
+import kotlin.test.AsserterContributor
 import kotlin.test.*
 import kotlin.test.junit.JUnitContributor
 
-private class Test {
+private class Main {
+
     init {
+        @Test
         @Ignore
         @BeforeTest
         @AfterTest

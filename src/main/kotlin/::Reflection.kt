@@ -9,7 +9,7 @@ Kotlin makes functions and properties rst-class citizens in the
 language, and introspecting them (i.e. learning a name or a type of property or function at
 runtime) is closely intertwined with simply using a functional or reactive style.
 */
-const val reflection:String = ""
+lateinit var reflection:String
 @OptIn(ExperimentalReflectionOnLambdas::class)
 @ExperimentalStdlibApi
 fun myReflection () {
@@ -25,7 +25,7 @@ fun myReflection () {
         isOpen
         isLateinit
         isSuspend // work with the function.
-//        this.isInitialized // this property doesn't work with top-level methods.
+//        isInitialized
         isAccessible //
         visibility
         name

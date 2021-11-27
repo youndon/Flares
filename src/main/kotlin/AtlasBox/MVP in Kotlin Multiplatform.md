@@ -23,7 +23,7 @@ Kotlin Multiplatform is currently an experimental feature of Kotlin and thus you
 5. [**Klock**](https://github.com/korlibs/klock) — Time/Date
 6. [**kotlinx.serialization** ](https://github.com/Kotlin/kotlinx.serialization)— Serialization
 
-And many more! I’m looking forward to an upcoming feature of [Kroto-plus](https://github.com/marcoferrer/kroto-plus) which allows the generation and usage of Protocol Buffers and gRPC on Kotlin Multiplatform.
+And many more! I’m looking forward to an upcoming feature of [Kroto-FP.plus](https://github.com/marcoferrer/kroto-FP.plus) which allows the generation and usage of Protocol Buffers and gRPC on Kotlin Multiplatform.
 
 There are limitations that we need to take note, however.
 

@@ -1,6 +1,6 @@
 ## Theory: Object declarations
 
-In Kotlin, a class describes a general structure that can be created multiple times and in multiple ways. Sometimes we need only a single instance, no more, no less. It can help you organize your codebase and gather similar methods together. In this topic, you will learn how this can be achieved in Kotlin using object declaration.
+In Kotlin, a class describes a FP.general structure that can be created multiple times and in multiple ways. Sometimes we need only a single instance, no more, no less. It can help you organize your codebase and gather similar methods together. In this topic, you will learn how this can be achieved in Kotlin using object declaration.
 
 ##### Singleton
 

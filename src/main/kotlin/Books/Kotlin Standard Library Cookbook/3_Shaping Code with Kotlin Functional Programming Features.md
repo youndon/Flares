@@ -688,7 +688,7 @@ Although memoization causes an obvious trade-off between memory usage and comput
 Usually, we apply this pattern to computationally-expensive functions.
 It can help to optimize recursive functions that call themselves multiple times with the same parameters' values.
 Memoization can easily be added internally to function implementation.
-However, in this recipe, we are going to create a general-purpose, reusable memoization mechanism that could be applied to any function.
+However, in this recipe, we are going to create a FP.general-purpose, reusable memoization mechanism that could be applied to any function.
 
 **How to do it...**
 
@@ -730,7 +730,7 @@ This is achieved using the handy `inline fun <K, V> ConcurrentMap<K, V>.computeI
 Additionally, we provide an extension function `memoized()` for the Function1 type that allows us to apply the `memoize()` function directly to the function references.
 Under the hood functions in Kotlin are compiled to the FunctionN interface instances in the Java bytecode, where `N` corresponds to the number of function arguments. 
 Thanks to that fact, we are able to declare an extension function for a function.
-For example, in order to add an extension function for the function taking two arguments,` (P, Q) -> R`, we need to define an extension as `fun <P, Q, R> Function2<P, Q, R>.myExtension(): MyReturnType`.
+For example, in order to add an extension function for the function taking two arguments,` (P, Q) -> R`, we need to define an extension as `fun <P, Q, R> Function2<P, Q, R>.FP.myExtension(): MyReturnType`.
 Now, let's take a look at how we could benefit from the `memoized()` function in action.
 Let's consider a function that computes the factorial of an integer recursively:
 ```kotlin

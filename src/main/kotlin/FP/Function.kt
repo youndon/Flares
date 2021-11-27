@@ -1,5 +1,7 @@
 @file:Suppress("UNUSED_PARAMETER")
 
+package FP
+
 import kotlinx.coroutines.delay
 
 //Function declarations
@@ -53,7 +55,7 @@ private infix fun Any.divide(int: Int){}
 }
 // operator Fun.
 // operator function must by extension function and have one parameter value.
-// it's powerful modifier used for make possibility operation between two values.
+// its powerful modifier used for make possibility operation between two values.
 private operator fun Any.plus(int: Int){}
 
 /* inline Fun.
@@ -84,14 +86,15 @@ Definitely all top-level [functions] are not [methods].
 Parameter is variable defined in function declaration.
  Argument is the actual value of this variable that get passed to the function. */
 // example :
-class Funs (){
-    private fun randomString(length: Int): String {
-        /*                      ↑
+@Suppress("UNREACHABLE_CODE")
+private fun randomString(length: Int): String {
+    /*                      ↑
                             parameter                 */
-        return "it's $length"
-    }
-    init {
-        randomString(10) // 10 is argument
+    return "it's $length"
+    object {
+        init {
+            randomString(10) // 10 is argument
+        }
     }
 }
 //In this example length is a parameter, and 10 (used in function call) is an argument.

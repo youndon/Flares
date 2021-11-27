@@ -59,6 +59,7 @@
      */
 
     /*  The Keywords:
+    where
     value
     typealias
     object

@@ -89,10 +89,10 @@ He graduated from the University of Warsaw.
 Packt is searching for authors like you
 If you're interested in becoming an author for Packt, please visit authors packtpub.com and apply today.
 We have worked with thousands of developers and tech professionals, just like you, to help them share their insight with the global tech community. 
-You can make a general application, apply for a specific hot topic that we are recruiting an author for, or submit your own idea.
+You can make a FP.general application, apply for a specific hot topic that we are recruiting an author for, or submit your own idea.
 
 Preface
-The primary aim of Kotlin Standard Library Cookbook is to help you dive into advanced language concepts and features as fast as possible in a friendly way. It covers a wide range of general programming problems at varying difficulty levels, including design patterns, functional programming, data processing, and more. The book consists of recipes that present a specific problem and give a step-by-step explanation of how to approach it effectively. All the presented features of the standard library are well explained, allowing you to discover them with ease.
+The primary aim of Kotlin Standard Library Cookbook is to help you dive into advanced language concepts and features as fast as possible in a friendly way. It covers a wide range of FP.general programming problems at varying difficulty levels, including design patterns, functional programming, data processing, and more. The book consists of recipes that present a specific problem and give a step-by-step explanation of how to approach it effectively. All the presented features of the standard library are well explained, allowing you to discover them with ease.
 This book will help software developers switch to Kotlin with ease and integrate it seamlessly into the existing JVM and JavaScript projects. Examples included in the book can easily be implemented in your own projects. You can also get the ready-made solutions from the book's GitHub repository if you prefer to follow and test the recipes in your favorite IDE. Once you have completed the book, you should have expert knowledge and insight into the language's advanced concepts, allowing you to address your daily programming challenges efficiently.
 
 Who this book is for
@@ -114,7 +114,7 @@ Chapter 6, Friendly I/O Operations, presents useful extension functions availabl
 
 Chapter 7, Making Asynchronous Programming Great Again, is an in-depth guide to asynchronous programming focusing on the Kotlin coroutines framework and its application in real-life situations. The chapter presents how to optimize and advance previous examples by executing parts of their code in the background in a non-blocking way. Here, you will also find a practical example of implementing an asynchronous REST client with the Retrofit library and the coroutines framework.
 
-Chapter 8, Best Practices for the Android, JUnit, and JVM UI Frameworks, covers practical problems specific to the popular frameworks, among which Kotlin is the one used most often. In general, it will focus on Android platform-specific aspects and asynchronous UI programming with coroutines, both on Android and JVM frameworks such as JavaFX and Swing. It will also help you to write effective unit tests for the JVM platform using the JUnit framework. The recipes related to unit testing will also include more advanced topics, such as mocking dependencies with the Mockito Kotlin library and testing asynchronous code based on the coroutines framework.
+Chapter 8, Best Practices for the Android, JUnit, and JVM UI Frameworks, covers practical problems specific to the popular frameworks, among which Kotlin is the one used most often. In FP.general, it will focus on Android platform-specific aspects and asynchronous UI programming with coroutines, both on Android and JVM frameworks such as JavaFX and Swing. It will also help you to write effective unit tests for the JVM platform using the JUnit framework. The recipes related to unit testing will also include more advanced topics, such as mocking dependencies with the Mockito Kotlin library and testing asynchronous code based on the coroutines framework.
 
 Chapter 9, Miscellaneous, presents handy solutions to various problems and issues that Kotlin developers deal with on a daily basis.
 

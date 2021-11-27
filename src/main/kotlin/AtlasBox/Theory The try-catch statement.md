@@ -117,7 +117,7 @@ You can add as many `catch` blocks as you need. When an exception occurs in the 
 
 
 
-The `catch` block with the base type has to be written below all the blocks with subtypes. In other words, more specialized handlers (like `IOException`) must be written before the more general ones (like `Exception`). Otherwise, the block with the subtype will be ignored.
+The `catch` block with the base type has to be written below all the blocks with subtypes. In other words, more specialized handlers (like `IOException`) must be written before the more FP.general ones (like `Exception`). Otherwise, the block with the subtype will be ignored.
 
 
 
@@ -125,7 +125,7 @@ The `catch` block with the base type has to be written below all the blocks with
 
 Technically, an exception can be handled in the method where it occurs or in the calling method. The best approach to handle an exception is to do it in a method that has sufficient information to make the correct decision based on this exception.
 
-So, why should we throw out specific types of exceptions when there is a general `Exception` that includes all possible cases and is always appropriate? Well, keep in mind that your colleagues or maybe even yourself in a couple of weeks may not really know what’s going on in the code. It would be best for you to provide as much information as possible. This will make handling exceptions much easier.
+So, why should we throw out specific types of exceptions when there is a FP.general `Exception` that includes all possible cases and is always appropriate? Well, keep in mind that your colleagues or maybe even yourself in a couple of weeks may not really know what’s going on in the code. It would be best for you to provide as much information as possible. This will make handling exceptions much easier.
 
 Always try to find the exception type that fits best to your exceptional event, for instance, throw a `NumberFormatException` instead of just an `Exception`.
 

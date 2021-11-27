@@ -10,7 +10,7 @@ When do we need such patterns? Say we want to obtain all the files with the same
 
 How do such patterns look? Well, at first, they may seem confusing, look, for example, at `\d+(\.\d)?` or `[a-zA-Z]`. And they're often substantially longer. We'll start with the basics, though.
 
-Regexps may be regarded as a kind of sublanguage that most programming languages support, but there are some differences in syntax called **"flavors"**. In this topic, we will consider **regexps** in isolation from programming languages to understand the general idea.
+Regexps may be regarded as a kind of sublanguage that most programming languages support, but there are some differences in syntax called **"flavors"**. In this topic, we will consider **regexps** in isolation from programming languages to understand the FP.general idea.
 
 While learning this topic, you can visit the [regexp site](https://regex101.com/) to play around with regular expressions from our examples. Choose **PCRE** as the flavor. It means **P**erl **C**ompatible **R**egular **E**xpressions which are the most common standard in practice.
 

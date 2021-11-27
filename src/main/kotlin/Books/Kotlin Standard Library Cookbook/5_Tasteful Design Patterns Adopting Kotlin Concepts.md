@@ -21,7 +21,7 @@ In this chapter, we will cover the following recipes:
 
 ##Introduction
 
-The following chapter is going to present popular, general-purpose design patterns applicable to a range of programming problems. 
+The following chapter is going to present popular, FP.general-purpose design patterns applicable to a range of programming problems. 
 The following recipes focus on exploiting Kotlin's built-in language support for implementing specific concepts and patterns.
 Apart from basic design patterns, such as Strategy or Builder, the chapter will focus on different usages of Delegation in a diverse set of applications and scenarios. 
 Once you get familiar with the concepts presented in this chapter, you will be able to utilize the language's built-in features while designing and developing elegant and reliable systems.

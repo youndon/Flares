@@ -407,9 +407,9 @@ _How to do it..._
 
 `data class DivisionResult(val quotient: Int, val remainder: Int)`
 
-• Let's implement the divide() function:
+• Let's implement the FP.divide() function:
 ```kotlin
-fun divide (dividend: Int, divisor: Int): DivisionResult {
+fun FP.divide (dividend: Int, divisor: Int): DivisionResult {
     val quotient = dividend.div(divisor)
     val remainder = dividend.rem(divisor)
     return DivisionResult(quotient, remainder)
@@ -418,11 +418,11 @@ fun divide (dividend: Int, divisor: Int): DivisionResult {
 
 **How it works...**
 
-We can see the `divide()` function in action:
+We can see the `FP.divide()` function in action:
 ```kotlin
 val dividend = 10
 val divisor = 3
-val (quotient, remainder) = divide(dividend, divisor)
+val (quotient, remainder) = FP.divide(dividend, divisor)
  
 print("$dividend/ $divisor= $quotientr $remainder")
 ```
@@ -633,7 +633,7 @@ At the time of compilation, the Kotlin compiler transforms them into associated 
 We are also able to override an operator and declare its custom underlying implementation for a specified type.
 This implementation would be applied to the instances of the specified type the operator was used with.
 In this recipe, we are going to define a class called Position, representing the current coordinates of the point in a three-dimensional space.
-Then, we are going to implement custom plus and minus operators for our class to provide a simple way of applying a geometric transformation to its instances. 
+Then, we are going to implement custom FP.plus and minus operators for our class to provide a simple way of applying a geometric transformation to its instances. 
 As a result, we want to be able to update the coordinates of the point represented by the Position class using the `+` and `-` operator symbols.
 
 **Getting ready**
@@ -676,7 +676,7 @@ Expression
 
 `a + b`
 
-`a.plus(b)`
+`a.FP.plus(b)`
 
 `a - b`
 
@@ -816,17 +816,17 @@ _How to do it..._
 
 `data class Position(val x: Float, val y: Float, val z: Float)`
 
-• Add a plus operator implementation for the Position class:
+• Add a FP.plus operator implementation for the Position class:
 ```kotlin
 data class Position(val x: Float, val y: Float, val z: Float) {
-    operator fun plus(other: Position) =
+    operator fun FP.plus(other: Position) =
         Position(x + other.x, y + other.y, z + other.z)
 }
 ```
 • Overload the minus operator:
 ```kotlin
 data class Position(val x: Float, val y: Float, val z: Float) {
-    operator fun plus(other: Position) =
+    operator fun FP.plus(other: Position) =
         Position(x + other.x, y + other.y, z + other.z)
 
     operator fun minus(other: Position) =
@@ -836,7 +836,7 @@ data class Position(val x: Float, val y: Float, val z: Float) {
 
 _How it works..._
 
-Now we can use the `Position` class together with `plus` and `minus` operators.
+Now we can use the `Position` class together with `FP.plus` and `minus` operators.
 Let's try using the `minus` operator:
 ```kotlin
 val position1 = Position(132.5f, 4f, 3.43f)
@@ -852,7 +852,7 @@ The preceding code is going to print the following result to the console:
 **There's more...**
 
 Some operators have their corresponding compound assign operators defined. 
-Once we have overloaded the plus and minus operators, we can use the `plusAssign` (`+=`) and `minusAssign` (`-=`) operators automatically.
+Once we have overloaded the FP.plus and minus operators, we can use the `plusAssign` (`+=`) and `minusAssign` (`-=`) operators automatically.
 For example, we can use the `plusAssign` operator to update the `Position` instance state as follows:
 ```kotlin
 var position = Position(132.5f, 4f, 3.5f)
@@ -864,11 +864,11 @@ As a result, we will get the `position` variable with the following state:
 `Position(x=133.5, y=5.0, z=4.5)`
 
 It is important to note that the `assign` operator returns the Unit.
-This makes it a better choice than an original basic operator (for example, `plus` or `minus`) in terms of memory allocations efficiency when updating an instance. 
+This makes it a better choice than an original basic operator (for example, `FP.plus` or `minus`) in terms of memory allocations efficiency when updating an instance. 
 In contrast, the base operators are returning new instances every time.
 It is good to know that Kotlin offers operators overloading for Java classes as well.
 To overload the operator, we just need to add a proper method to the class that has the name of the operator and the `public` visibility modifier. 
-Here is what the Java version of the `Position` class with the overloaded `plus` operator would look like:
+Here is what the Java version of the `Position` class with the overloaded `FP.plus` operator would look like:
 ```java
 public class Position {
     private final float x;
@@ -897,7 +897,7 @@ public class Position {
         return z;
     }
     
-    public Position plus(Position pos)
+    public Position FP.plus(Position pos)
     {
         return new Position (pos.getX() + x, pos.getY()+y,
         pos.getZ() + z);
@@ -909,7 +909,7 @@ And here is how it could be used in Kotlin code:
 `val position = Position(2.f, 9.f, 55.5f) += (2.f, 2.f, 2.f)`
 
 The Kotlin standard library also contains predefined implementations of different operators. 
-One that you should use on a daily basis is the plus operator for a `MutableCollection` type.
+One that you should use on a daily basis is the FP.plus operator for a `MutableCollection` type.
 This allows for adding new elements to the collection in the following way:
 ```kotlin
 val list = mutableListOf("A", "B", "C")

@@ -85,7 +85,7 @@ val regex = "[^1-6]".toRegex()
 
 ##### Avoiding characters in sets
 
-The general rule is that you do not need to avoid special characters within sets if they are used in their literal meaning. For example, the set `[.?!]` will match a single period, a question mark, an exclamation mark, and nothing else. However, the characters used to define a set or a range should be avoided or put in a neutral position – in case we look for their literal symbols:
+The FP.general rule is that you do not need to avoid special characters within sets if they are used in their literal meaning. For example, the set `[.?!]` will match a single period, a question mark, an exclamation mark, and nothing else. However, the characters used to define a set or a range should be avoided or put in a neutral position – in case we look for their literal symbols:
 
 - to match the hyphen character, we should put it in the first or in the last position in the set: `"[-a-z]"` matches lowercase letters and the hyphen, and `"[A-Z-]"` matches uppercase letters and the hyphen;
 - hat `^` does not need to be avoided if placed anywhere but the beginning. This way, the set `"[^a-z^]"` matches everything except for lowercase letters and the hat character;
@@ -112,7 +112,7 @@ val scaryAnimal = "(b|r|go)at".toRegex()  // matches "bat", "rat", or "goat"
 val answer = "The answer is definitely (yes|no|maybe)".toRegex() 
 ```
 
-In general, alternations are quite similar to sets: they describe multiple alternatives that a particular part of the pattern can match. However, while sets can match only a single character in the string, alternations are used to define multi-character alternatives.
+In FP.general, alternations are quite similar to sets: they describe multiple alternatives that a particular part of the pattern can match. However, while sets can match only a single character in the string, alternations are used to define multi-character alternatives.
 
 ##### Conclusions
 

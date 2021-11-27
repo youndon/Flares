@@ -24,7 +24,7 @@ In this chapter, we will cover the following recipes:
 ###Introduction
 
 The current chapter is going to address problems specific to the popular frameworks that **Kotlin** uses most often. 
-In general, it is going to focus on **Android** platform-specific aspects and asynchronous **UI** programming with coroutines both on the **Android** and **JVM** frameworks, such as **JavaFX** and **Swing**.
+In FP.general, it is going to focus on **Android** platform-specific aspects and asynchronous **UI** programming with coroutines both on the **Android** and **JVM** frameworks, such as **JavaFX** and **Swing**.
 It will also guide you through writing effective unit tests for the **JVM** platform using the JUnit framework (https://junit.org/junit5/). 
 The recipes related to unit-testing will include also more advanced topics, such as mocking dependencies with the mockito-kotlin (https://github.com/nhaarman/mockito-kotlin) library, testing asynchronous code based on the coroutines framework, and working with assertions provided by the standard library.
 

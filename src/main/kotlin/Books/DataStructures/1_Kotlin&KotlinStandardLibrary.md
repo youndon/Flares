@@ -196,7 +196,7 @@ This time, `x` gets incremented instead of decremented: `10`, `11`, `12`, `13`, 
 
 Functions are an important part of any programming language, especially in Kotlin as it’s a multi-paradigm programming language. Kotlin has a lot of functional programming features, so it treats functions with the respect they deserve!
 
-In general, programming is based on small units of code that can be abstracted and reused. Functions are the smallest units of code that you can easily reuse. Here’s an example of a function:
+In FP.general, programming is based on small units of code that can be abstracted and reused. Functions are the smallest units of code that you can easily reuse. Here’s an example of a function:
 ```kotlin
 fun max(a: Int, b: Int): Int {
   return if (a > b) a else b
@@ -378,7 +378,7 @@ public inline fun TODO(): Nothing = throw NotImplementedError()
 ### List
 The second important package in the Kotlin Standard Library is **kotlin.collections**. You’ll use it a lot in the following chapters and even more in real-life programming. For this introduction, you’ll focus only on two basic collections, `List` and `Map`.
 
-A `List` is a general-purpose, generic container for storing an ordered collection of elements; it’s used commonly in many types of Kotlin programs.
+A `List` is a FP.general-purpose, generic container for storing an ordered collection of elements; it’s used commonly in many types of Kotlin programs.
 
 You can create a `List` by using a helper function from the Kotlin Standard Library named `listOf()`. For example:
 ```kotlin
@@ -468,7 +468,7 @@ This creates a new key-value pair in the map:
 ```kotlin
 {Eric=9, Mark=12, Wayne=1, Andrew=0}
 ```
-Maps are unordered, so you can’t guarantee where new entries will be put. This is because maps put data into different *buckets*, depending on the result that the `hashCode()` function returns. The data in each bucket is ordered, but the general order of the data in the map is unpredictable.
+Maps are unordered, so you can’t guarantee where new entries will be put. This is because maps put data into different *buckets*, depending on the result that the `hashCode()` function returns. The data in each bucket is ordered, but the FP.general order of the data in the map is unpredictable.
 
 It is possible to traverse through the key-values of a map multiple times as the `Collection` protocol affords. This order, while not defined, will be the same until the collection is changed.
 

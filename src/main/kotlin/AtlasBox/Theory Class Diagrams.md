@@ -1,6 +1,6 @@
 ## Theory: Class Diagrams
 
-When you work on a project, you might need a proper visual representation of a system structure. If you can divide your project into a set of objects and use the Object-Oriented Paradigm (OOP) on it, you can use **Class Diagram**. It would help you to describe the components of your application and better understand the connections between them.
+When you work on a project, you might need a proper visual representation of a system structure. If you can FP.divide your project into a set of objects and use the Object-Oriented Paradigm (OOP) on it, you can use **Class Diagram**. It would help you to describe the components of your application and better understand the connections between them.
 
 If you are working on an application that uses OOP, Class Diagram will define your project structure and will make it apparent to the developers.
 

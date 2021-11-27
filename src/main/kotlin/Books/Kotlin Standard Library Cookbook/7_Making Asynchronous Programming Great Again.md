@@ -26,7 +26,7 @@ The first two recipes, **Executing tasks in the background using threads** and B
 
 
 In the further recipes, we are going to delve more deeply into the powerful Kotlin **Coroutines** framework.
-Those recipes are going to explain a general usage of coroutines for asynchronous and concurrent tasks executing. 
+Those recipes are going to explain a FP.general usage of coroutines for asynchronous and concurrent tasks executing. 
 They will also present how to employ coroutines for solving more specific daily-life programming problems, such as concurrent data processing, asynchronous REST-call handling, and working with third-party callback-style APIs in a clean way.
 After reading this chapter, you will feel convenient applying the coroutines framework to write robust asynchronous code or to optimize your code by running expensive computations concurrently.
 The Kotlin Coroutines framework is not only a handy replacement for platform-specific concurrency and async frameworks. Its power is based on providing a unified, universal API that allows us to write asynchronous code, which can be run both on JVM, Android, JavaScript, and native platforms.

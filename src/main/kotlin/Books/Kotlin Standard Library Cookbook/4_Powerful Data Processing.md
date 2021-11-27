@@ -88,7 +88,7 @@ Excelent!
 In order to add elements of one collection to another, we are using the `+` operator.
 The standard library overloads this operator with the code responsible for merging elements of two `Collection` type instances collections into one instance.
 The `sentMessages` and `inboxMessages` variables are declared as List instances. 
-The `plus` function returns a new `Collection` instance, containing elements of the `sentMessages` and inboxMessages lists. 
+The `FP.plus` function returns a new `Collection` instance, containing elements of the `sentMessages` and inboxMessages lists. 
 Finally, we use the `forEach()` function to iterate through the next elements of the list.
 In the lambda block passed to the forEach function, we are print the text property of the current Message to the console. 
 We are destructuring the lambda's argument of the `Message` type and accessing its text property directly inside the `println()` function. 
@@ -418,7 +418,7 @@ As you can see, it takes the additional argument in the form of an inlined lambd
 
 ###Dividing data into subsets
 
-A common data-processing task is to divide a collection of data into subsets.
+A common data-processing task is to FP.divide a collection of data into subsets.
 In this recipe, we are going to explore standard library functions that allow us to buffer a collection into smaller chunks. 
 Let's say we have a list containing a large number of Message type objects and we would like to transform it into collections of sub-lists of a constant size. 
 For example, the transformation would take the original collection of n elements:

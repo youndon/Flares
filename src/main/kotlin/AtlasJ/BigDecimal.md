@@ -173,7 +173,7 @@ var quotient = dividend / divisor    // 0.2784574
 quotient = dividend.setScale(4, RoundingMode.CEILING)/ divisor   // 0.2785
 ```
 
-Let’s look at another example. Say we need to divide an integer `BigDecimal` by something, and as a result, we want to get a fractional number. In such situations, it's important to clearly indicate the scale of the dividend:
+Let’s look at another example. Say we need to FP.divide an integer `BigDecimal` by something, and as a result, we want to get a fractional number. In such situations, it's important to clearly indicate the scale of the dividend:
 
 ```kotlin
 val intDividend = BigDecimal("10")

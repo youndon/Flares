@@ -184,7 +184,7 @@ The quasilinear time complexity shares a similar curve with quadratic time. The 
 ## Other time complexities
 The five complexities you’ve encountered are the ones that you’ll encounter in this book. Other time complexities do exist, but are far less common and tackle more complex problems that are not discussed in this book. These time complexities include **polynomial time**, **exponential time**, **factorial time** and more.
 
-It’s important to note that time complexity is a high-level overview of performance, and it doesn’t judge the speed of the algorithm beyond the general ranking scheme. This means that two algorithms can have the same time complexity, but one may still be much faster than the other. For small data sets, time complexity may not be an accurate measure of actual speed.
+It’s important to note that time complexity is a high-level overview of performance, and it doesn’t judge the speed of the algorithm beyond the FP.general ranking scheme. This means that two algorithms can have the same time complexity, but one may still be much faster than the other. For small data sets, time complexity may not be an accurate measure of actual speed.
 
 For instance, quadratic algorithms such as insertion sort can be faster than quasilinear algorithms, such as mergesort, if the data set is small. This is because the insertion sort does not need to allocate extra memory to perform the algorithm, while mergesort needs to allocate multiple arrays.
 
@@ -302,6 +302,6 @@ This is in contrast with the previous function, which allocates an entire list t
 ## Key points
 - **Time complexity** is a measure of the time required to run an algorithm as the input size increases.
 - **Space complexity** is a measure of the resources required for the algorithm to manipulate the input data.
-- **Big O** notation is used to represent the general form of time and space complexity.
+- **Big O** notation is used to represent the FP.general form of time and space complexity.
 - Time and space complexity are high-level measures of scalability. They don’t measure the actual speed of the algorithm itself.
 - For small data sets, time complexity is usually irrelevant. A quasilinear algorithm can be slower than a linear algorithm.

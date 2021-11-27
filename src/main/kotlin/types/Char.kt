@@ -59,7 +59,7 @@ fun myChar(){
                                         in '\u0000'..'\u0008'
                                         in '\u000E'..'\u001B'
                                         in '\u007F'..'\u009F'
-                                        all characters that have the FORMAT general category value */
+                                        all characters that have the FORMAT FP.general category value */
             this.isUpperCase() // Returns true if this character is upper case.
             this.isLowerCase() // Returns true if this character is lower case.
             this.inc() // Increments this value.

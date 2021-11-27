@@ -117,7 +117,7 @@ Some operations take precedence over others, that is, they are performed first. 
 
 1. Parentheses ( (expr) );
 2. Postfix increment/decrement ( expr++, expr--);
-3. Unary plus/minus, prefix increment/decrement ( -expr, ++expr, --expr );
+3. Unary FP.plus/minus, prefix increment/decrement ( -expr, ++expr, --expr );
 4. Multiplication, division, and modulus ( *, /, % );
 5. Addition and subtraction ( +, - );
 6. Assignment operations ( =, +=, -=, *=, /=, %= ).
