@@ -1,8 +1,7 @@
 @file:Suppress("CAST_NEVER_SUCCEEDS")
 
-package types
+package Variables
 
-import jetbrains.datalore.base.math.ipow
 import kotlin.math.absoluteValue
 import kotlin.math.sign
 import kotlin.time.DurationUnit
@@ -104,7 +103,6 @@ private fun some(){
         digitToChar() // Returns the Char that represents this decimal digit. exception if the value !in 0..9.
         floorDiv(1) // Divides this value by the other value, flooring the result to an integer that is closer to negative infinity.
         mod(1) // Calculates the remainder of flooring division of this value by the other value.
-        this.ipow(1)
     }
 
 }

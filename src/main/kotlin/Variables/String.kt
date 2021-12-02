@@ -1,6 +1,6 @@
 @file:Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION", "DEPRECATED_IDENTITY_EQUALS")
 
-package types
+package Variables
 
 import java.util.*
 
@@ -69,7 +69,7 @@ val string = "\n-> next line," +
         lowercase() // Make All the String as lowercase.
         endsWith("ing") // Check if the text end with some char or char_sequence.
         encodeToByteArray().run{
-            /**@see types.byteArr*/
+            /**@see Variables.byteArr*/
         }
         filter { it == 's' } // for get only "it" from the string.
         filterNot { it == 's' } // for get all the text except "it".
@@ -123,10 +123,10 @@ val string = "\n-> next line," +
         substringAfterLast('r')
         toBoolean() // Returns true if the orchid.contents of this string is equal to the word "true", ignoring case, and false otherwise.
         toByteArray().run {
-            /**@see types.byteArr*/
+            /**@see Variables.byteArr*/
         }
         toCharArray().run {
-            /**@see types.charArray*/
+            /**@see Variables.charArray*/
         }
         toBooleanStrict() // Returns true if the content of this string is equal to the word "true", false if it is equal to "false".
         toBooleanStrictOrNull() // , and null otherwise.

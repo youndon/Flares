@@ -3,6 +3,7 @@ package Atlas.d
 import java.time.Duration
 import kotlin.time.DurationUnit
 import kotlin.time.ExperimentalTime
+import kotlin.time.toTimeUnit
 
 private class DurationUnit {
     @ExperimentalTime
@@ -10,7 +11,7 @@ private class DurationUnit {
 
     @ExperimentalTime
     fun main() {
-        with(durationUnit) {
+        durationUnit.toTimeUnit().run {
             toNanos(0L)
             toSeconds(0L)
             toMinutes(0L)

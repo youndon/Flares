@@ -1,4 +1,4 @@
-package types
+package Variables
 
 lateinit var shot :BooleanIterator
 

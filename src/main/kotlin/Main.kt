@@ -1,45 +1,40 @@
-import java.nio.file.Watchable
-import javax.lang.model.element.AnnotationValueVisitor
+import kotlin.random.Random
 
 fun main() {
-    noble(5645)
+
 
 }
-fun noble(t: Int) = println("$t Noble!")
-open class MainClass<T>(){
-   open fun range() {
 
+/* println("12345".let {
+        val mid = it.length / 2
+        if (it.length % 2 == 0) {
+            it.take(mid).dropLast(1) + it.takeLast(mid).drop(1)
+        } else {
+            it.take(mid) + it.takeLast(mid)
+        }
+    })*/
+
+/*Array(4) { readLine()!!.toInt() }.let {
+        runCatching {
+            require(it.contentEquals(it.sortedArray()))
+        }.onSuccess { print("YES") }
+            .onFailure { print("NO") }
+    }*/
+
+    fun generatePredictablePassword(seed: Int): String {
+        val randomPassword = ""
+        repeat(10) {
+            randomPassword + Random(seed).nextInt(33, 126).toChar()
+        }
+        return randomPassword
     }
-}
-class SecondClass<T>
-interface MainInterface<T>
-interface SecondInterface<T>
 
-fun <T>swung()
-    where T: MainClass<T>,T : SecondInterface<T>, T: MainInterface<T> {}
-fun MainClass<Any>.land() {
-    this.range()
-}
-
-// change the code below
-class SmartKitchen<T:Logger,R:Cooker> {
-    fun <T>finishCooking(l: T) where T:Logger,T:Cooker
-    {
-
+    fun List<Int>.findPairsWithGivenDifference(k: Int): MutableList<Pair<Int, Int>> {
+        val l = mutableListOf<Pair<Int, Int>>()
+        this.sortedBy { it == it }.zipWithNext { a, b ->
+            if (a + k == b) l.add(Pair(a, b))
+        }
+        return l
     }
-}
-// don't change it!
-interface Logger {
-    fun log()
-}
-interface Cooker {
-    fun cook()
-}
-class Microwave: Logger, Cooker {
-    override fun log() = println("Microwave finished cooking!")
-    override fun cook() = println("Microwave is cooking")
-}
-class MultiCooker: Logger, Cooker {
-    override fun log() = println("Multicooker finished cooking!")
-    override fun cook() = println("Multicooker is cooking")
-}
+
+//fun <F> genericF(f:F): F where F:CharSequence = f
