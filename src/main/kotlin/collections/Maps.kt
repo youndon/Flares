@@ -41,8 +41,8 @@ internal fun maps(){
         count() // Returns the number of entries in this map.
         filter { it.key > 0 }
         filterTo(mutableMapOf()) { it.key > 0 }
-//        this.flatMap {  } TODO
-//        this.flatMapTo() TODO
+        flatMap { entries } // TODO: 04/12/2021
+        flatMapTo(mutableListOf()) { entries } // TODO: 04/12/2021
         isNotEmpty() // Returns true if this map is not empty.
         iterator() // Returns an Iterator over the entries in the Map.
         map { } // Returns a list containing the results of applying the given transform function to each entry in the original map.
@@ -83,7 +83,7 @@ internal fun maps(){
         merge(1,"value") { s, s2 -> s+s2 } // make operation between old value and new one.
         clear() // Removes all elements in this map.
         this.replace(1,"old","new") // return true if succeed, false if the key or value not correct.
-        this.replaceAll { t, u -> when{
+        this.replaceAll { t, u -> when {
             t > 5 -> "..."
             else -> u
         } }
@@ -93,20 +93,37 @@ internal fun maps(){
         this.withDefault { "..." } // TODO: 26/06/2021
     }
 
-    // MutableEntry.
-    val mutableEntry = map as MutableMap.MutableEntry<*,Int> 
-    mutableEntry.setValue(1)
-
-    // AbstractMap.
-    val abstractMap = map as AbstractMap
-
-    // AbstractMutableMap.
-    val abstractMutableMap = map as AbstractMutableMap
-
     // HashMap.
-    val hashMap = map as HashMap
+    hashMapOf(null to null)
 
     // LinkedHashMap.
-    val linkedHashMap = map as LinkedHashMap
+    linkedMapOf(null to null)
 
+    // MutableEntry.
+    object : MutableMap.MutableEntry<Nothing, Nothing> {
+        override val key: Nothing
+            get() = TODO("Not yet implemented")
+        override val value: Nothing
+            get() = TODO("Not yet implemented")
+
+        override fun setValue(newValue: Nothing): Nothing {
+            TODO("Not yet implemented")
+        }
+    }
+
+    // AbstractMap.
+    object : AbstractMap<Nothing,Nothing>() {
+        override val entries: Set<Map.Entry<Nothing, Nothing>>
+            get() = TODO("Not yet implemented")
+    }
+
+    // AbstractMutableMap.
+    object : AbstractMutableMap<Nothing,Nothing>(){
+        override fun put(key: Nothing, value: Nothing): Nothing? {
+            TODO("Not yet implemented")
+        }
+
+        override val entries: MutableSet<MutableMap.MutableEntry<Nothing, Nothing>>
+            get() = TODO("Not yet implemented")
+    }
 }

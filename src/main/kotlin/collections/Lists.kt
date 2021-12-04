@@ -18,8 +18,8 @@ private fun lists() {
             /**@see AtlasJ.JStream*/ }
         asReversed()
         binarySearch { 1 } /* Searches this list, or it's range for the provided
-                                [element] using the binary search algorithm. */
-        binarySearchBy(1, 0, 3){it}
+                                [element] using the binary search algorithm, Big notion 'O(log(n))' worst case. */
+        binarySearchBy(1, 0, 3){ it }
         component1() // Returns 1st element from the list, there is 5th.
         dropLast(1) // Returns a list containing all elements except last n elements.
         dropLastWhile { it==1 } // Returns a list containing all elements except last elements that satisfy the given predicate.
@@ -48,8 +48,8 @@ private fun lists() {
         single() // Returns the single element, or throws an exception if the list is empty or has more than one element.
         singleOrNull() // , or null if the list is empty or has more than one element.
         slice(0..6) // Returns a list containing elements at indices in the specified indices range.
-        foldRight(""){i, acc -> acc } // Accumulates value starting with initial value and applying operation from right to left to each element and current accumulator value, or return initial vale if this collection is empty (this why we haven't foldRightOrNull() fun like reduce).
-        foldRightIndexed(""){index, i, acc -> acc } // In here we get index with each element.
+        foldRight(""){ i, acc -> acc } // Accumulates value starting with initial value and applying operation from right to left to each element and current accumulator value, or return initial vale if this collection is empty (this why we haven't foldRightOrNull() fun like reduce).
+        foldRightIndexed(""){ index, i, acc -> acc } // In here we get index with each element.
     }
 
     (0..9).toMutableList().apply {
@@ -73,6 +73,12 @@ private fun lists() {
         sortByDescending { it } // sort the list from the grand to the small
     }
 
+    // emptyList.
+    emptyList<Int>()
+
+    // listIterator
+    emptyList<Nothing>().listIterator()
+
     // ArrayList.
     arrayListOf<String>().apply {
         trimToSize() // TODO: 26/06/2021
@@ -80,15 +86,32 @@ private fun lists() {
     }
 
     // AbstractList.
-    val myAbstractList : AbstractList<*>
+    object : AbstractList<Nothing>() {
+        override val size: Int = 0
+
+        override fun get(index: Int): Nothing {
+            throw Exception()
+        }
+    }
 
     // AbstractMutableList.
-    val myAbstractMutableList : AbstractMutableList<Any>
+    object : AbstractMutableList<Any>(){
+        override fun add(index: Int, element: Any) {
+        }
 
-    // listIterator
-    val pleasant = listOf(1,2).listIterator()
+        override fun removeAt(index: Int): Any {
+            TODO("Not yet implemented")
+        }
 
-    // emptyList.
-   val myEmptyList =  emptyList<Int>()
+        override fun set(index: Int, element: Any): Any {
+            TODO("Not yet implemented")
+        }
 
+        override val size: Int
+            get() = 0
+
+        override fun get(index: Int): Any {
+            TODO("Not yet implemented")
+        }
+    }
 }
