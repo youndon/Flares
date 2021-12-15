@@ -4,15 +4,14 @@ import kotlin.test.junit.JUnitContributor
 
 private class AtlasT {
 
-    init {
-        @Test
-        @Ignore
-        @BeforeTest
-        @AfterTest
-        fun kTest() {
-        }
+    @Test
+    @Ignore
+    @BeforeTest
+    @AfterTest
+    fun kTest() {
+
         asserter
-        assertContains(arrayOf(),0,"")
+        assertContains(arrayOf(), 0, "")
 //        assertContentEquals()
 //        assertEquals()
 //        assertNotEquals()
@@ -29,7 +28,7 @@ private class AtlasT {
         currentStackTrace()
 //        expect()
         fail()
-        todo {  }
+        todo { }
         JUnitContributor().contribute()
     }
 }
