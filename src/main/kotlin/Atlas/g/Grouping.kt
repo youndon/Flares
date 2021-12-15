@@ -14,7 +14,7 @@ interface Grouping {
             this.sourceIterator()
 //        this.aggregate({key: Any, accumulator:String, element: Any, first: Boolean ->  })
 //        this.aggregateTo(mutableMapOf(),{key, accumulator, element, first ->  })
-            this.eachCount() // TODO: 30/07/2021
+            this.eachCount() // return a [Map] associating the key of each group with the count of elements in the group.
             this.eachCountTo(mutableMapOf())
             this.fold(1) { accumulator, element -> 1 }
             this.foldTo(mutableMapOf(), 1) { accumulator, element -> 1 }

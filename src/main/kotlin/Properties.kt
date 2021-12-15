@@ -1,6 +1,7 @@
+import kotlin.properties.Delegates
 
 // The properties have two different terms.
-// val: the value on val property not allowed to change.
+// val: the value on val property not allowed changing.
 private val ONE = 2020
 fun main() {
 //    ONE = 2021 // FIXME: error!
@@ -40,6 +41,14 @@ private lateinit var `var`:Any
 
 // by.
 private val some:Any? by lazy { null }
+// ot
+private val del by Delegates
+    .observable("") {
+            property,
+            oldValue,
+            newValue ->
+        newValue
+}
 
 /*
  const.
@@ -50,7 +59,7 @@ The `const` keyword is used to declare those properties which are immutable in n
 - no custom getter
 */
 
-    const val con = "constant"
+const val con = "constant"
 
 // Why use "const" when we can use "val"?
 // It's all depending on your status,

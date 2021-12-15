@@ -2,7 +2,9 @@
 private fun arr(){
 
     val arr = Array(3){'s'}
-    arr[0]='a' ; arr[1]='b' ; arr[2]='c'
+    arr[0]='a'
+    arr[1]='b'
+    arr[2]='c'
 
     arr.apply {
         component1() // Returns 1st element from the array.

@@ -1,8 +1,8 @@
-import kotlin.test.AsserterContributor
+
 import kotlin.test.*
 import kotlin.test.junit.JUnitContributor
 
-private class Main {
+private class AtlasT {
 
     init {
         @Test

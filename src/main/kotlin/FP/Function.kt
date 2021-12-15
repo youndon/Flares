@@ -39,7 +39,7 @@ fun myAnonymous() = fun (){}
 fun myExtension(a: () -> Unit) {}
 
 // Lambda fun.High-Order.
-fun myLambda() =  {a:Int,b:Int -> a + b }
+fun myLambda() =  { a:Int,b:Int -> a + b }
 
 // infix notation.
 // infix function must by extension function and have one parameter value.
@@ -89,12 +89,15 @@ Parameter is variable defined in function declaration.
 @Suppress("UNREACHABLE_CODE")
 private fun randomString(length: Int): String {
     /*                      ↑
-                            parameter                 */
+                         parameter                 */
     return "it's $length"
-    object {
-        init {
-            randomString(10) // 10 is argument
-        }
-    }
 }
+object Some {
+    init {
+        randomString(10) // 10 is an argument
+    }
 //In this example length is a parameter, and 10 (used in function call) is an argument.
+}
+
+// where option.
+fun <F> genericF(f:F): F where F:CharSequence = f // TODO: 14/12/2021
