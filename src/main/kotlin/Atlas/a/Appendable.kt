@@ -1,7 +1,5 @@
 package Atlas.a
 
-import kotlin.text.Appendable
-
 private class kAppendable {
 
     init {

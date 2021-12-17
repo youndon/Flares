@@ -32,8 +32,7 @@ private fun some(){
     }
 
     // IntProgression. The Progression work with the range variables.
-    val intProgression = 0..100
-    intProgression.run {
+    (0..100).run {
         first // The first element in the progression.
         last // The last element in the progression.
         step // The step of the progression.
@@ -49,16 +48,14 @@ private fun some(){
     val myIntArray : IntArray = intArrayOf(1,2,3)
 
     // IntRange.
-    val intRange = 0..100
-       intRange.run {
+    (0..100).run {
         random() // get some char from the range randomly.
         randomOrNull()
         contains(0)
     }
 
     // Int Attachment:
-    val integer = 100
-    with(integer){
+    with(100){
         dec() // Increments this value.
         inc() // Decrements this value.
         div(2) // divide
