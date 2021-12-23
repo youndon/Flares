@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: org.jetbrains.skiko:skiko-jvm-runtime-linux-x64:0.3.9">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-jvm-runtime-linux-x64/0.3.9/e73517c56b28ae3254c041f398358940c360b152/skiko-jvm-runtime-linux-x64-0.3.9.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

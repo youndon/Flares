@@ -3,16 +3,15 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.6.0"
 }
-
 group = "me.nes"
-version = "1.0"
+version = "1.0.1"
 
 repositories {
     jcenter()
     mavenCentral()
-}
+} // possible
 dependencies {
-    testImplementation(kotlin("test" ))
+    testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
@@ -23,9 +22,13 @@ dependencies {
 //    implementation ("io.github.microutils:kotlin-logging-jvm:2.0.10") // or 2.1.15
 
 }
-tasks.test {
-    useJUnit()
+
+tasks.run {
+    test {
+        useJUnit()
+    }
+    withType<KotlinCompile>() {
+            kotlinOptions.jvmTarget = "11"
+    }
 }
-tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "11"
-}
+
