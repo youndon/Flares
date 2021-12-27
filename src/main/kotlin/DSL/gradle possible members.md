@@ -52,7 +52,7 @@ gradle.run {
     addBuildListener()
     addListener("")
     addProjectEvaluationListener()
-        removeListener()
+    removeListener()
     removeProjectEvaluationListener()
     afterProject {  }
     beforeProject {  }

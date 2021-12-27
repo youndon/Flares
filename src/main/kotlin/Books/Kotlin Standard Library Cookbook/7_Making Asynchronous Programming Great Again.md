@@ -1093,7 +1093,7 @@ val asyncResults = async {
 getResults()
 }
  
-println("getResults() is running in bacground. Main thread is not blocked.")
+println("getResults() is running in bacground. KotlinTest thread is not blocked.")
 asyncResults.await().map { println(it.displayName) }
 println("getResults() completed")
 
@@ -1104,7 +1104,7 @@ In the end, our code is going to print the following output to the console:
 ```text
 
 getResults() is running in background. 
-Main thread is not blocked.
+KotlinTest thread is not blocked.
 a
 b
 c

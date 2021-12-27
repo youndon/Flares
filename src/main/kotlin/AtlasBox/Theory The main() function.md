@@ -13,7 +13,7 @@ fun main() {}
 ```
 
 - `fun` is a keyword that shows that `main()` is a function. Just a regular function;
-- `main` is the function name. It is important to know that we cannot change it: if we change it, for example, to `Main()`, the program will compile but not start;
+- `main` is the function name. It is important to know that we cannot change it: if we change it, for example, to `KotlinTest()`, the program will compile but not start;
 - and finally, the body of the function, as you well know, will be placed in curly braces.
 
 In fact, there may still be input parameters — `args` — in the `main()` syntax; it’s a non-binding part of the declaration of the `main()`, and we'll talk more about it later.

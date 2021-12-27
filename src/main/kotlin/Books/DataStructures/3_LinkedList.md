@@ -26,7 +26,7 @@ data class Node<T>(var value: T, var next: Node<T>? = null) {
   }
 }
 ```
-Navigate to the **Main.kt** file and add the following inside `main()`:
+Navigate to the **KotlinTest.kt** file and add the following inside `main()`:
 ```kotlin
 fun main() {
   "creating and linking nodes" example {
@@ -45,7 +45,7 @@ You’ve just created three nodes and connected them:
 
 ![A linked list containing values 1, 2, and 3](https://assets.alexandria.raywenderlich.com/books/dsk/images/a3f250ea0a8132e7d8e897a82ce029173f0a433f89ac1a136d9c904f2dd50f08/original.png)A linked list containing values 1, 2, and 3
 
-Once you run `Main.kt`, you’ll see the following output in the console:
+Once you run `KotlinTest.kt`, you’ll see the following output in the console:
 ```
 ---Example of creating and linking nodes---
 1 -> 2 -> 3
@@ -100,7 +100,7 @@ fun push(value: T) {
 ```
 In the case in which you’re pushing into an empty list, the new node is both the `head` and `tail` of the list. Since the list now has a new node, you increment the value of `size`.
 
-In **Main.kt**, add the following in `main()`:
+In **KotlinTest.kt**, add the following in `main()`:
 ```kotlin
 "push" example {
   val list = LinkedList<Int>()
@@ -162,7 +162,7 @@ This code is relatively straightforward:
 2. In all other cases, you create a new node *after* the current `tail` node. `tail` will never be `null` here because you’ve already handled the case where the list is empty in the `if` statement.
 3. Since this is tail-end insertion, your new node is also the tail of the list.
 
-Go back to **Main.kt** and write the following at the bottom of `main()`:
+Go back to **KotlinTest.kt** and write the following at the bottom of `main()`:
 ```kotlin
 "append" example {
   val list = LinkedList<Int>()
@@ -229,7 +229,7 @@ Here’s what you’ve done:
 2. Otherwise, you create a new node and link its `next` property to the next node of the list.
 3. You reassign the `next` value of the specified node to link it to the new node that you just created.
 
-To test things, go back to **Main.kt** and add the following to the bottom of `main()`:
+To test things, go back to **KotlinTest.kt** and add the following to the bottom of `main()`:
 ```kotlin
 "inserting at a particular index" example {
   val list = LinkedList<Int>()
@@ -285,7 +285,7 @@ fun pop(): T? {
 
 By moving the `head` down a node, you’ve effectively removed the first node of the list. The garbage collector will remove the old node from memory once the method finishes since there will be no more references attached to it. If the list becomes empty, you set `tail` to `null` as well.
 
-To test, go to **Main.kt** and add the following code at the bottom inside `main()`:
+To test, go to **KotlinTest.kt** and add the following code at the bottom inside `main()`:
 ```kotlin
 "pop" example {
   val list = LinkedList<Int>()
@@ -344,7 +344,7 @@ Here’s what’s happening:
 4. You keep searching for the next node until `current.next` is `null`. This signifies that `current` is the last node of the list.
 5. Since `current` is the last node, you disconnect it using the `prev.next` reference. You also make sure to update the `tail` reference.
 
-Go back to **Main.kt**, and in `main()`, add the following to the bottom:
+Go back to **KotlinTest.kt**, and in `main()`, add the following to the bottom:
 ```kotlin
 "removing the last node" example {
   val list = LinkedList<Int>()
@@ -730,7 +730,7 @@ override fun retainAll(elements: Collection<T>): Boolean {
   return result
 }
 ```
-Congrats! You finished the implementation, so it’s time for some testing. Go back into **Main.kt** and add these at the end of `main()`:
+Congrats! You finished the implementation, so it’s time for some testing. Go back into **KotlinTest.kt** and add these at the end of `main()`:
 ```kotlin
 "removing elements" example {
   val list: MutableCollection<Int> = LinkedList()
@@ -864,7 +864,7 @@ fun <T> LinkedList<T>.getMiddle(): Node<T>? {
 ```
 In the `while` declaration, you bind the next node to `fast`. If there’s a next node, you update `fast` to the next node of `fast`, effectively traversing down the list twice. `slow` is updated only once. This is also known as the **runner technique**.
 #### Try it out!
-Write the following at the bottom of **Main.kt**:
+Write the following at the bottom of **KotlinTest.kt**:
 ```kotlin
 "print middle" example {
   val list = LinkedList<Int>()

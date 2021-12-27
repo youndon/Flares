@@ -99,7 +99,7 @@ runBlocking {
 Iterable{ iterator {
     
 yield(0) // We can say it's the initializer of SequenceScope bloc, for one value.
-yieldAll(0..10) // this one for ranges values or seqquen
+yieldAll(0..10) // this one for ranges values or Sequence.
      }
  }
  ```

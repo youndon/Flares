@@ -95,7 +95,7 @@ interface InterfaceExample {
 
 ### Inheritance
 Inheritance means that one class acquires the attributes and methods of another class. That means, we can create new classes over existing classes.<br/>
-Main purpose of inheritance is to provide the reusability of code. So, a class has to write only the unique attributes and methods. Rest of the common attributes and methods can be extended from the another class.<br/>
+KotlinTest purpose of inheritance is to provide the reusability of code. So, a class has to write only the unique attributes and methods. Rest of the common attributes and methods can be extended from the another class.<br/>
 Here, two new terms come up. Parent class and child class.
 - <b>Parent Class:</b> This the class whose attributes and methods will be using by child class.
 - <b>Child Class:</b> This is class that extends the features of parent class.

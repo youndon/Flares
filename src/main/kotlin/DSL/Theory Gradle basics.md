@@ -33,13 +33,13 @@ To install Gradle, follow [the installation instructions](https://gradle.org/rel
 
 To verify that the installation has been completed correctly, run the following command:
 
-```java
+```shell
 gradle -v
 ```
 
 The result should look similar to:
 
-```java
+```shell
 ------------------------------------------------------------
 Gradle 5.6.4
 ------------------------------------------------------------

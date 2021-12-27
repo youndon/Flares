@@ -61,7 +61,7 @@ override fun pop(): Element? {
 ```
 In the the `push` method you just append the value passed as parameter to the end of the `ArrayList` using it’s `add` method. In the `pop` method you simply return null if the storage is empty or you remove and return the last element you’have inserter.
 
-It’s time to see it working. Open **Main.kt** and write this code into the `main()`:
+It’s time to see it working. Open **KotlinTest.kt** and write this code into the `main()`:
 ```kotlin
 "using a stack" example {
   val stack = StackImpl<Int>().apply {

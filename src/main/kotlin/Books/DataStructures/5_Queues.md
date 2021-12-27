@@ -113,7 +113,7 @@ For debugging purposes, you’ll have your `queue` override `toString()`. Add th
 ```kotlin
 override fun toString(): String = list.toString()
 ```
-It’s time to try out the queue that you just implemented. In **Main.kt**, add the following to the bottom of `main()`:
+It’s time to try out the queue that you just implemented. In **KotlinTest.kt**, add the following to the bottom of `main()`:
 ```kotlin
 "Queue with ArrayList" example {
   val queue = ArrayListQueue<String>().apply {
@@ -193,7 +193,7 @@ override fun toString(): String = list.toString()
 ```
 This leverages the `DoublyLinkedList`’s existing implementation for `toString()`.
 
-That’s all there is to implementing a queue using a linked list. In **Main.kt**, you can try the following example:
+That’s all there is to implementing a queue using a linked list. In **KotlinTest.kt**, you can try the following example:
 ```kotlin
 "Queue with Doubly Linked List" example {
   val queue = LinkedListQueue<String>().apply {
@@ -301,7 +301,7 @@ override fun toString(): String = ringBuffer.toString()
 ```
 This code creates a string representation of the queue by delegating to the underlying ring buffer.
 
-That’s all there is to it. Test your ring buffer-based queue by adding the following at the bottom of **Main.kt**, inside `main()`:
+That’s all there is to it. Test your ring buffer-based queue by adding the following at the bottom of **KotlinTest.kt**, inside `main()`:
 ```kotlin
 "Queue with Ring Buffer" example {
   val queue = RingBufferQueue<String>(10).apply {
