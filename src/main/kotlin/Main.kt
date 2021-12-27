@@ -1,13 +1,17 @@
+import java.io.File
+
 fun main() {
-
-
-    val list = mutableListOf<Long>()
-    while (true) {
-        val put = readLine() ?: break
-        list.add(put.toLong())
+"""
+AnnotationHelper
+AnnotationRegistry
+FieldMapping
+MethodDescriptor
+MethodFilter
+TransformedHeader
+    """.trimIndent().lines().forEach {
+        File("$it.kt").run {
+//            mkdir()
+            writeText("class $it { \n }")
+        }
     }
-    val max = list.maxOf { it }
-    val occ = list.count { it == max }
-    println("$max $occ")
-
 }
