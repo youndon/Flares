@@ -2,16 +2,19 @@ import java.io.File
 
 fun main() {
 """
-AnnotationHelper
-AnnotationRegistry
-FieldMapping
-MethodDescriptor
-MethodFilter
-TransformedHeader
+AnswerAnsweringOpportunity
+CommonClearer
+ConstructorStub
+MockKStub
+MockType
+SpyKStub
+Stub
+StubGatewayAccess
+StubRepository
     """.trimIndent().lines().forEach {
         File("$it.kt").run {
 //            mkdir()
-            writeText("class $it { \n }")
+            writeText("class $it { \n}")
         }
     }
 }

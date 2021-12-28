@@ -1,5 +1,4 @@
 
-import org.junit.jupiter.api.Test
 import kotlin.test.*
 
 class KotlinTest {
@@ -13,8 +12,8 @@ class KotlinTest {
         assertContentEquals(expected = arrayOf(""), actual = arrayOf(""), "")
         assertEquals("", "", "")
         assertNotEquals("", "", "")
-//        assertFails()
-//        assertFailsWith()
+        assertFails {}
+//        assertFailsWith("") {} // TODO: 28/12/2021 "reified"
         assertFalse("") { false }
         assertIs<String>("", "")
         assertIsNot<String>("", "")
@@ -25,29 +24,8 @@ class KotlinTest {
         assertTrue("") { true }
         currentStackTrace()
         expect("", "") { "..." }
-//        fail()
         todo {}
-
+        fail("")
     }
 
-    fun mockk() {
-        io.mockk.*
-        io.mockk.junit5.MockKExtension
-        io.mockk.proxy.common.*
-        io.mockk.proxy.common.transformation.*
-        io.mockk.proxy.jvm.*
-        io.mockk.proxy.jvm.advice.jvm.*
-        io.mockk.proxy.jvm.dispatcher
-        io.mockk.proxy.jvm.transformation
-        io.mockk.impl.log.*
-        io.mockk.impl.annotations.*
-        io.mockk.impl.platform.*
-        io.mockk.impl.verify.*
-        io.mockk.impl.eval.*
-        io.mockk.impl.instantiation.*
-        io.mockk.impl.recording.*
-        io.mockk.impl.recording.states.*
-        io.mockk.impl.stub.*
-
-    }
 }
