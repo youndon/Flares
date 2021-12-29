@@ -2,8 +2,8 @@ package mockk
 
 import io.mockk.*
 
-private fun anions() {
-//    clearMocks()
+private inline fun <reified T:Any> anions() {
+    clearMocks("","")
     clearAllMocks()
     clearConstructorMockk()
     clearStaticMockk()
@@ -17,15 +17,15 @@ private fun anions() {
     confirmVerified()
     every {  }
     excludeRecords {  }
-//    mockk<>()
-//    mockkClass()
+    mockk<T>()
+    mockkClass(T::class)
     mockkObject()
-//    mockkStatic()
+    mockkStatic("")
     mockkConstructor()
-//    isMockKMock()
+    isMockKMock("")
     registerInstanceFactory {  }
-//    slot<>()
-//    spyk<>()
+    slot<T>()
+    spyk<T>()
     stackTracesAlignmentValueOf("")
     unmockkAll()
     unmockkConstructor()

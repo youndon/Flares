@@ -1,20 +1,21 @@
-import java.io.File
-
 fun main() {
-"""
-AnswerAnsweringOpportunity
-CommonClearer
-ConstructorStub
-MockKStub
-MockType
-SpyKStub
-Stub
-StubGatewayAccess
-StubRepository
-    """.trimIndent().lines().forEach {
-        File("$it.kt").run {
-//            mkdir()
-            writeText("class $it { \n}")
-        }
+
+}
+
+fun com(): Int {
+    val n = readLine()!!.toInt()
+    val company = mutableListOf<Int>()
+    val tax = mutableListOf<Int>()
+    repeat(n) {
+        company += readLine()!!.toInt()
     }
+    repeat(n){
+        tax += readLine()!!.toInt()
+    }
+    val highest = mutableListOf<Double>()
+    company.zip(tax).forEach {
+        highest += (it.first * it.second) / 100.0
+    }
+    println(highest)
+      return  highest.indexOf(highest.maxOrNull()) + 1
 }

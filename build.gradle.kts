@@ -18,18 +18,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
     testImplementation("io.mockk:mockk:1.12.1")
     implementation ("io.github.microutils:kotlin-logging-jvm:2.1.21")
-    testImplementation(platform("org.junit:junit-bom:5.8.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
 
 tasks.run {
-    test {
-        useJUnitPlatform()
-        testLogging {
-            events("passed", "skipped", "failed")
-        }
         withType<KotlinCompile>() {
             kotlinOptions.jvmTarget = "11"
         }
-    }
 }

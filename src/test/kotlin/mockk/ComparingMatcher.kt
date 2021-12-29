@@ -1,2 +1,5 @@
-class ComparingMatcher { 
- }
+package mockk
+
+@Deprecated("Don't have own members.")
+class ComparingMatcher {
+}

@@ -1,2 +1,5 @@
-class FunctionWithNullableArgMatcher { 
- }
+package mockk
+
+@Deprecated("Don't have own members.")
+class FunctionWithNullableArgMatcher {
+}
