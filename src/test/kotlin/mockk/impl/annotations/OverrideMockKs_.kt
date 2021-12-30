@@ -1,16 +1,15 @@
 package mockk.impl.annotations
 
-import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.InjectionLookupType
+import io.mockk.impl.annotations.OverrideMockKs
 
-annotation class InjectMockKs {
+annotation class OverrideMockKs_ {
     companion object {
         init {
-            InjectMockKs(
+            OverrideMockKs(
                 lookupType = InjectionLookupType.BOTH,
-                injectImmutable = false,
-                overrideValues = false
+                injectImmutable = false
             )
         }
     }
- }
+}

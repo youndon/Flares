@@ -1,2 +1,0 @@
-class Slf4jLogger { 
- }

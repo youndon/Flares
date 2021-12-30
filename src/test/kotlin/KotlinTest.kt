@@ -2,10 +2,10 @@
 import kotlin.test.*
 
 class KotlinTest {
-    @Ignore
+    @Ignore("")
     @BeforeTest
     @AfterTest
-    @Test
+    @Test(timeout = 6)
     fun kTest() {
         asserter
         assertContains(array = arrayOf(), 0, "")
@@ -27,5 +27,6 @@ class KotlinTest {
         todo {}
         fail("")
     }
+
 
 }

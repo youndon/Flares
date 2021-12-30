@@ -7,23 +7,32 @@ private inline fun <reified T:Any> anions() {
     clearAllMocks()
     clearConstructorMockk()
     clearStaticMockk()
-    coEvery {  }
-    coVerify {  }
-    coJustRun {  }
-    coExcludeRecords {  }
-    coVerifyAll {}
-    coVerifyOrder {  }
-    coVerifySequence {  }
+    coEvery {
+    }
+    coVerify {
+    }
+    coJustRun {
+    }
+    coExcludeRecords {
+    }
+    coVerifyAll {
+    }
+    coVerifyOrder {
+    }
+    coVerifySequence {
+    }
     confirmVerified()
-    every {  }
-    excludeRecords {  }
+    every {
+    }
+    excludeRecords {
+    }
     mockk<T>()
     mockkClass(T::class)
     mockkObject()
     mockkStatic("")
     mockkConstructor()
     isMockKMock("")
-    registerInstanceFactory {  }
+    registerInstanceFactory {}
     slot<T>()
     spyk<T>()
     stackTracesAlignmentValueOf("")
