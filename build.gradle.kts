@@ -17,7 +17,6 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
     testImplementation("io.mockk:mockk:1.12.1")
-    implementation ("io.github.microutils:kotlin-logging-jvm:2.1.21")
 }
 
 tasks.run {
