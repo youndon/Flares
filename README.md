@@ -12,7 +12,7 @@ Here you can find All kotlin classes,objects,interfaces library in one package s
 ### cio:
 **Classes**,**Interfaces**,**Objects**: This package highlight on all the classes type and show you some idea about each class, also you'll find example about the interface, and the object
 
-### types:
+### Properties:
 
 ### oop:
 
