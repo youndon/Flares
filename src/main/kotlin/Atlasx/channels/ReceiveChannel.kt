@@ -6,18 +6,18 @@ import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.runBlocking
 
 interface ReceiveChannel {
-     var receiveChannel:ReceiveChannel<*>
+    var receiveChannel: ReceiveChannel<*>
 
     @ObsoleteCoroutinesApi
     @ExperimentalCoroutinesApi
-    fun main() = runBlocking{
-        with(receiveChannel){
+    fun main() = runBlocking {
+        with(receiveChannel) {
             this.isClosedForReceive
             this.isEmpty
             this.onReceive
             this.cancel()
             this.iterator()
-            this.poll()
+            this.tryReceive().getOrNull()
             this.receive()
             this.receiveCatching().getOrNull()
 //            this.toChannel() // TODO

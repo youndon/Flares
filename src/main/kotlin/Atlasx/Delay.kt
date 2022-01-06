@@ -12,10 +12,9 @@ class Delay {
     lateinit var delay: Delay
 
     @OptIn(InternalCoroutinesApi::class)
-    fun main() = runBlocking{
+    fun main() = runBlocking {
         delay.run {
-            this.delay(1L)
-            this.invokeOnTimeout(1L, Runnable {  },coroutineContext)
+            this.invokeOnTimeout(1L, Runnable { }, coroutineContext)
 //            this.scheduleResumeAfterDelay(1L,)
         }
     }
