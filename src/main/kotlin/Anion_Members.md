@@ -34,7 +34,7 @@ Comparator<Any> { a,b  -> a.compareTo(b) }
 
 `enumValueOf<MyEnum>("")`  Returns an enum entry with specified name.
 
-`error("")`  Throws an [IllegalStateException] with the given [message].
+`error("")`  Throws a [IllegalStateException] with the given [message].
 
 `repeat(0) { /*action something*/ }`  repeat any action n times.
 
@@ -42,7 +42,7 @@ Comparator<Any> { a,b  -> a.compareTo(b) }
 
 `runCatching { }`  see CodeHelper.kt
 ```kotlin
-runBlocking {
+suspend fun some() {
         suspend {}.invoke()  // For make coroutine block.
     }
 ```
@@ -106,7 +106,7 @@ yieldAll(0..10) // this one for ranges values or Sequence.
 
 ###kotlin.coroutines.*
 ```kotlin
-runBlocking {
+suspend fun some() {
      kotlin.coroutines.coroutineContext  // TODO
      suspendCoroutine<Nothing> {  } // TODO
      Continuation<String>(coroutineContext){} // TODO
@@ -157,7 +157,9 @@ runBlocking {
 
 `createTempFile()` like createTempDir() but file.
 
-`readLine()`  Reads a line of input.
+`readln()`  Reads a line of input.
+
+`readlnOrNull()` Reads a line of input or null.
 
 ###kotlin.random.*
 

@@ -1,12 +1,12 @@
 
-// Using double slash to comment All the lne => shortcut(Ctrl+SLASH)
+// Using <End of line comments> to comment All the lne => shortcut(Ctrl+SLASH)
 
 /*
 Using ... for make all what between ... is comment
 shortcut(Ctrl+shift+slash)
 */
 
-/**
+/** <Doc Comments>
  *  @author
  *  @constructor
  *  @exception

@@ -13,7 +13,7 @@ class KotlinTest {
         assertEquals("", "", "")
         assertNotEquals("", "", "")
         assertFails {}
-//        assertFailsWith("") {} // TODO: 28/12/2021 "reified"
+        assertFailsWith(Throwable::class) {  } // TODO: 28/12/2021
         assertFalse("") { false }
         assertIs<String>("", "")
         assertIsNot<String>("", "")
@@ -27,6 +27,4 @@ class KotlinTest {
         todo {}
         fail("")
     }
-
-
 }

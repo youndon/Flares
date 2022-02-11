@@ -62,7 +62,7 @@ private operator fun Any.plus(int: Int){}
  Normally it's used in high-order functions, and when you have parameter as function
  the inline keyword came to make the implantation of your code more efficiency
  it's substitutes the body of parameter function directly into place where the function gets called,
- the system doesn't suggested this option because it strong. */
+ the system doesn't suggest this option because it is strong. */
  inline fun myInline(a:()->Unit){}
 
 // noinline.
@@ -84,7 +84,7 @@ Definitely all top-level [functions] are not [methods].
 
 /* parameter vs argument:
 Parameter is variable defined in function declaration.
- Argument is the actual value of this variable that get passed to the function. */
+ Argument is the actual value of this variable that get past to the function. */
 // example :
 @Suppress("UNREACHABLE_CODE")
 private fun randomString(length: Int): String {
@@ -99,5 +99,5 @@ object Some {
 //In this example length is a parameter, and 10 (used in function call) is an argument.
 }
 
-// where option.
-fun <F> genericF(f:F): F where F:CharSequence = f // TODO: 14/12/2021
+// where tip.
+fun <F> genericF(f:F): F where F:Float = f // TODO: 14/12/2021

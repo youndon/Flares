@@ -1,12 +1,13 @@
 @file:Suppress("UNREACHABLE_CODE")
 
-package coroutines
+package Atlasx
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.ObsoleteCoroutinesApi
 
+@OptIn(DelicateCoroutinesApi::class)
 @ExperimentalCoroutinesApi
 @ObsoleteCoroutinesApi
 @InternalCoroutinesApi
