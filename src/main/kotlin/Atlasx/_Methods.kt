@@ -24,11 +24,12 @@ suspend fun coroutinesMethods(){
     coroutineScope {  }
     CompletableDeferred(Any())
     CoroutineExceptionHandler { coroutineContext, throwable -> Unit }
-//    CoroutineScope()
+    CoroutineScope(currentCoroutineContext())
     DisposableHandle {  }
     MainScope()
     Runnable {  }
     SupervisorJob()
+
 //    awaitAll() // TODO
 //    handleCoroutineException(, Throwable(),null)
 //    handleExceptionViaHandler(, Throwable())

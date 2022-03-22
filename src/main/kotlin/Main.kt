@@ -1,26 +1,19 @@
-import kotlin.math.pow
-import kotlin.math.sqrt
+import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.internal.synchronized
 
+@OptIn(InternalCoroutinesApi::class)
 fun main() {
+    // Removing chords.
+//   .replace(Regex("[ADGC]m? "), "")
 
-}
+    // Web colors.
+//    "#[0-9a-fA-F]{6}\\b".toRegex()
+//        .findAll(
+//            "Web colors are colors used when displaying web pages. They can be represented as #123ABC: three pairs of hexadecimal digits. The first two digits are red, the two in the middle are green and the last two digits are blue. Example: #AABBCC, #ff0000."
+//        ).forEach { println(it.value) }
 
-fun berty() {
-    when (readln()) {
-        "triangle" -> {
-            val (a, b, c) = Array(3) { readLine()!!.toInt() }
-            val p = (a + b + c) / 2
-            println(sqrt((p * (p - a) * (p - b) * (p - c)).toFloat()))
-        }
-        "rectangle" -> {
-            println(readln().toFloat() * readln().toFloat())
-        }
-        else -> {
-            println("%.1f".format(readln().toFloat().pow(2f) * Math.PI))
-        }
-    }
-}
+    //
 
-fun mlogit() {
 
 }

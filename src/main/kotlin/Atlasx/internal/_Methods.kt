@@ -6,4 +6,5 @@ import kotlinx.coroutines.internal.artificialFrame
 @InternalCoroutinesApi
 fun main() {
     artificialFrame("")
+    synchronized(0) { }
 }

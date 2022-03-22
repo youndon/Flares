@@ -42,12 +42,11 @@ Comparator<Any> { a,b  -> a.compareTo(b) }
 
 `runCatching { }`  see CodeHelper.kt
 ```kotlin
-suspend fun some() {
-        suspend {}.invoke()  // For make coroutine block.
-    }
+suspend {
+          // For make suspend scope.
+}
 ```
 
-`synchronized("") {}`  TODO
 
 ### kotlin.script.templates.*
 
@@ -96,17 +95,17 @@ suspend fun some() {
  `sortedSetOf<Nothing>()` Returning sorted set sequence.
 
 ```kotlin
-Iterable{ iterator {
-    
-yield(0) // We can say it's the initializer of SequenceScope bloc, for one value.
-yieldAll(0..10) // this one for ranges values or Sequence.
+Iterable{ 
+    iterator {
+        yield(0) // We can say it's the initializer of SequenceScope block, for one value.
+        yieldAll(0..10) // this one for ranges values or Sequence.
      }
  }
  ```
 
 ###kotlin.coroutines.*
 ```kotlin
-suspend fun some() {
+suspend {
      kotlin.coroutines.coroutineContext  // TODO
      suspendCoroutine<Nothing> {  } // TODO
      Continuation<String>(coroutineContext){} // TODO
