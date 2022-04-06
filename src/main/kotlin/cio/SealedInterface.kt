@@ -8,12 +8,14 @@ sealed interface SealedInterface{
         interface VW
         interface BMD
 
-    fun ss() = when(this) {
-        is Mercedes -> println("mercedes models")
-        is Audi -> println("audi models")
-        is VW -> println("vw models")
-        is BMD -> println("bmd models")
-        else -> null
+    companion object {
+        fun ss(si: SealedInterface) = when(si) {
+            is Mercedes -> println("mercedes models")
+            is Audi -> println("audi models")
+            is VW -> println("vw models")
+            is BMD -> println("bmd models")
+            else -> {}
+        }
     }
 }
 

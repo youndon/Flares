@@ -1,8 +1,5 @@
-import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.internal.synchronized
+import java.util.Collections
 
-@OptIn(InternalCoroutinesApi::class)
 fun main() {
 
 }

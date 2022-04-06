@@ -1,18 +1,19 @@
 package AtlasLib
 
+import java.util.*
 import kotlin.math.absoluteValue
 
 class Coding {
     // convert the text to binary.
     internal fun textToBinary(text: String) = text.forEach {
-        val binary = Integer.toBinaryString(it.toInt())
+        val binary = Integer.toBinaryString(it.code)
         print("$binary ")
     }
     // convert the text to hex.
     internal fun textToHex(text: String): String {
         text.forEach {
             val hex = Integer.toHexString(it.toInt())
-            print("${hex.toUpperCase()} ")
+            print("${hex.uppercase(Locale.getDefault())} ")
         }
         return ""
     }
@@ -38,13 +39,13 @@ class Coding {
                 .toList()
                 .zip(arr0)
                 .filter { it.first == '1' }
-                .sumBy { it.second.unaryMinus() }
+                .sumOf { it.second.unaryMinus() }
 
         } else num.reversed()
             .toList()
             .zip(arr0)
             .filter { it.first == '1' }
-            .sumBy { it.second.absoluteValue }
+            .sumOf { it.second.absoluteValue }
     }
 
     // convert the integer to octal.

@@ -8,6 +8,4 @@ private fun anion() {
     DateTimePeriod()
     DayOfWeek(1)
     Month(1)
-    DayOfWeek(1)
-    Month(1)
 }

@@ -3,9 +3,8 @@ package AtlasTime
 import kotlinx.datetime.DateTimePeriod
 
 class DateTimePeriod {
-    val ss  =DateTimePeriod
     init {
-        ss.parse("").apply {
+        DateTimePeriod.parse("").apply {
             this.nanoseconds
             this.seconds
             this.minutes

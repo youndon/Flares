@@ -46,13 +46,5 @@ for (ss in 0..10){
 
 }
 
-// loop function.
-var int = 0
-tailrec fun loopFunction(a:Any?){
-    if (int==100) return
-    println("$int $a")
-    int++
-//    Thread.sleep(500)
-    loopFunction(a)
-}
+
 

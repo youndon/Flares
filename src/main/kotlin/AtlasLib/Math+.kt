@@ -9,8 +9,8 @@ import kotlin.math.sign
 
      fun factorial(`!`: Int = readLine()!!.toInt()): Any {
         if (`!` < 0) return Double.NaN
-        return (`!` downTo 1).toList().fold(1, { i, acc -> acc * i })
-    }
+        return (`!` downTo 1).toList().fold(1) { i, acc -> acc * i }
+     }
 
     // Fibonacci Atlas.s.Sequence.
     //

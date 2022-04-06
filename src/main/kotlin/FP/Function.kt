@@ -3,6 +3,7 @@
 package FP
 
 import kotlinx.coroutines.delay
+import java.math.BigInteger
 
 //Function declarations
 //Functions in Kotlin are declared using the fun keyword:
@@ -57,6 +58,17 @@ private infix fun Any.divide(int: Int){}
 // operator function must by extension function and have one parameter value.
 // its powerful modifier used for make possibility operation between two values.
 private operator fun Any.plus(int: Int){}
+
+// recursion function.
+// tailrec is useful especially when the fun need to call her self in her self,
+// and for avoiding 'stackOverFlow' bag with big numbers.
+tailrec fun fib(
+    n: Int,
+    a: BigInteger = BigInteger.ZERO,
+    b: BigInteger = BigInteger.ONE
+): BigInteger {
+    return if (n == 0) b else fib(n-1,a+b,a)
+}
 
 /* inline Fun.
  Normally it's used in high-order functions, and when you have parameter as function
