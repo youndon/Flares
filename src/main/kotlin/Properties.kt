@@ -29,7 +29,7 @@ lateinit var late:Any
 private val boss = Any()
 
 // Create Extension property.
-private val Any.go:Int get() = 0
+private val Any.go get() = 0
 // this mean we're creating property for the Boss class out the class.
 
 // Generic Extension property.
