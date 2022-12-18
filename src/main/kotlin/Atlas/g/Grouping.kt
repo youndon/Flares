@@ -10,16 +10,16 @@ interface Grouping {
      */
     fun some() {
         with(grouping) {
-            this.keyOf(0)
-            this.sourceIterator()
-//        this.aggregate({key: Any, accumulator:String, element: Any, first: Boolean ->  })
-//        this.aggregateTo(mutableMapOf(),{key, accumulator, element, first ->  })
-            this.eachCount() // return a [Map] associating the key of each group with the count of elements in the group.
-            this.eachCountTo(mutableMapOf())
-            this.fold(1) { accumulator, element -> 1 }
-            this.foldTo(mutableMapOf(), 1) { accumulator, element -> 1 }
-            this.reduce { key, accumulator, element -> accumulator }
-            this.reduceTo(mutableMapOf()) { key, accumulator, element -> accumulator }
+            keyOf(0)
+            sourceIterator() // Returns an Iterator over the elements of the source of this grouping.
+            aggregate { key, accumulator: Int?, element, first -> 0 } // Apply an operation to all the elements in each group and return the result.
+            aggregateTo(mutableMapOf()) { key, accumulator: Int?, element, first -> 0 }
+            eachCount() // return a [Map] associating the key of each group with the count of elements in the group.
+            eachCountTo(mutableMapOf())
+            fold(1) { accumulator, element -> 1 }
+            foldTo(mutableMapOf(), 1) { accumulator, element -> 1 }
+            reduce { key, accumulator, element -> accumulator }
+            reduceTo(mutableMapOf()) { key, accumulator, element -> accumulator }
         }
     }
 }

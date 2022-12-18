@@ -34,13 +34,13 @@ fun  deafening() = 10 to 20
     return arrayListOf(long)
 }
 // Anonymous fun.
-fun myAnonymous() = fun (){}
+fun myAnonymous() = fun () { }
 
 // High-Order fun.
-fun myExtension(a: () -> Unit) {}
+fun myExtension(a: () -> Unit) { }
 
 // Lambda fun.High-Order.
-fun myLambda() =  { a:Int,b:Int -> a + b }
+fun myLambda() = { a: Int, b: Int -> a + b }
 
 // infix notation.
 // infix function must by extension function and have one parameter value.
@@ -75,7 +75,7 @@ tailrec fun fib(
  the inline keyword came to make the implantation of your code more efficiency
  it's substitutes the body of parameter function directly into place where the function gets called,
  the system doesn't suggest this option because it is strong. */
- inline fun myInline(a:()->Unit){}
+ inline fun myInline(a: () -> Unit) { }
 
 // noinline.
 // Add noinline for exclude that functions you won't make it inline.

@@ -46,7 +46,7 @@ private class File {
             this.invariantSeparatorsPath // Pathname.
             this.isRooted // todo
             this.extension // Type of this file.
-            this.nameWithoutExtension // Name of the this file without type.
+            this.nameWithoutExtension // Name of  this file without type.
             this.canExecute()
             this.canRead()
             this.canWrite()

@@ -34,7 +34,7 @@ class JFormat {
         // for remove all numbers except the firsts.
         println("%.5s".format(123456789))
 
-        // for remove all the line of string
+        // for inserts a newline of string.
         println("%n".format(1985))
 
         // for changing the digit with unicode value.

@@ -99,7 +99,7 @@ private fun some(){
         absoluteValue // |-1| = 1.
         digitToChar() // Returns the Char that represents this decimal digit. exception if the value !in 0..9.
         floorDiv(1) // Divides this value by the other value, flooring the result to an integer that is closer to negative infinity.
-        mod(1) // Calculates the remainder of flooring division of this value by the other value.
+        mod(1) // (Modulo division) Calculates the remainder of flooring division of this value by the other value.
     }
 
 }

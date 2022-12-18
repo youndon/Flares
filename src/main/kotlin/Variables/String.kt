@@ -8,7 +8,7 @@ import java.util.*
 Using the String type for creating text and control it.
 String is kotlin Class has overriding 4 function and 1 variable,
 but all others attachment in String class came from Comparable,
-and CharSequence interfaces and the extensions functions and the some from java.String
+and CharSequence interfaces and the extensions functions and some from java.String
  */
 // Note: Some Attachment has void run block,
 // you can find those in the path of package.
