@@ -22,7 +22,8 @@ interface Interface {
     }
 
     //
-    fun interface vidas{
+    fun interface vidas {
         fun ss()
     }
+
 }

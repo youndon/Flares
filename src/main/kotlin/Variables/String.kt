@@ -1,4 +1,4 @@
-@file:Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION", "DEPRECATED_IDENTITY_EQUALS")
+@file:Suppress("ALL")
 
 package Variables
 
@@ -20,12 +20,12 @@ private fun some() {
     """..."""
     val string = "\n-> next line," +
             "\r-> hide all the chars before it" +
-            "\b ..." +
-            "\t-> tap space, " +
-            "\$-> print $ itself, " +
-            "\'-> print apostrophe itself, " +
-            "\\-> print back_slash itself, " +
-            "\"-> print quotation_marks itself  " +
+            "\b the Unicode BACKSPACE symbol (U+0008) | hide the last char in output." +
+            "\t->  the Unicode TAB symbol (U+0009) " +
+            "\$-> the Unicode DOLLAR sign (U+0024)" +
+            "\'-> the Unicode apostrophe symbol (U+0027)" +
+            "\\-> the Unicode backslash symbol (U+005C)" +
+            "\"-> the Unicode double quotation symbol (U+0028)" +
             "\u1FC8-> unicode."
 
     buildString {

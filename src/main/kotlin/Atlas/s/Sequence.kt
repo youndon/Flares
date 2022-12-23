@@ -1,6 +1,6 @@
 package Atlas.s
 
-private interface Sequence {
+interface Sequence {
     /**
      * A sequence that returns values through its iterator.
      * The values are evaluated lazily, and the sequence is potentially infinite.

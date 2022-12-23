@@ -1,9 +1,11 @@
 package Atlas.a
 
+import kotlin.annotation.AnnotationRetention.*
+
 private enum class AnnotationRetention { ;
     init {
-        kotlin.annotation.AnnotationRetention.BINARY
-        kotlin.annotation.AnnotationRetention.RUNTIME
-        kotlin.annotation.AnnotationRetention.SOURCE
+        BINARY
+        RUNTIME
+        SOURCE
     }
 }

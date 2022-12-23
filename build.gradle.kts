@@ -18,8 +18,9 @@ dependencies {
     testImplementation("io.mockk:mockk:1.13.2")
 }
 
+
 tasks.run {
-        withType<KotlinCompile>() {
-            kotlinOptions.jvmTarget = "11"
-        }
+    withType<KotlinCompile>() {
+        kotlinOptions.jvmTarget = "11"
+    }
 }

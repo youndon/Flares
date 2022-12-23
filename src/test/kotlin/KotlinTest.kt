@@ -1,6 +1,3 @@
-import org.junit.*
-import org.junit.Ignore
-import org.junit.Test
 import kotlin.test.*
 
 class KotlinTest {
