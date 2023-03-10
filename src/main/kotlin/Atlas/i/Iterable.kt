@@ -45,7 +45,7 @@ private interface Iterable {
             forEachIndexed { index, any -> println("$index; $any") }
             fold("") { acc, any -> acc + any } // Accumulates value starting with initial value and applying operation from left to right to current accumulator value and each element.
             foldIndexed("") { index, acc, any -> acc + any + index }
-            runningFold(""){acc, c -> c + acc } // return a list has every result operation between two values.
+            runningFold(""){ acc, c -> c + acc } // return a list has every result operation between two values.
             runningFoldIndexed(""){index, acc, c -> c+acc+index }
             filter { it == 'g' } // for get only "it" from the string.
             filterNot { it == 'g' } // for get all the text except "it".
@@ -62,7 +62,7 @@ private interface Iterable {
             indexOfFirst { it == 'g' }
             indexOfLast { it == 'g' }
             iterator().run {
-                /**@see Atlas.i.Iter    ator*/
+                /**@see Atlas.i.Iterator*/
             }
             joinTo(StringBuffer("B "),"-", "<", ">", 5, "..!") // <B a-b-c-d-e-..!>
             joinToString("-", "<", ">", 5, "..!") // <a-b-c-d-e-..!>

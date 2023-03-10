@@ -41,7 +41,7 @@ private lateinit var `var`:Any
 
 // by.
 private val some:Any? by lazy { null }
-// ot
+// or
 private val del by Delegates
     .observable("") {
             property,

@@ -99,6 +99,7 @@ Iterable{
     iterator {
         yield(0) // We can say it's the initializer of SequenceScope block, for one value.
         yieldAll(0..10) // this one for ranges values or Sequence.
+        /*yield() and yieldAll(), we can return one or more elements (Iterable) and suspend the execution (wait until these elements are consumed).*/
      }
  }
  ```

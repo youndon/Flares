@@ -54,7 +54,7 @@ fun myChar(){
                                         getType(char) returns LETTER_NUMBER
                                         char is a currency symbol (such as '$')
                                         char is a connecting punctuation character (such as '_'). */
-            isIdentifierIgnorable() /* The following Unicode characters are ignorable in a Java identifier or a Unicode identifier −
+                isIdentifierIgnorable() /* The following Unicode characters are ignorable in a Java identifier or a Unicode identifier −
                                         ISO control characters that are not whitespace
                                         in '\u0000'..'\u0008'
                                         in '\u000E'..'\u001B'

@@ -81,7 +81,14 @@ tailrec fun fib(
 // Add noinline for exclude that functions you won't make it inline.
 inline fun myInlineFun(a:()->Unit,noinline b:()->Unit){}
 
-inline fun myInlineFunction(crossinline a:()->Unit){} // TODO: 10/06/2021 crossinline
+// To indicate that the lambda parameter of the inline function cannot use non-local field,
+// mark the lambda parameter with the crossinline modifier
+inline fun myInlineFunction(crossinline a:() -> Unit, b:() -> Unit){
+    object {
+//        val c = b() // cannot access.
+        val c = a() // can access.
+    }
+}
 
 // external modifier.
 // If you need to access a class implemented in JavaScript from Kotlin in a typesafe way,

@@ -13,7 +13,7 @@ private object Delegates {
         In the following example, we will see how to use Observable() method in order to
         implement delegation.
          */
-        class User{
+        class User {
             var user : Int by delegates.observable ( 0)
             { property, oldValue, newValue ->
                 println("a:$property b:$oldValue c:$newValue")
