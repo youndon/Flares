@@ -25,11 +25,11 @@ You can find most of the code of this chapter in the provided projects.
 
 Ready to get started?
 
-### Variables and data types
+### Types and data types
 
 A variable is a way to store information. 
 Typically, a variable has a name and a data type.
-Variables can also have modifiers that add extra options or restrictions to it.
+Types can also have modifiers that add extra options or restrictions to it.
 
 In Kotlin, there are two types of variables, `val` and `var`:
 

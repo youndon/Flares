@@ -1,4 +1,4 @@
-package Variables
+package Types
 
 lateinit var longIterator:LongIterator
 

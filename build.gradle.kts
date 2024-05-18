@@ -17,6 +17,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
+
+    implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.0.0")
+
     testImplementation("io.mockk:mockk:1.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
 

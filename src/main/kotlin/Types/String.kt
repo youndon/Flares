@@ -1,6 +1,6 @@
 @file:Suppress("ALL")
 
-package Variables
+package Types
 
 import java.util.*
 
@@ -69,7 +69,7 @@ private fun some() {
         lowercase() // Make All the String as lowercase.
         endsWith("ing") // Check if the text end with some char or char_sequence.
         encodeToByteArray().run {
-            /**@see Variables.byteArr*/
+            /**@see Types.byteArr*/
         }
         filter { it == 's' } // for get only "it" from the string.
         filterNot { it == 's' } // for get all the text except "it".
@@ -136,10 +136,10 @@ private fun some() {
         substringAfterLast('r')
         toBoolean() // Returns true if the orchid.contents of this string is equal to the word "true", ignoring case, and false otherwise.
         toByteArray().run {
-            /**@see Variables.byteArr*/
+            /**@see Types.byteArr*/
         }
         toCharArray().run {
-            /**@see Variables.charArray*/
+            /**@see Types.charArray*/
         }
         toBooleanStrict() // Returns true if the content of this string is equal to the word "true", false if it is equal to "false".
         toBooleanStrictOrNull() // , and null otherwise.

@@ -1,6 +1,6 @@
 @file:Suppress("CAST_NEVER_SUCCEEDS")
 
-package Variables
+package Types
 
 import kotlin.math.absoluteValue
 import kotlin.math.sign

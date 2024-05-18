@@ -1,4 +1,4 @@
-package Variables
+package Types
 
 import kotlin.math.*
 import kotlin.time.DurationUnit

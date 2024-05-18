@@ -78,7 +78,7 @@ Let's say we are interested in the iteration that tests the character `H`:
 3. Start debugging by either clicking Debug or attaching a debugger to the existing process.
 4. The program stops in the loop. In contrast with the previous example, the debugger has not suspended the program every time it's hit the breakpoint. We didn't stop until the loop was checking the letter `H`.
    ![img](https://ucarecdn.com/553d869d-6e4c-4a26-b7de-b9516ccb8864/)
-5. Let's examine the variables in the **Debug** tool window. Its purpose is to show you information related to the current state of the program and suggest a way to interact with it. For now, let's look at the **Variables** tab. It provides the information on all variables accessible in the current context. Here, you can see the values of `rangeStart`, `rangeEnd` and `findLetter`, as well as the loop's local variable `c`.
+5. Let's examine the variables in the **Debug** tool window. Its purpose is to show you information related to the current state of the program and suggest a way to interact with it. For now, let's look at the **Types** tab. It provides the information on all variables accessible in the current context. Here, you can see the values of `rangeStart`, `rangeEnd` and `findLetter`, as well as the loop's local variable `c`.
 6. **Resume** the application, letting it run further.
 
 ##### Conclusion
