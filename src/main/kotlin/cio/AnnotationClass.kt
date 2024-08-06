@@ -43,7 +43,7 @@ annotation class Nationalistic(
 
         @set:Nationalistic var qfqlsid:Int = 0
 
-        val jtdkhgch:Int @get:Nationalistic get() = 0
+//        val jtdkhgch:Int @get:Nationalistic get() = 0
     }
 //@delegate:Target
 //@setparam:Target
